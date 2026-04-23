@@ -1,0 +1,41 @@
+name: Update seed data
+
+on:
+  schedule:
+    # Her pazar gecesi 02:00 UTC (Türkiye saatiyle 05:00)
+    - cron: '0 2 * * 0'
+  # Actions sekmesinden elle tetiklemek için
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build seed.json
+        run: |
+          cd backend
+          node scripts/buildSeed.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add backend/seed.json
+          # Sadece değişiklik varsa commit et
+          git diff --staged --quiet || git commit -m "chore: refresh seed data [skip ci]"
+          git push
+
+      - name: Clean up raw files
+        if: always()
+        run: rm -rf backend/raw
