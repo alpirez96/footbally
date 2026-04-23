@@ -1,7 +1,4 @@
 // scripts/buildSeed.js
-// İndirmeyi sistem curl'ü ile yapar (Node.js v24 SSL sorunundan kaçınmak için).
-// curl macOS ve Linux'ta yerleşik, Windows 10+ da yerleşik.
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -11,34 +8,67 @@ const OUT = path.join(__dirname, '..', 'seed.json');
 const ZIP_URL = 'https://pub-e682421888d945d684bcae8890b0ec20.r2.dev/data/transfermarkt-datasets.zip';
 const ZIP_PATH = path.join(RAW, 'dataset.zip');
 
-// ── CSV'leri hazırla ──
+const NEEDED = ['players.csv', 'clubs.csv', 'player_valuations.csv', 'transfers.csv'];
+
 function ensureCSVs() {
   if (!fs.existsSync(RAW)) fs.mkdirSync(RAW, { recursive: true });
 
-  const needed = ['players.csv', 'clubs.csv', 'player_valuations.csv', 'transfers.csv'];
-  const allExist = needed.every(f => fs.existsSync(path.join(RAW, f)));
+  const allExist = NEEDED.every(f => fs.existsSync(path.join(RAW, f)));
   if (allExist) {
     console.log('CSV dosyaları zaten var, indirme atlanıyor.');
     return;
   }
 
-  console.log('Dataset ZIP indiriliyor (~60 MB)...');
-  // curl -L: redirect'leri takip et, -o: çıktı dosyası, --progress-bar: ilerleme göster
-  execSync(`curl -L --progress-bar -o "${ZIP_PATH}" "${ZIP_URL}"`, { stdio: 'inherit' });
-
-  const size = fs.statSync(ZIP_PATH).size;
-  if (size < 1_000_000) {
-    throw new Error(`İndirilen dosya çok küçük (${size} byte), bozuk olmalı`);
+  if (!fs.existsSync(ZIP_PATH)) {
+    console.log('Dataset ZIP indiriliyor...');
+    execSync(`curl -L --progress-bar -o "${ZIP_PATH}" "${ZIP_URL}"`, { stdio: 'inherit' });
+    const size = fs.statSync(ZIP_PATH).size;
+    if (size < 1_000_000) throw new Error(`İndirilen dosya çok küçük (${size} byte)`);
+    console.log(`✓ İndirme tamamlandı (${(size / 1024 / 1024).toFixed(1)} MB)`);
   }
-  console.log(`✓ İndirme tamamlandı (${(size / 1024 / 1024).toFixed(1)} MB)`);
 
-  console.log('ZIP açılıyor...');
-  execSync(`unzip -o -j "${ZIP_PATH}" "*.csv" -d "${RAW}"`, { stdio: 'inherit' });
-  fs.unlinkSync(ZIP_PATH);
-  console.log('✓ CSV dosyaları hazır');
+  // ZIP içindekileri listele (debug için)
+  console.log('\nZIP içeriği (ilk 30 dosya):');
+  const listing = execSync(`unzip -l "${ZIP_PATH}" | head -40`, { encoding: 'utf8' });
+  console.log(listing);
+
+  // Aradığımız CSV'leri bulmaya çalış — farklı uzantılar ve yollar deneyelim
+  console.log('CSV dosyaları aranıyor...');
+
+  // Önce ihtiyacımız olan dosya adlarını içeren herhangi bir şey bulalım
+  for (const needed of NEEDED) {
+    const baseName = needed.replace('.csv', '');
+    // ZIP içinde bu isimle eşleşen tüm dosyaları bul
+    const foundRaw = execSync(
+      `unzip -l "${ZIP_PATH}" | awk '{print $NF}' | grep -iE "(^|/)${baseName}\\.(csv|parquet|json)(\\.gz)?$" || true`,
+      { encoding: 'utf8' }
+    ).trim();
+
+    if (!foundRaw) {
+      console.log(`  ✗ ${baseName}: bulunamadı`);
+      continue;
+    }
+
+    const found = foundRaw.split('\n')[0]; // İlk bulduğunu al
+    console.log(`  ✓ ${baseName}: ${found}`);
+
+    // Çıkar (-j flat çıkartır, alt klasör oluşturmadan)
+    execSync(`unzip -o -j "${ZIP_PATH}" "${found}" -d "${RAW}"`, { stdio: 'pipe' });
+  }
+
+  // Şimdi çıkarılan dosyaları bulunan adla kontrol et, uzantı dönüşümü gerekiyorsa yap
+  const files = fs.readdirSync(RAW);
+  console.log('\nÇıkarılan dosyalar:', files.join(', '));
+
+  // Tüm ihtiyaçlar mevcut mu?
+  const missing = NEEDED.filter(f => !fs.existsSync(path.join(RAW, f)));
+  if (missing.length > 0) {
+    throw new Error(`Şu CSV dosyaları hala eksik: ${missing.join(', ')}. ZIP içeriğini yukarıda kontrol et.`);
+  }
+
+  console.log('✓ Tüm CSV dosyaları hazır');
 }
 
-// ── CSV parser ──
 function splitCSVLine(line) {
   const result = [];
   let current = '';
@@ -69,17 +99,16 @@ function readCSV(filename) {
   return parseCSV(fs.readFileSync(path.join(RAW, filename), 'utf8'));
 }
 
-// ── Ana iş ──
 function main() {
   ensureCSVs();
 
-  console.log('CSV dosyaları okunuyor...');
+  console.log('\nCSV dosyaları okunuyor...');
   const players = readCSV('players.csv');
   const clubs = readCSV('clubs.csv');
   const valuations = readCSV('player_valuations.csv');
   const transfers = readCSV('transfers.csv');
 
-  console.log(`  ${players.length} oyuncu, ${clubs.length} kulüp`);
+  console.log(`  ${players.length} oyuncu, ${clubs.length} kulüp, ${valuations.length} değerleme, ${transfers.length} transfer`);
 
   const clubMap = new Map();
   clubs.forEach(c => clubMap.set(c.club_id, c.name));
