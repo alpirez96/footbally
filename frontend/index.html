@@ -4,162 +4,300 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Footbally — Multiplayer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f172a;
-    color: #f1f5f9;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 2rem 1rem;
-  }
-  .container {
-    width: 100%;
-    max-width: 720px;
-    background: #1e293b;
-    border-radius: 16px;
-    padding: 2rem;
-    border: 1px solid #334155;
-  }
-  h1 { font-size: 32px; font-weight: 600; margin-bottom: 8px; }
-  h2 { font-size: 20px; font-weight: 500; line-height: 1.4; }
-  .muted { color: #94a3b8; font-size: 14px; }
-  .center { text-align: center; }
-  input, button {
-    font-family: inherit;
-    font-size: 15px;
-    padding: 12px 16px;
-    border: 1px solid #475569;
-    background: #334155;
-    color: #f1f5f9;
-    border-radius: 8px;
-  }
-  input { width: 100%; margin-bottom: 12px; }
-  input:focus { outline: none; border-color: #3b82f6; }
-  button {
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  button:hover:not(:disabled) { background: #475569; }
-  button:disabled { opacity: 0.5; cursor: not-allowed; }
-  .btn-primary { background: #3b82f6; border-color: #3b82f6; }
-  .btn-primary:hover:not(:disabled) { background: #2563eb !important; }
-  .btn-row { display: flex; gap: 10px; }
-  .btn-row button { flex: 1; }
-  .lobby-player {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    background: #0f172a;
-    border-radius: 8px;
-    margin-bottom: 8px;
-  }
-  .lobby-player .badge {
-    background: #3b82f6;
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-weight: 500;
-  }
-  .code-display {
-    font-family: ui-monospace, monospace;
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    background: #0f172a;
-    padding: 16px;
-    border-radius: 8px;
-    margin: 1rem 0;
-    text-align: center;
-  }
-  .header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-  .timer-bar-wrap {
-    height: 8px;
-    background: #0f172a;
-    border-radius: 4px;
-    margin-bottom: 2rem;
-    overflow: hidden;
-  }
-  .timer-bar { height: 100%; background: #3b82f6; transition: width 0.1s linear; }
-  .options-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 10px;
-  }
-  .opt-btn {
-    padding: 16px 18px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .opt-btn.correct { background: #065f46 !important; border-color: #10b981 !important; }
-  .opt-btn.wrong { background: #7f1d1d !important; border-color: #ef4444 !important; }
-  .opt-letter {
-    width: 26px; height: 26px; border-radius: 50%;
-    background: #0f172a;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 12px; font-weight: 500;
-    flex-shrink: 0;
-  }
-  .leaderboard-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 14px;
-    background: #0f172a;
-    border-radius: 8px;
-    margin-bottom: 6px;
-  }
-  .rank { width: 24px; text-align: center; font-weight: 600; color: #94a3b8; }
-  .rank.gold { color: #fbbf24; }
-  .error { color: #ef4444; font-size: 13px; margin-top: 8px; text-align: center; }
-
-  /* top bar */
-  .top-bar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 1.5rem;
-    font-size: 13px;
-    color: #64748b;
-  }
-  .conn-indicator { display: flex; align-items: center; gap: 5px; }
-  .conn-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: #10b981; flex-shrink: 0;
-    transition: background 0.3s;
-  }
-  .conn-dot.off { background: #ef4444; }
-  .top-sep { color: #334155; margin: 0 2px; }
-  .lang-btn {
-    background: none !important;
-    border: none;
-    padding: 2px 4px;
-    color: #475569;
-    font-size: 13px;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 400;
-    border-radius: 4px;
-    transition: color 0.15s;
-  }
-  .lang-btn:hover:not(:disabled) { background: none !important; color: #cbd5e1; }
-  .lang-btn.active { color: #f1f5f9; font-weight: 600; }
+/* ── Reset & base ─────────────────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  /* Çim şeritleri */
+  background-color: #0e6630;
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 48px,
+    rgba(0,0,0,0.07) 48px,
+    rgba(0,0,0,0.07) 96px
+  );
+  color: #f1f5f9;
+}
+/* Yarı saydam saha dekorasyonu (arka plan) */
+.pitch-bg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.pitch-bg svg {
+  width: min(95vw, 780px);
+  opacity: 0.13;
+}
+/* ── Container ────────────────────────────────────────────────────────── */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 720px;
+  background: #083d1f;
+  border-radius: 16px;
+  padding: 1.5rem 2rem 2rem;
+  border: 2px solid rgba(255,255,255,0.22);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+/* ── Tipografi ────────────────────────────────────────────────────────── */
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+h2 { font-size: 20px; font-weight: 500; line-height: 1.4; }
+.muted  { color: #86efac; font-size: 14px; }
+.center { text-align: center; }
+/* ── Input & button ───────────────────────────────────────────────────── */
+input, button {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: #0a5c2e;
+  color: #f1f5f9;
+  border-radius: 10px;
+}
+input { width: 100%; margin-bottom: 12px; }
+input:focus { outline: none; border-color: #f4c430; }
+input::placeholder { color: #86efac; }
+button {
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+}
+button:hover:not(:disabled) { background: #0f6b35; box-shadow: 0 0 12px rgba(244,196,48,0.2); }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary {
+  background: #f4c430;
+  border-color: #f4c430;
+  color: #083d1f;
+}
+.btn-primary:hover:not(:disabled) { background: #f0b800 !important; box-shadow: 0 0 18px rgba(244,196,48,0.45) !important; }
+.btn-row { display: flex; gap: 10px; }
+.btn-row button { flex: 1; }
+/* ── Top bar ──────────────────────────────────────────────────────────── */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 13px;
+  color: #86efac;
+}
+.conn-indicator { display: flex; align-items: center; gap: 5px; }
+.conn-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; flex-shrink: 0; transition: background 0.3s; }
+.conn-dot.off { background: #dc2626; }
+.top-sep { color: rgba(255,255,255,0.2); margin: 0 2px; }
+.lang-btn {
+  background: none !important;
+  border: none; padding: 2px 4px;
+  color: #86efac; font-size: 13px; cursor: pointer;
+  font-family: inherit; font-weight: 400; border-radius: 4px;
+  transition: color 0.15s;
+}
+.lang-btn:hover:not(:disabled) { background: none !important; color: #f1f5f9; box-shadow: none !important; }
+.lang-btn.active { color: #f4c430; font-weight: 700; }
+/* ── Mode badge ───────────────────────────────────────────────────────── */
+.mode-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(244,196,48,0.12);
+  border: 1px solid rgba(244,196,48,0.3);
+  color: #f4c430;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.mode-pill.hard { background: rgba(220,38,38,0.12); border-color: rgba(220,38,38,0.3); color: #fca5a5; }
+/* ── Lobby player ─────────────────────────────────────────────────────── */
+.lobby-player {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 8px; margin-bottom: 8px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.badge-host {
+  background: #f4c430; color: #083d1f;
+  font-size: 10px; padding: 2px 8px;
+  border-radius: 10px; font-weight: 700;
+  letter-spacing: 1px;
+}
+/* ── Code display ─────────────────────────────────────────────────────── */
+.code-display {
+  font-family: ui-monospace, monospace;
+  font-size: 32px; font-weight: 700;
+  letter-spacing: 6px;
+  background: rgba(0,0,0,0.3);
+  padding: 16px; border-radius: 10px;
+  margin: 1rem 0; text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #f4c430;
+}
+/* ── Header row ───────────────────────────────────────────────────────── */
+.header-row {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 1.5rem;
+}
+/* ── Timer bar ────────────────────────────────────────────────────────── */
+.timer-bar-wrap {
+  height: 6px; background: rgba(0,0,0,0.35);
+  border-radius: 3px; margin-bottom: 2rem; overflow: hidden;
+}
+.timer-bar { height: 100%; background: #f4c430; transition: width 0.1s linear; }
+/* ── Options ──────────────────────────────────────────────────────────── */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+.opt-btn {
+  padding: 14px 16px; text-align: left;
+  display: flex; align-items: center; gap: 12px;
+  background: #0a5c2e;
+}
+.opt-btn.correct {
+  background: #065f46 !important; border-color: #10b981 !important;
+  animation: correct-flash 0.35s ease-out;
+}
+.opt-btn.wrong {
+  background: #7f1d1d !important; border-color: #dc2626 !important;
+  animation: wrong-flash 0.25s ease-out;
+}
+.opt-letter {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; flex-shrink: 0;
+  color: #f4c430;
+}
+/* ── Leaderboard ──────────────────────────────────────────────────────── */
+.leaderboard-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.25); border-radius: 8px; margin-bottom: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.rank { width: 24px; text-align: center; font-weight: 700; color: #86efac; }
+.rank.gold   { color: #f4c430; }
+.rank.silver { color: #cbd5e1; }
+.rank.bronze { color: #cd7f32; }
+/* ── Podium ───────────────────────────────────────────────────────────── */
+.podium {
+  display: flex; align-items: flex-end; justify-content: center;
+  gap: 6px; margin: 1.5rem 0;
+}
+.podium-col { display: flex; flex-direction: column; align-items: center; flex: 1; max-width: 160px; }
+.podium-block {
+  width: 100%; border-radius: 8px 8px 0 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 28px;
+  color: rgba(0,0,0,0.45);
+}
+.podium-block.p1 { height: 100px; background: linear-gradient(180deg, #f4c430, #d4a017); }
+.podium-block.p2 { height: 72px;  background: linear-gradient(180deg, #cbd5e1, #94a3b8); }
+.podium-block.p3 { height: 52px;  background: linear-gradient(180deg, #cd7f32, #9a5f22); }
+.podium-name  { font-weight: 700; font-size: 13px; text-align: center; margin-bottom: 4px; }
+.podium-score { font-size: 12px; color: #86efac; margin-bottom: 6px; }
+.podium-crown { font-size: 22px; margin-bottom: 4px; }
+/* ── Mode select cards ────────────────────────────────────────────────── */
+.mode-card {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 20px; border-radius: 12px;
+  background: #0a5c2e; border: 2px solid rgba(255,255,255,0.12);
+  cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+  text-align: left; margin-bottom: 12px; width: 100%;
+}
+.mode-card:hover { border-color: #f4c430; box-shadow: 0 0 20px rgba(244,196,48,0.2); }
+.mode-card:active { transform: translateY(1px); }
+.mode-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 1px; }
+.mode-card-sub   { font-size: 13px; color: #86efac; }
+.hard-tag { display: inline-block; background: #dc2626; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 8px; margin-left: 8px; }
+/* ── Warning box ──────────────────────────────────────────────────────── */
+.warning-box {
+  background: rgba(220,38,38,0.12); border: 1px solid rgba(220,38,38,0.3);
+  border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #fca5a5;
+  margin-top: 1rem;
+}
+/* ── Error ────────────────────────────────────────────────────────────── */
+.error { color: #fca5a5; font-size: 13px; margin-top: 8px; text-align: center; }
+/* ── Animations ───────────────────────────────────────────────────────── */
+@keyframes correct-flash {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.025); box-shadow: 0 0 20px rgba(16,185,129,0.5); }
+  100% { transform: scale(1); }
+}
+@keyframes wrong-flash {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(0.97) translateX(-3px); box-shadow: 0 0 14px rgba(220,38,38,0.4); }
+  60%  { transform: scale(0.97) translateX(3px); }
+  100% { transform: scale(1); }
+}
+@keyframes ball-in {
+  from { transform: translateX(-24px) scale(0.4); opacity: 0; }
+  to   { transform: translateX(0) scale(1); opacity: 1; }
+}
+.ball-anim { display: inline-block; animation: ball-in 0.3s cubic-bezier(.34,1.56,.64,1); }
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .container { padding: 1.2rem 1rem 1.5rem; }
+  h1 { font-size: 32px; }
+  .code-display { font-size: 24px; }
+  .options-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
+
+<!-- Saha arka plan dekorasyonu -->
+<div class="pitch-bg">
+  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="8" width="684" height="364" fill="none" stroke="white" stroke-width="2.5"/>
+    <line x1="350" y1="8" x2="350" y2="372" stroke="white" stroke-width="2"/>
+    <circle cx="350" cy="190" r="60" fill="none" stroke="white" stroke-width="2"/>
+    <circle cx="350" cy="190" r="4" fill="white"/>
+    <!-- Ceza alanları -->
+    <rect x="8" y="110" width="100" height="160" fill="none" stroke="white" stroke-width="2"/>
+    <rect x="592" y="110" width="100" height="160" fill="none" stroke="white" stroke-width="2"/>
+    <!-- Kale alanları -->
+    <rect x="8" y="150" width="40" height="80" fill="none" stroke="white" stroke-width="1.5"/>
+    <rect x="652" y="150" width="40" height="80" fill="none" stroke="white" stroke-width="1.5"/>
+    <!-- Penaltı noktaları -->
+    <circle cx="82"  cy="190" r="3.5" fill="white"/>
+    <circle cx="618" cy="190" r="3.5" fill="white"/>
+    <!-- Köşe yayları -->
+    <path d="M8,24 A16,16 0,0,0 24,8"   fill="none" stroke="white" stroke-width="1.5"/>
+    <path d="M676,8 A16,16 0,0,0 692,24" fill="none" stroke="white" stroke-width="1.5"/>
+    <path d="M8,356 A16,16 0,0,1 24,372" fill="none" stroke="white" stroke-width="1.5"/>
+    <path d="M676,372 A16,16 0,0,1 692,356" fill="none" stroke="white" stroke-width="1.5"/>
+  </svg>
+</div>
+
 <div class="container">
   <div class="top-bar">
     <span class="conn-indicator" id="conn-indicator" style="display:none">
@@ -178,72 +316,98 @@
 <script>
 const BACKEND_URL = 'https://footbally-a7js.onrender.com';
 
-// ── i18n ──
+// ── i18n ─────────────────────────────────────────────────────────────────
 const i18n = {
   tr: {
-    subtitle: 'Multiplayer futbol trivia',
-    namePlaceholder: 'Adın',
-    createRoom: 'Oda oluştur',
-    joinRoom: 'Odaya katıl',
-    enterName: 'Ad girmen gerek',
-    joinFormTitle: 'Odaya katıl',
-    joinFormSub: 'Arkadaşından 6 karakterlik kodu al',
-    codePlaceholder: 'Oda kodu (ör. ABC123)',
-    back: 'Geri',
-    join: 'Katıl',
-    invalidCode: 'Geçerli bir kod gir',
-    connError: 'Sunucuya bağlanılamadı: ',
-    lobbyTitle: 'Lobi',
-    shareCode: 'Oda kodu — arkadaşlarınla paylaş:',
-    players: 'Oyuncular',
-    needMorePlayers: 'En az 2 oyuncu gerek',
-    startGame: 'Oyunu başlat',
-    waitingHost: "Host'un başlatmasını bekle...",
-    question: 'Soru',
-    answerSubmitted: 'Cevap gönderildi, diğerlerini bekliyor...',
-    correctAnswer: 'Doğru cevap:',
-    gameOver: 'Oyun bitti',
-    winner: 'Kazanan:',
-    you: '(sen)',
-    newGame: 'Yeni oyun',
-    gameStarting: 'Oyun başlıyor...',
-    connected: 'Bağlı',
-    disconnected: 'Bağlantı koptu',
-    disconnectedAlert: 'Sunucuyla bağlantı koptu',
-    code: 'Kod',
+    subtitle:         'Multiplayer futbol trivia',
+    namePlaceholder:  'Adın',
+    createRoom:       'Oda oluştur',
+    joinRoom:         'Odaya katıl',
+    enterName:        'Ad girmen gerek',
+    // mod seçimi
+    selectMode:       'Mod Seç',
+    selectModeSub:    'Nasıl bir trivia istiyorsun?',
+    modeEuropeTitle:  '🌍 Avrupa Futbolu',
+    modeEuropeSub:    'Big-5 ligler & dünya yıldızları',
+    modeTurkeyTitle:  '🇹🇷 Türkiye Süper Lig',
+    modeTurkeySub:    'Sadece Süper Lig kulüpleri ve oyuncuları',
+    modeTurkeyBadge:  'Zor 🔥',
+    modeEuropeLabel:  '🌍 Avrupa Futbolu',
+    modeTurkeyLabel:  '🇹🇷 Türkiye Süper Lig',
+    // join form
+    joinFormTitle:    'Odaya katıl',
+    joinFormSub:      'Arkadaşından 6 karakterlik kodu al',
+    codePlaceholder:  'Oda kodu (ör. ABC123)',
+    back:             'Geri',
+    join:             'Katıl',
+    invalidCode:      'Geçerli bir kod gir',
+    connError:        'Sunucuya bağlanılamadı: ',
+    // lobi
+    lobbyTitle:       'Lobi',
+    shareCode:        'Oda kodu — arkadaşlarınla paylaş:',
+    players:          'Oyuncular',
+    needMorePlayers:  'En az 2 oyuncu gerek',
+    startGame:        'Oyunu başlat',
+    waitingHost:      "Host'un başlatmasını bekle...",
+    turkeyWarning:    "Bu mod daha zordur — Süper Lig'i iyi bildiğinden emin ol!",
+    // oyun
+    question:         'Soru',
+    code:             'Kod',
+    answerSubmitted:  'Cevap gönderildi, diğerlerini bekliyor...',
+    correctAnswer:    'Doğru cevap:',
+    // oyun sonu
+    matchOver:        'MAÇ SONA ERDİ',
+    winner:           'Kazanan:',
+    you:              '(sen)',
+    newGame:          'Yeni oyun',
+    gameStarting:     'Oyun başlıyor...',
+    // bağlantı
+    connected:        'Bağlı',
+    disconnected:     'Bağlantı koptu',
+    disconnectedAlert:'Sunucuyla bağlantı koptu',
   },
   en: {
-    subtitle: 'Multiplayer football trivia',
-    namePlaceholder: 'Your name',
-    createRoom: 'Create room',
-    joinRoom: 'Join room',
-    enterName: 'Please enter your name',
-    joinFormTitle: 'Join a room',
-    joinFormSub: 'Get the 6-character code from your friend',
-    codePlaceholder: 'Room code (e.g. ABC123)',
-    back: 'Back',
-    join: 'Join',
-    invalidCode: 'Enter a valid code',
-    connError: 'Could not connect to server: ',
-    lobbyTitle: 'Lobby',
-    shareCode: 'Room code — share with your friends:',
-    players: 'Players',
-    needMorePlayers: 'Need at least 2 players',
-    startGame: 'Start game',
-    waitingHost: 'Waiting for host to start...',
-    question: 'Question',
-    answerSubmitted: 'Answer submitted, waiting for others...',
-    correctAnswer: 'Correct answer:',
-    gameOver: 'Game over',
-    winner: 'Winner:',
-    you: '(you)',
-    newGame: 'New game',
-    gameStarting: 'Game starting...',
-    connected: 'Connected',
-    disconnected: 'Disconnected',
-    disconnectedAlert: 'Connection to server lost',
-    code: 'Code',
-  }
+    subtitle:         'Multiplayer football trivia',
+    namePlaceholder:  'Your name',
+    createRoom:       'Create room',
+    joinRoom:         'Join room',
+    enterName:        'Please enter your name',
+    selectMode:       'Select Mode',
+    selectModeSub:    'What kind of trivia do you want?',
+    modeEuropeTitle:  '🌍 European Football',
+    modeEuropeSub:    'Big-5 leagues & global stars',
+    modeTurkeyTitle:  '🇹🇷 Türkiye Süper Lig',
+    modeTurkeySub:    'Only Süper Lig clubs and players',
+    modeTurkeyBadge:  'Hard 🔥',
+    modeEuropeLabel:  '🌍 European Football',
+    modeTurkeyLabel:  '🇹🇷 Türkiye Süper Lig',
+    joinFormTitle:    'Join a room',
+    joinFormSub:      'Get the 6-character code from your friend',
+    codePlaceholder:  'Room code (e.g. ABC123)',
+    back:             'Back',
+    join:             'Join',
+    invalidCode:      'Enter a valid code',
+    connError:        'Could not connect to server: ',
+    lobbyTitle:       'Lobby',
+    shareCode:        'Room code — share with your friends:',
+    players:          'Players',
+    needMorePlayers:  'Need at least 2 players',
+    startGame:        'Start game',
+    waitingHost:      'Waiting for host to start...',
+    turkeyWarning:    'This mode is harder — make sure you know your Süper Lig!',
+    question:         'Question',
+    code:             'Code',
+    answerSubmitted:  'Answer submitted, waiting for others...',
+    correctAnswer:    'Correct answer:',
+    matchOver:        'MATCH OVER',
+    winner:           'Winner:',
+    you:              '(you)',
+    newGame:          'New game',
+    gameStarting:     'Game starting...',
+    connected:        'Connected',
+    disconnected:     'Disconnected',
+    disconnectedAlert:'Connection to server lost',
+  },
 };
 
 let lang = navigator.language.startsWith('tr') ? 'tr' : 'en';
@@ -261,43 +425,63 @@ function setLang(l) {
   document.documentElement.lang = l;
   document.getElementById('btn-tr').classList.toggle('active', l === 'tr');
   document.getElementById('btn-en').classList.toggle('active', l === 'en');
-  const connText = document.getElementById('conn-text');
-  if (connText && connText.textContent) {
-    connText.textContent = _socketConnected ? t('connected') : t('disconnected');
-  }
+  const ct = document.getElementById('conn-text');
+  if (ct && ct.textContent) ct.textContent = _socketConnected ? t('connected') : t('disconnected');
   if (_lastRender) _lastRender();
 }
 
-// ── Connection status ──
+// ── Bağlantı durumu ──────────────────────────────────────────────────────
 let _socketConnected = false;
 
 function setConnected(v) {
   _socketConnected = v;
-  const indicator = document.getElementById('conn-indicator');
-  const sep = document.getElementById('conn-sep');
-  const dot = document.getElementById('conn-dot');
+  const ind  = document.getElementById('conn-indicator');
+  const sep  = document.getElementById('conn-sep');
+  const dot  = document.getElementById('conn-dot');
   const text = document.getElementById('conn-text');
-  indicator.style.display = '';
-  sep.style.display = '';
+  ind.style.display = sep.style.display = '';
   dot.classList.toggle('off', !v);
   text.textContent = v ? t('connected') : t('disconnected');
 }
 
-// ── Core ──
+// ── Durum ────────────────────────────────────────────────────────────────
 const root = document.getElementById('root');
-let socket = null;
-let myName = '';
-let isHost = false;
-let currentCode = '';
+let socket       = null;
+let myName       = '';
+let isHost       = false;
+let currentCode  = '';
+let selectedMode = 'europe'; // host tarafından seçilen
+let roomMode     = 'europe'; // sunucudan gelen
 
 function render(html) { root.innerHTML = html; }
 
-// ── Home ──
+// ── Forma renkleri ───────────────────────────────────────────────────────
+const JERSEY_COLORS = ['#e63946', '#2196f3', '#ff9800', '#9c27b0', '#00bcd4'];
+
+function jerseyIcon(idx) {
+  const c = JERSEY_COLORS[idx % JERSEY_COLORS.length];
+  return `<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 7L7 3H9.5C9.5 4.3 10.1 5 11 5S12.5 4.3 12.5 3H15L19 7L16 10V21H6V10Z"
+      fill="${c}" stroke="rgba(255,255,255,0.3)" stroke-width="0.7"/>
+  </svg>`;
+}
+
+// ── Madalya ikonu ────────────────────────────────────────────────────────
+function medalIcon(rank) {
+  const colors = { 1: '#f4c430', 2: '#cbd5e1', 3: '#cd7f32' };
+  const c = colors[rank] || '#86efac';
+  return `<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="9" fill="${c}" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+    <text x="10" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#083d1f">${rank}</text>
+  </svg>`;
+}
+
+// ── Ana ekran ────────────────────────────────────────────────────────────
 function renderHome() {
   _lastRender = renderHome;
   render(`
     <div class="center" style="padding: 2rem 1rem;">
-      <div style="font-size: 56px;">⚽</div>
+      <div style="font-size: 60px; line-height:1; margin-bottom: 8px;">⚽</div>
       <h1>Footbally</h1>
       <p class="muted" style="margin-bottom: 2rem;">${t('subtitle')}</p>
       <div style="max-width: 320px; margin: 0 auto;">
@@ -313,7 +497,7 @@ function renderHome() {
     const name = document.getElementById('name-input').value.trim();
     if (!name) return alert(t('enterName'));
     myName = name;
-    createRoom();
+    renderModeSelect();
   };
   document.getElementById('join-btn').onclick = () => {
     const name = document.getElementById('name-input').value.trim();
@@ -323,7 +507,30 @@ function renderHome() {
   };
 }
 
-// ── Join form ──
+// ── Mod seçim ekranı ─────────────────────────────────────────────────────
+function renderModeSelect() {
+  _lastRender = renderModeSelect;
+  render(`
+    <div style="padding: 0.5rem 0;">
+      <h1>${t('selectMode')}</h1>
+      <p class="muted" style="margin-bottom: 1.5rem;">${t('selectModeSub')}</p>
+      <button class="mode-card" id="mode-europe">
+        <span class="mode-card-title">${t('modeEuropeTitle')}</span>
+        <span class="mode-card-sub">${t('modeEuropeSub')}</span>
+      </button>
+      <button class="mode-card" id="mode-turkey">
+        <span class="mode-card-title">${t('modeTurkeyTitle')}<span class="hard-tag">${t('modeTurkeyBadge')}</span></span>
+        <span class="mode-card-sub">${t('modeTurkeySub')}</span>
+      </button>
+      <button id="back-btn" style="width:100%; margin-top: 4px;">${t('back')}</button>
+    </div>
+  `);
+  document.getElementById('mode-europe').onclick = () => { selectedMode = 'europe'; createRoom(); };
+  document.getElementById('mode-turkey').onclick = () => { selectedMode = 'turkey'; createRoom(); };
+  document.getElementById('back-btn').onclick    = renderHome;
+}
+
+// ── Odaya katıl formu ────────────────────────────────────────────────────
 function renderJoinForm() {
   _lastRender = renderJoinForm;
   render(`
@@ -331,7 +538,8 @@ function renderJoinForm() {
       <h1>${t('joinFormTitle')}</h1>
       <p class="muted" style="margin-bottom: 2rem;">${t('joinFormSub')}</p>
       <div style="max-width: 320px; margin: 0 auto;">
-        <input id="code-input" placeholder="${t('codePlaceholder')}" maxlength="6" style="text-transform: uppercase; text-align: center; letter-spacing: 2px;" />
+        <input id="code-input" placeholder="${t('codePlaceholder')}" maxlength="6"
+          style="text-transform:uppercase; text-align:center; letter-spacing:3px;" />
         <div class="btn-row">
           <button id="back-btn">${t('back')}</button>
           <button id="join-btn" class="btn-primary">${t('join')}</button>
@@ -343,15 +551,12 @@ function renderJoinForm() {
   document.getElementById('back-btn').onclick = renderHome;
   document.getElementById('join-btn').onclick = () => {
     const code = document.getElementById('code-input').value.trim().toUpperCase();
-    if (code.length !== 6) {
-      document.getElementById('error').textContent = t('invalidCode');
-      return;
-    }
+    if (code.length !== 6) { document.getElementById('error').textContent = t('invalidCode'); return; }
     joinRoom(code);
   };
 }
 
-// ── Create / join room ──
+// ── Oda oluştur ──────────────────────────────────────────────────────────
 async function createRoom() {
   try {
     const res = await fetch(`${BACKEND_URL}/create-room`, { method: 'POST' });
@@ -364,60 +569,70 @@ async function createRoom() {
 
 function joinRoom(code) {
   currentCode = code;
-  if (!socket) {
-    socket = io(BACKEND_URL);
-    setupSocketHandlers();
-  }
+  if (!socket) { socket = io(BACKEND_URL); setupSocketHandlers(); }
+
   socket.emit('join_room', { code, name: myName }, (res) => {
     if (!res.ok) {
-      document.getElementById('error') && (document.getElementById('error').textContent = res.error);
+      const el = document.getElementById('error');
+      if (el) el.textContent = res.error;
       return;
     }
     isHost = res.isHost;
+    if (isHost) {
+      roomMode = selectedMode;
+      socket.emit('set_mode', { mode: selectedMode });
+    }
     renderLobby([]);
   });
 }
 
-// ── Lobby ──
+// ── Lobi ─────────────────────────────────────────────────────────────────
 function renderLobby(players) {
   _lastRender = () => renderLobby(players);
+  const isTurkey = roomMode === 'turkey';
+  const modeLabel = isTurkey ? t('modeTurkeyLabel') : t('modeEuropeLabel');
+
   render(`
     <h1>${t('lobbyTitle')}</h1>
+    <div class="mode-pill ${isTurkey ? 'hard' : ''}">${modeLabel}</div>
     <p class="muted">${t('shareCode')}</p>
     <div class="code-display">${currentCode}</div>
-    <h2 style="margin-bottom: 12px;">${t('players')} (${players.length}/5)</h2>
+    <h2 style="margin-bottom:12px;">${t('players')} (${players.length}/5)</h2>
     <div id="player-list">
       ${players.map((p, i) => `
         <div class="lobby-player">
-          <span>${p}</span>
-          ${i === 0 ? '<span class="badge">HOST</span>' : ''}
+          ${jerseyIcon(i)}
+          <span style="flex:1;">${p}</span>
+          ${i === 0 ? `<span class="badge-host">©</span>` : ''}
         </div>
       `).join('')}
     </div>
     ${isHost ? `
-      <button id="start-btn" class="btn-primary" style="width: 100%; margin-top: 1.5rem;" ${players.length < 2 ? 'disabled' : ''}>
+      <button id="start-btn" class="btn-primary" style="width:100%; margin-top:1.5rem;"
+        ${players.length < 2 ? 'disabled' : ''}>
         ${players.length < 2 ? t('needMorePlayers') : t('startGame')}
       </button>
     ` : `
-      <p class="muted center" style="margin-top: 1.5rem;">${t('waitingHost')}</p>
+      <p class="muted center" style="margin-top:1.5rem;">${t('waitingHost')}</p>
     `}
+    ${isTurkey ? `<div class="warning-box">⚠️ ${t('turkeyWarning')}</div>` : ''}
   `);
+
   if (isHost) {
     document.getElementById('start-btn').onclick = () => {
-      socket.emit('start_game', {}, (res) => {
+      socket.emit('start_game', { mode: roomMode }, (res) => {
         if (!res.ok) alert(res.error);
       });
     };
   }
 }
 
-// ── Question ──
-let qStartTs = 0;
-let timerRaf = null;
-let answered = false;
+// ── Soru ─────────────────────────────────────────────────────────────────
+let qStartTs  = 0;
+let timerRaf  = null;
+let answered  = false;
 
 function renderQuestion({ index, total, question, sub, options, durationMs }) {
-  // Don't update _lastRender — mid-question language switch won't re-render
   qStartTs = Date.now();
   answered = false;
   if (timerRaf) cancelAnimationFrame(timerRaf);
@@ -425,22 +640,22 @@ function renderQuestion({ index, total, question, sub, options, durationMs }) {
   render(`
     <div class="header-row">
       <span class="muted">${t('question')} ${index + 1} / ${total}</span>
-      <span style="font-size: 13px;">${t('code')}: ${currentCode}</span>
+      <span style="font-size:13px;color:#86efac;">${t('code')}: ${currentCode}</span>
     </div>
-    <div class="timer-bar-wrap"><div id="timer-bar" class="timer-bar"></div></div>
-    <div class="center" style="margin-bottom: 2rem; min-height: 80px;">
+    <div class="timer-bar-wrap"><div id="timer-bar" class="timer-bar" style="width:100%"></div></div>
+    <div class="center" style="margin-bottom:2rem; min-height:80px;">
       <h2>${question}</h2>
-      ${sub ? `<p class="muted" style="margin-top: 8px;">${sub}</p>` : ''}
+      ${sub ? `<p class="muted" style="margin-top:8px;">${sub}</p>` : ''}
     </div>
     <div class="options-grid">
       ${options.map((opt, i) => `
         <button class="opt-btn" data-opt="${encodeURIComponent(opt)}">
-          <span class="opt-letter">${String.fromCharCode(65+i)}</span>
+          <span class="opt-letter">${String.fromCharCode(65 + i)}</span>
           <span>${opt}</span>
         </button>
       `).join('')}
     </div>
-    <div id="feedback" class="center muted" style="margin-top: 1.5rem; min-height: 24px;"></div>
+    <div id="feedback" class="center muted" style="margin-top:1.5rem; min-height:24px;"></div>
   `);
 
   document.querySelectorAll('.opt-btn').forEach(btn => {
@@ -450,83 +665,118 @@ function renderQuestion({ index, total, question, sub, options, durationMs }) {
       const opt = decodeURIComponent(btn.dataset.opt);
       socket.emit('submit_answer', { answer: opt });
       document.querySelectorAll('.opt-btn').forEach(b => b.disabled = true);
-      btn.style.borderColor = '#3b82f6';
+      btn.style.borderColor = '#f4c430';
       document.getElementById('feedback').textContent = t('answerSubmitted');
     };
   });
 
-  const bar = document.getElementById('timer-bar');
+  const bar  = document.getElementById('timer-bar');
   const tick = () => {
-    const elapsed = Date.now() - qStartTs;
+    const elapsed   = Date.now() - qStartTs;
     const remaining = Math.max(0, durationMs - elapsed);
     bar.style.width = (remaining / durationMs * 100) + '%';
-    if (remaining > 5000) bar.style.background = '#3b82f6';
+    if      (remaining > 5000) bar.style.background = '#f4c430';
     else if (remaining > 2500) bar.style.background = '#f59e0b';
-    else bar.style.background = '#ef4444';
+    else                       bar.style.background = '#dc2626';
     if (remaining > 0) timerRaf = requestAnimationFrame(tick);
   };
   timerRaf = requestAnimationFrame(tick);
 }
 
-// ── Reveal ──
+// ── Cevap açıklaması ─────────────────────────────────────────────────────
 function renderReveal({ correct, leaderboard }) {
   cancelAnimationFrame(timerRaf);
   document.querySelectorAll('.opt-btn').forEach(btn => {
     const opt = decodeURIComponent(btn.dataset.opt);
     btn.disabled = true;
     if (opt === correct) btn.classList.add('correct');
-    else btn.style.opacity = '0.4';
+    else                 btn.style.opacity = '0.35';
   });
   document.getElementById('feedback').innerHTML = `
-    <div style="margin-bottom: 12px;">${t('correctAnswer')} <strong>${correct}</strong></div>
-    <div style="text-align: left; max-width: 360px; margin: 0 auto;">
-      ${leaderboard.map((p, i) => `
+    <div style="margin-bottom:10px;">
+      <span class="ball-anim">⚽</span>
+      ${t('correctAnswer')} <strong style="color:#f4c430;">${correct}</strong>
+    </div>
+    <div style="text-align:left; max-width:360px; margin:0 auto;">
+      ${leaderboard.slice(0, 5).map((p, i) => `
         <div class="leaderboard-row">
-          <span class="rank ${i === 0 ? 'gold' : ''}">${i+1}.</span>
-          <span style="flex: 1;">${p.name}</span>
-          <span style="font-weight: 500;">${p.score.toLocaleString()}</span>
+          <span class="rank ${i===0?'gold':i===1?'silver':i===2?'bronze':''}">${medalIcon(i+1)}</span>
+          <span style="flex:1;">${p.name}</span>
+          <span style="font-weight:600;color:#f4c430;">${p.score.toLocaleString()}</span>
         </div>
       `).join('')}
     </div>
   `;
 }
 
-// ── Game over ──
+// ── Oyun sonu ─────────────────────────────────────────────────────────────
 function renderGameOver({ leaderboard }) {
-  const winner = leaderboard[0];
   _lastRender = () => renderGameOver({ leaderboard });
+  const top3  = leaderboard.slice(0, 3);
+  const rest  = leaderboard.slice(3);
+  const winner = leaderboard[0];
+
+  // podium: 2. sol — 1. orta — 3. sağ
+  const podiumOrder = [top3[1], top3[0], top3[2]].filter(Boolean);
+  const blockClass  = ['p2', 'p1', 'p3'];
+  const crownLabel  = ['🥈', '🏆', '🥉'];
+
   render(`
-    <div class="center">
-      <div style="font-size: 56px;">🏆</div>
-      <h1>${t('gameOver')}</h1>
-      <p class="muted" style="margin-bottom: 2rem;">${t('winner')} <strong>${winner.name}</strong></p>
+    <div class="center" style="margin-bottom:1rem;">
+      <h1 style="font-size:36px; letter-spacing:3px;">${t('matchOver')}</h1>
+      <p class="muted">${t('winner')} <strong style="color:#f4c430;">${winner.name}</strong></p>
     </div>
-    <div style="max-width: 400px; margin: 0 auto;">
-      ${leaderboard.map((p, i) => `
-        <div class="leaderboard-row">
-          <span class="rank ${i === 0 ? 'gold' : ''}">${i+1}.</span>
-          <span style="flex: 1;">${p.name} ${p.name === myName ? t('you') : ''}</span>
-          <span style="font-weight: 500;">${p.score.toLocaleString()}</span>
+
+    <div class="podium">
+      ${podiumOrder.map((p, i) => `
+        <div class="podium-col">
+          <div class="podium-crown">${crownLabel[i]}</div>
+          <div class="podium-name">${p.name}${p.name === myName ? ` <span style="color:#86efac;font-size:11px;">${t('you')}</span>` : ''}</div>
+          <div class="podium-score">${p.score.toLocaleString()} pts</div>
+          <div class="podium-block ${blockClass[i]}">${blockClass[i] === 'p1' ? '1' : blockClass[i] === 'p2' ? '2' : '3'}</div>
         </div>
       `).join('')}
     </div>
-    <button class="btn-primary" style="width: 100%; margin-top: 2rem;" onclick="location.reload()">
+
+    ${rest.length > 0 ? `
+      <div style="max-width:400px; margin: 0 auto 1.5rem;">
+        ${rest.map((p, i) => `
+          <div class="leaderboard-row">
+            <span class="rank" style="color:#64748b;">${i + 4}.</span>
+            <span style="flex:1;">${p.name}${p.name === myName ? ` <span style="color:#86efac;font-size:11px;">${t('you')}</span>` : ''}</span>
+            <span style="font-weight:600;color:#86efac;">${p.score.toLocaleString()}</span>
+          </div>
+        `).join('')}
+      </div>
+    ` : ''}
+
+    <button class="btn-primary" style="width:100%;" onclick="location.reload()">
       ${t('newGame')}
     </button>
   `);
 }
 
-// ── Socket handlers ──
+// ── Socket handlers ──────────────────────────────────────────────────────
 function setupSocketHandlers() {
   socket.on('connect', () => setConnected(true));
-  socket.on('lobby_update', ({ players }) => renderLobby(players));
+
+  socket.on('lobby_update', ({ players, mode }) => {
+    if (mode !== undefined) roomMode = mode;
+    renderLobby(players);
+  });
+
   socket.on('game_started', () => {
     _lastRender = null;
-    root.innerHTML = `<div class="center" style="padding: 3rem;"><h2>${t('gameStarting')}</h2></div>`;
+    root.innerHTML = `<div class="center" style="padding:3rem;">
+      <div style="font-size:48px;margin-bottom:1rem;">⚽</div>
+      <h2>${t('gameStarting')}</h2>
+    </div>`;
   });
-  socket.on('question', renderQuestion);
-  socket.on('reveal', renderReveal);
+
+  socket.on('question',  renderQuestion);
+  socket.on('reveal',    renderReveal);
   socket.on('game_over', renderGameOver);
+
   socket.on('disconnect', () => {
     setConnected(false);
     alert(t('disconnectedAlert'));
