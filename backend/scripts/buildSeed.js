@@ -27,43 +27,28 @@ function ensureCSVs() {
     console.log(`✓ İndirme tamamlandı (${(size / 1024 / 1024).toFixed(1)} MB)`);
   }
 
-  // ZIP içindekileri listele (debug için)
-  console.log('\nZIP içeriği (ilk 30 dosya):');
-  const listing = execSync(`unzip -l "${ZIP_PATH}" | head -40`, { encoding: 'utf8' });
-  console.log(listing);
+  // ZIP içindekiler .csv.gz uzantılı
+  console.log('İhtiyaç duyulan .csv.gz dosyaları çıkartılıyor...');
+  const gzFiles = NEEDED.map(f => f + '.gz');
+  const quotedFiles = gzFiles.map(f => `"${f}"`).join(' ');
+  execSync(`unzip -o -j "${ZIP_PATH}" ${quotedFiles} -d "${RAW}"`, { stdio: 'inherit' });
 
-  // Aradığımız CSV'leri bulmaya çalış — farklı uzantılar ve yollar deneyelim
-  console.log('CSV dosyaları aranıyor...');
-
-  // Önce ihtiyacımız olan dosya adlarını içeren herhangi bir şey bulalım
-  for (const needed of NEEDED) {
-    const baseName = needed.replace('.csv', '');
-    // ZIP içinde bu isimle eşleşen tüm dosyaları bul
-    const foundRaw = execSync(
-      `unzip -l "${ZIP_PATH}" | awk '{print $NF}' | grep -iE "(^|/)${baseName}\\.(csv|parquet|json)(\\.gz)?$" || true`,
-      { encoding: 'utf8' }
-    ).trim();
-
-    if (!foundRaw) {
-      console.log(`  ✗ ${baseName}: bulunamadı`);
-      continue;
+  // Her .gz dosyasını aç
+  console.log('Gzip dosyaları açılıyor...');
+  for (const gzFile of gzFiles) {
+    const gzPath = path.join(RAW, gzFile);
+    if (!fs.existsSync(gzPath)) {
+      throw new Error(`Çıkartılan dosya bulunamadı: ${gzFile}`);
     }
-
-    const found = foundRaw.split('\n')[0]; // İlk bulduğunu al
-    console.log(`  ✓ ${baseName}: ${found}`);
-
-    // Çıkar (-j flat çıkartır, alt klasör oluşturmadan)
-    execSync(`unzip -o -j "${ZIP_PATH}" "${found}" -d "${RAW}"`, { stdio: 'pipe' });
+    // gunzip -f: zaten varsa üstüne yaz, -k: .gz dosyasını sakla (temizlik sonra)
+    execSync(`gunzip -f "${gzPath}"`, { stdio: 'inherit' });
+    console.log(`  ✓ ${gzFile.replace('.gz', '')}`);
   }
-
-  // Şimdi çıkarılan dosyaları bulunan adla kontrol et, uzantı dönüşümü gerekiyorsa yap
-  const files = fs.readdirSync(RAW);
-  console.log('\nÇıkarılan dosyalar:', files.join(', '));
 
   // Tüm ihtiyaçlar mevcut mu?
   const missing = NEEDED.filter(f => !fs.existsSync(path.join(RAW, f)));
   if (missing.length > 0) {
-    throw new Error(`Şu CSV dosyaları hala eksik: ${missing.join(', ')}. ZIP içeriğini yukarıda kontrol et.`);
+    throw new Error(`Şu CSV dosyaları hala eksik: ${missing.join(', ')}`);
   }
 
   console.log('✓ Tüm CSV dosyaları hazır');
