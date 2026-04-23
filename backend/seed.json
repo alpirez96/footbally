@@ -1,0 +1,6929 @@
+{
+  "players": [
+    {
+      "id": "342229",
+      "name": "Kylian Mbappé",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 200000000,
+      "lastTransfer": {
+        "from": "Paris Saint-Germain Football Club",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "418560",
+      "name": "Erling Haaland",
+      "club": "Manchester City Football Club",
+      "position": "Attack",
+      "nationality": "Norway",
+      "marketValue": 200000000,
+      "lastTransfer": {
+        "from": "Borussia Dortmund",
+        "to": "Manchester City Football Club",
+        "date": "2022-07-01",
+        "fee": 60000000
+      }
+    },
+    {
+      "id": "937958",
+      "name": "Lamine Yamal",
+      "club": "Futbol Club Barcelona",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 200000000,
+      "lastTransfer": {
+        "to": "Futbol Club Barcelona",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "371998",
+      "name": "Vinicius Junior",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 150000000,
+      "lastTransfer": {
+        "from": "Clube de Regatas do Flamengo",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2018-07-12",
+        "fee": 45000000
+      }
+    },
+    {
+      "id": "683840",
+      "name": "Pedri",
+      "club": "Futbol Club Barcelona",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 150000000,
+      "lastTransfer": {
+        "from": "UD Las Palmas",
+        "to": "Futbol Club Barcelona",
+        "date": "2020-07-31",
+        "fee": 0
+      }
+    },
+    {
+      "id": "566723",
+      "name": "Michael Olise",
+      "club": "FC Bayern München",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 140000000,
+      "lastTransfer": {
+        "from": "Crystal Palace Football Club",
+        "to": "FC Bayern München",
+        "date": "2024-07-07",
+        "fee": 53000000
+      }
+    },
+    {
+      "id": "581678",
+      "name": "Jude Bellingham",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 140000000,
+      "lastTransfer": {
+        "from": "Borussia Dortmund",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2023-07-01",
+        "fee": 127000000
+      }
+    },
+    {
+      "id": "357662",
+      "name": "Declan Rice",
+      "club": "Arsenal Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 120000000,
+      "lastTransfer": {
+        "from": "West Ham United Football Club",
+        "to": "Arsenal Football Club",
+        "date": "2023-07-15",
+        "fee": 116600000
+      }
+    },
+    {
+      "id": "369081",
+      "name": "Federico Valverde",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Midfield",
+      "nationality": "Uruguay",
+      "marketValue": 120000000,
+      "lastTransfer": {
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2018-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "433177",
+      "name": "Bukayo Saka",
+      "club": "Arsenal Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 120000000,
+      "lastTransfer": {
+        "to": "Arsenal Football Club",
+        "date": "2019-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "580195",
+      "name": "Jamal Musiala",
+      "club": "FC Bayern München",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 120000000,
+      "lastTransfer": {
+        "to": "FC Bayern München",
+        "date": "2020-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "487469",
+      "name": "Vitinha",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 110000000,
+      "lastTransfer": {
+        "from": "Futebol Clube do Porto",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2022-07-01",
+        "fee": 41500000
+      }
+    },
+    {
+      "id": "568177",
+      "name": "Cole Palmer",
+      "club": "Chelsea Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 110000000,
+      "lastTransfer": {
+        "from": "Manchester City Football Club",
+        "to": "Chelsea Football Club",
+        "date": "2023-09-01",
+        "fee": 47000000
+      }
+    },
+    {
+      "id": "598577",
+      "name": "Florian Wirtz",
+      "club": "Liverpool Football Club",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 110000000,
+      "lastTransfer": {
+        "from": "Bayer 04 Leverkusen Fußball",
+        "to": "Liverpool Football Club",
+        "date": "2025-07-01",
+        "fee": 125000000
+      }
+    },
+    {
+      "id": "670681",
+      "name": "João Neves",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 110000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2024-08-05",
+        "fee": 65920000
+      }
+    },
+    {
+      "id": "687626",
+      "name": "Moisés Caicedo",
+      "club": "Chelsea Football Club",
+      "position": "Midfield",
+      "nationality": "Ecuador",
+      "marketValue": 110000000,
+      "lastTransfer": {
+        "from": "Brighton and Hove Albion Football Club",
+        "to": "Chelsea Football Club",
+        "date": "2023-08-14",
+        "fee": 116000000
+      }
+    },
+    {
+      "id": "288230",
+      "name": "Ousmane Dembélé",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 100000000,
+      "lastTransfer": {
+        "from": "Futbol Club Barcelona",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2023-08-12",
+        "fee": 50000000
+      }
+    },
+    {
+      "id": "349066",
+      "name": "Alexander Isak",
+      "club": "Liverpool Football Club",
+      "position": "Attack",
+      "nationality": "Sweden",
+      "marketValue": 100000000,
+      "lastTransfer": {
+        "from": "Newcastle United Football Club",
+        "to": "Liverpool Football Club",
+        "date": "2025-09-01",
+        "fee": 145000000
+      }
+    },
+    {
+      "id": "451276",
+      "name": "Dominik Szoboszlai",
+      "club": "Liverpool Football Club",
+      "position": "Midfield",
+      "nationality": "Hungary",
+      "marketValue": 100000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "Liverpool Football Club",
+        "date": "2023-07-02",
+        "fee": 70000000
+      }
+    },
+    {
+      "id": "636703",
+      "name": "Fermín López",
+      "club": "Futbol Club Barcelona",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 100000000,
+      "lastTransfer": {
+        "to": "Futbol Club Barcelona",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "478573",
+      "name": "Ryan Gravenberch",
+      "club": "Liverpool Football Club",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 90000000,
+      "lastTransfer": {
+        "from": "FC Bayern München",
+        "to": "Liverpool Football Club",
+        "date": "2023-09-01",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "495666",
+      "name": "William Saliba",
+      "club": "Arsenal Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 90000000,
+      "lastTransfer": {
+        "from": "Olympique de Marseille",
+        "to": "Arsenal Football Club",
+        "date": "2022-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "502670",
+      "name": "Khvicha Kvaratskhelia",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Attack",
+      "nationality": "Georgia",
+      "marketValue": 90000000,
+      "lastTransfer": {
+        "from": "Società Sportiva Calcio Napoli",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2025-01-17",
+        "fee": 80000000
+      }
+    },
+    {
+      "id": "576024",
+      "name": "Julián Alvarez",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 90000000,
+      "lastTransfer": {
+        "from": "Manchester City Football Club",
+        "to": "Club Atlético de Madrid S.A.D.",
+        "date": "2024-08-12",
+        "fee": 75000000
+      }
+    },
+    {
+      "id": "648195",
+      "name": "Enzo Fernández",
+      "club": "Chelsea Football Club",
+      "position": "Midfield",
+      "nationality": "Argentina",
+      "marketValue": 90000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Chelsea Football Club",
+        "date": "2023-01-31",
+        "fee": 121000000
+      }
+    },
+    {
+      "id": "709726",
+      "name": "Hugo Ekitiké",
+      "club": "Liverpool Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 90000000,
+      "lastTransfer": {
+        "from": "Eintracht Frankfurt Fußball AG",
+        "to": "Liverpool Football Club",
+        "date": "2025-07-23",
+        "fee": 95000000
+      }
+    },
+    {
+      "id": "861410",
+      "name": "Arda Güler",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Midfield",
+      "nationality": "Türkiye",
+      "marketValue": 90000000,
+      "lastTransfer": {
+        "from": "Fenerbahçe Spor Kulübü",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2023-07-06",
+        "fee": 28000000
+      }
+    },
+    {
+      "id": "914562",
+      "name": "Désiré Doué",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 90000000,
+      "lastTransfer": {
+        "from": "Stade Rennais Football Club",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2024-08-17",
+        "fee": 50000000
+      }
+    },
+    {
+      "id": "406625",
+      "name": "Lautaro Martínez",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 85000000,
+      "lastTransfer": {
+        "from": "Racing Club Asociación Civil de Avellaneda",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2018-07-04",
+        "fee": 25000000
+      }
+    },
+    {
+      "id": "397033",
+      "name": "Sandro Tonali",
+      "club": "Newcastle United Football Club",
+      "position": "Midfield",
+      "nationality": "Italy",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Milan",
+        "to": "Newcastle United Football Club",
+        "date": "2023-07-03",
+        "fee": 60800000
+      }
+    },
+    {
+      "id": "398073",
+      "name": "Achraf Hakimi",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Defender",
+      "nationality": "Morocco",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "from": "Football Club Internazionale Milano S.p.A.",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2021-07-06",
+        "fee": 68000000
+      }
+    },
+    {
+      "id": "406635",
+      "name": "Phil Foden",
+      "club": "Manchester City Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "to": "Manchester City Football Club",
+        "date": "2017-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "411295",
+      "name": "Raphinha",
+      "club": "Futbol Club Barcelona",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "from": "Leeds United Association Football Club",
+        "to": "Futbol Club Barcelona",
+        "date": "2022-07-13",
+        "fee": 58000000
+      }
+    },
+    {
+      "id": "413039",
+      "name": "Bryan Mbeumo",
+      "club": "Manchester United Football Club",
+      "position": "Attack",
+      "nationality": "Cameroon",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "from": "Brentford Football Club",
+        "to": "Manchester United Football Club",
+        "date": "2025-07-21",
+        "fee": 75000000
+      }
+    },
+    {
+      "id": "423440",
+      "name": "Martín Zubimendi",
+      "club": "Arsenal Football Club",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "from": "Real Sociedad de Fútbol S.A.D.",
+        "to": "Arsenal Football Club",
+        "date": "2025-07-06",
+        "fee": 70000000
+      }
+    },
+    {
+      "id": "503743",
+      "name": "Morgan Rogers",
+      "club": "Aston Villa Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "from": "Middlesbrough FC",
+        "to": "Aston Villa Football Club",
+        "date": "2024-02-01",
+        "fee": 9400000
+      }
+    },
+    {
+      "id": "534033",
+      "name": "Alexis Mac Allister",
+      "club": "Liverpool Football Club",
+      "position": "Midfield",
+      "nationality": "Argentina",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "from": "Brighton and Hove Albion Football Club",
+        "to": "Liverpool Football Club",
+        "date": "2023-07-01",
+        "fee": 42000000
+      }
+    },
+    {
+      "id": "962110",
+      "name": "Pau Cubarsí",
+      "club": "Futbol Club Barcelona",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "to": "Futbol Club Barcelona",
+        "date": "2024-01-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1056993",
+      "name": "Estêvão",
+      "club": "Chelsea Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 80000000,
+      "lastTransfer": {
+        "from": "Sociedade Esportiva Palmeiras",
+        "to": "Chelsea Football Club",
+        "date": "2025-07-14",
+        "fee": 45000000
+      }
+    },
+    {
+      "id": "401923",
+      "name": "Victor Osimhen",
+      "club": "Galatasaray Spor Kulübü",
+      "position": "Attack",
+      "nationality": "Nigeria",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "from": "Società Sportiva Calcio Napoli",
+        "to": "Galatasaray Spor Kulübü",
+        "date": "2025-07-31",
+        "fee": 75000000
+      }
+    },
+    {
+      "id": "413112",
+      "name": "Aurélien Tchouaméni",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "from": "Association sportive de Monaco Football Club",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2022-07-01",
+        "fee": 80000000
+      }
+    },
+    {
+      "id": "435338",
+      "name": "Gabriel",
+      "club": "Arsenal Football Club",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Arsenal Football Club",
+        "date": "2020-09-01",
+        "fee": 26000000
+      }
+    },
+    {
+      "id": "520624",
+      "name": "Bruno Guimarães",
+      "club": "Newcastle United Football Club",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "from": "Olympique Lyonnais",
+        "to": "Newcastle United Football Club",
+        "date": "2022-01-30",
+        "fee": 42100000
+      }
+    },
+    {
+      "id": "583255",
+      "name": "Antoine Semenyo",
+      "club": "Manchester City Football Club",
+      "position": "Attack",
+      "nationality": "Ghana",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "from": "Association Football Club Bournemouth",
+        "to": "Manchester City Football Club",
+        "date": "2026-01-09",
+        "fee": 72000000
+      }
+    },
+    {
+      "id": "616341",
+      "name": "Nuno Mendes",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Defender",
+      "nationality": "Portugal",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "from": "Sporting Clube de Portugal",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2022-07-01",
+        "fee": 38000000
+      }
+    },
+    {
+      "id": "626724",
+      "name": "João Pedro",
+      "club": "Chelsea Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "from": "Brighton and Hove Albion Football Club",
+        "to": "Chelsea Football Club",
+        "date": "2025-07-02",
+        "fee": 63700000
+      }
+    },
+    {
+      "id": "792380",
+      "name": "Aleksandar Pavlovic",
+      "club": "FC Bayern München",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "to": "FC Bayern München",
+        "date": "2023-11-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "845654",
+      "name": "Kenan Yıldız",
+      "club": "Juventus Football Club",
+      "position": "Attack",
+      "nationality": "Türkiye",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "to": "Juventus Football Club",
+        "date": "2023-11-07",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1390649",
+      "name": "Yan Diomande",
+      "club": "RasenBallsport Leipzig",
+      "position": "Attack",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 75000000,
+      "lastTransfer": {
+        "from": "CD Leganés",
+        "to": "RasenBallsport Leipzig",
+        "date": "2025-07-16",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "315853",
+      "name": "Alessandro Bastoni",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 70000000,
+      "lastTransfer": {
+        "from": "Parma Calcio 1913",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2019-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "344695",
+      "name": "Dayot Upamecano",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 70000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "FC Bayern München",
+        "date": "2021-07-05",
+        "fee": 42500000
+      }
+    },
+    {
+      "id": "420243",
+      "name": "Jurriën Timber",
+      "club": "Arsenal Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 70000000,
+      "lastTransfer": {
+        "from": "AFC Ajax Amsterdam",
+        "to": "Arsenal Football Club",
+        "date": "2023-07-14",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "475959",
+      "name": "Josko Gvardiol",
+      "club": "Manchester City Football Club",
+      "position": "Defender",
+      "nationality": "Croatia",
+      "marketValue": 70000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "Manchester City Football Club",
+        "date": "2023-08-05",
+        "fee": 90000000
+      }
+    },
+    {
+      "id": "480692",
+      "name": "Luis Díaz",
+      "club": "FC Bayern München",
+      "position": "Attack",
+      "nationality": "Colombia",
+      "marketValue": 70000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "FC Bayern München",
+        "date": "2025-07-30",
+        "fee": 70000000
+      }
+    },
+    {
+      "id": "517894",
+      "name": "Matheus Cunha",
+      "club": "Manchester United Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 70000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Manchester United Football Club",
+        "date": "2025-07-01",
+        "fee": 74200000
+      }
+    },
+    {
+      "id": "661171",
+      "name": "Willian Pacho",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Defender",
+      "nationality": "Ecuador",
+      "marketValue": 70000000,
+      "lastTransfer": {
+        "from": "Eintracht Frankfurt Fußball AG",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2024-08-09",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "708265",
+      "name": "Bradley Barcola",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 70000000,
+      "lastTransfer": {
+        "from": "Olympique Lyonnais",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2023-08-31",
+        "fee": 45000000
+      }
+    },
+    {
+      "id": "132098",
+      "name": "Harry Kane",
+      "club": "FC Bayern München",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Tottenham Hotspur Football Club",
+        "to": "FC Bayern München",
+        "date": "2023-08-12",
+        "fee": 95000000
+      }
+    },
+    {
+      "id": "314353",
+      "name": "Trent Alexander-Arnold",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2025-06-01",
+        "fee": 10000000
+      }
+    },
+    {
+      "id": "316264",
+      "name": "Martin Ødegaard",
+      "club": "Arsenal Football Club",
+      "position": "Midfield",
+      "nationality": "Norway",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Real Madrid Club de Fútbol",
+        "to": "Arsenal Football Club",
+        "date": "2021-08-20",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "325443",
+      "name": "Viktor Gyökeres",
+      "club": "Arsenal Football Club",
+      "position": "Attack",
+      "nationality": "Sweden",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Sporting Clube de Portugal",
+        "to": "Arsenal Football Club",
+        "date": "2025-07-26",
+        "fee": 66900000
+      }
+    },
+    {
+      "id": "357164",
+      "name": "Rafael Leão",
+      "club": "Associazione Calcio Milan",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Associazione Calcio Milan",
+        "date": "2019-08-01",
+        "fee": 49500000
+      }
+    },
+    {
+      "id": "357565",
+      "name": "Rodri",
+      "club": "Manchester City Football Club",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Club Atlético de Madrid S.A.D.",
+        "to": "Manchester City Football Club",
+        "date": "2019-07-04",
+        "fee": 70000000
+      }
+    },
+    {
+      "id": "392757",
+      "name": "Marc Guéhi",
+      "club": "Manchester City Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Crystal Palace Football Club",
+        "to": "Manchester City Football Club",
+        "date": "2026-01-19",
+        "fee": 23000000
+      }
+    },
+    {
+      "id": "411975",
+      "name": "Jules Koundé",
+      "club": "Futbol Club Barcelona",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Sevilla Fútbol Club S.A.D.",
+        "to": "Futbol Club Barcelona",
+        "date": "2022-07-28",
+        "fee": 50000000
+      }
+    },
+    {
+      "id": "434675",
+      "name": "Cody Gakpo",
+      "club": "Liverpool Football Club",
+      "position": "Attack",
+      "nationality": "Netherlands",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "to": "Liverpool Football Club",
+        "date": "2023-01-01",
+        "fee": 42000000
+      }
+    },
+    {
+      "id": "455661",
+      "name": "Nick Woltemade",
+      "club": "Newcastle United Football Club",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Verein für Bewegungsspiele Stuttgart 1893",
+        "to": "Newcastle United Football Club",
+        "date": "2025-08-30",
+        "fee": 75000000
+      }
+    },
+    {
+      "id": "486049",
+      "name": "Jérémy Doku",
+      "club": "Manchester City Football Club",
+      "position": "Attack",
+      "nationality": "Belgium",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Stade Rennais Football Club",
+        "to": "Manchester City Football Club",
+        "date": "2023-08-24",
+        "fee": 60000000
+      }
+    },
+    {
+      "id": "557459",
+      "name": "Micky van de Ven",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Verein für Leibesübungen Wolfsburg",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2023-08-08",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "607223",
+      "name": "Rayan Cherki",
+      "club": "Manchester City Football Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Olympique Lyonnais",
+        "to": "Manchester City Football Club",
+        "date": "2025-06-10",
+        "fee": 36500000
+      }
+    },
+    {
+      "id": "627442",
+      "name": "Benjamin Sesko",
+      "club": "Manchester United Football Club",
+      "position": "Attack",
+      "nationality": "Slovenia",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "Manchester United Football Club",
+        "date": "2025-08-09",
+        "fee": 76500000
+      }
+    },
+    {
+      "id": "890290",
+      "name": "Dean Huijsen",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "from": "Association Football Club Bournemouth",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2025-06-01",
+        "fee": 62500000
+      }
+    },
+    {
+      "id": "948294",
+      "name": "Nico Paz",
+      "club": "Calcio Como",
+      "position": "Midfield",
+      "nationality": "Argentina",
+      "marketValue": 65000000,
+      "lastTransfer": {
+        "to": "Calcio Como",
+        "date": "2024-08-25",
+        "fee": 6000000
+      }
+    },
+    {
+      "id": "258004",
+      "name": "Rúben Dias",
+      "club": "Manchester City Football Club",
+      "position": "Defender",
+      "nationality": "Portugal",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Manchester City Football Club",
+        "date": "2020-09-29",
+        "fee": 71600000
+      }
+    },
+    {
+      "id": "293385",
+      "name": "Dani Olmo",
+      "club": "Futbol Club Barcelona",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "Futbol Club Barcelona",
+        "date": "2024-08-09",
+        "fee": 55000000
+      }
+    },
+    {
+      "id": "429014",
+      "name": "Morgan Gibbs-White",
+      "club": "Nottingham Forest Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Nottingham Forest Football Club",
+        "date": "2022-08-19",
+        "fee": 29500000
+      }
+    },
+    {
+      "id": "445939",
+      "name": "Omar Marmoush",
+      "club": "Manchester City Football Club",
+      "position": "Attack",
+      "nationality": "Egypt",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Eintracht Frankfurt Fußball AG",
+        "to": "Manchester City Football Club",
+        "date": "2025-01-23",
+        "fee": 75000000
+      }
+    },
+    {
+      "id": "460939",
+      "name": "Tijjani Reijnders",
+      "club": "Manchester City Football Club",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Milan",
+        "to": "Manchester City Football Club",
+        "date": "2025-06-10",
+        "fee": 54900000
+      }
+    },
+    {
+      "id": "472423",
+      "name": "Reece James",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "to": "Chelsea Football Club",
+        "date": "2019-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "479999",
+      "name": "Eberechi Eze",
+      "club": "Arsenal Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Crystal Palace Football Club",
+        "to": "Arsenal Football Club",
+        "date": "2025-08-23",
+        "fee": 69300000
+      }
+    },
+    {
+      "id": "487465",
+      "name": "Pedro Neto",
+      "club": "Chelsea Football Club",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Chelsea Football Club",
+        "date": "2024-08-11",
+        "fee": 60000000
+      }
+    },
+    {
+      "id": "503733",
+      "name": "Anthony Gordon",
+      "club": "Newcastle United Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Everton Football Club",
+        "to": "Newcastle United Football Club",
+        "date": "2023-01-29",
+        "fee": 45600000
+      }
+    },
+    {
+      "id": "567576",
+      "name": "Elliot Anderson",
+      "club": "Nottingham Forest Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Newcastle United Football Club",
+        "to": "Nottingham Forest Football Club",
+        "date": "2024-07-01",
+        "fee": 41200000
+      }
+    },
+    {
+      "id": "744149",
+      "name": "Adam Wharton",
+      "club": "Crystal Palace Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "to": "Crystal Palace Football Club",
+        "date": "2024-02-01",
+        "fee": 21100000
+      }
+    },
+    {
+      "id": "775605",
+      "name": "Pablo Barrios",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "to": "Club Atlético de Madrid S.A.D.",
+        "date": "2023-01-23",
+        "fee": 0
+      }
+    },
+    {
+      "id": "810092",
+      "name": "Warren Zaïre-Emery",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "811778",
+      "name": "Álvaro Carreras",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2025-07-14",
+        "fee": 50000000
+      }
+    },
+    {
+      "id": "892160",
+      "name": "Luka Vuskovic",
+      "club": "Hamburger Sport Verein",
+      "position": "Defender",
+      "nationality": "Croatia",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "from": "Hamburger Sport Verein",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1075147",
+      "name": "Lennart Karl",
+      "club": "FC Bayern München",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 60000000,
+      "lastTransfer": {
+        "to": "FC Bayern München",
+        "date": "2025-06-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "388198",
+      "name": "Nico Schlotterbeck",
+      "club": "Borussia Dortmund",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 55000000,
+      "lastTransfer": {
+        "from": "Sport-Club Freiburg",
+        "to": "Borussia Dortmund",
+        "date": "2022-07-01",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "532826",
+      "name": "Mason Greenwood",
+      "club": "Olympique de Marseille",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 55000000,
+      "lastTransfer": {
+        "from": "Manchester United Football Club",
+        "to": "Olympique de Marseille",
+        "date": "2024-07-18",
+        "fee": 26000000
+      }
+    },
+    {
+      "id": "543499",
+      "name": "Mohammed Kudus",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Attack",
+      "nationality": "Ghana",
+      "marketValue": 55000000,
+      "lastTransfer": {
+        "from": "West Ham United Football Club",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2025-07-10",
+        "fee": 63800000
+      }
+    },
+    {
+      "id": "636688",
+      "name": "Alejandro Balde",
+      "club": "Futbol Club Barcelona",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 55000000,
+      "lastTransfer": {
+        "to": "Futbol Club Barcelona",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "973085",
+      "name": "Carlos Baleba",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Midfield",
+      "nationality": "Cameroon",
+      "marketValue": 55000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2023-08-29",
+        "fee": 27000000
+      }
+    },
+    {
+      "id": "1004301",
+      "name": "Jérémy Jacquet",
+      "club": "Stade Rennais Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 55000000,
+      "lastTransfer": {
+        "from": "Stade Rennais Football Club",
+        "to": "Liverpool Football Club",
+        "date": "2026-07-01",
+        "fee": 63600000
+      }
+    },
+    {
+      "id": "198116",
+      "name": "Federico Dimarco",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Verona Hellas Football Club",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2021-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "255942",
+      "name": "Nicolò Barella",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Midfield",
+      "nationality": "Italy",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Cagliari Calcio",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2020-09-01",
+        "fee": 32500000
+      }
+    },
+    {
+      "id": "284857",
+      "name": "Marc Cucurella",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Brighton and Hove Albion Football Club",
+        "to": "Chelsea Football Club",
+        "date": "2022-08-05",
+        "fee": 65300000
+      }
+    },
+    {
+      "id": "309400",
+      "name": "Kai Havertz",
+      "club": "Arsenal Football Club",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Arsenal Football Club",
+        "date": "2023-07-01",
+        "fee": 75000000
+      }
+    },
+    {
+      "id": "315779",
+      "name": "Christian Pulisic",
+      "club": "Associazione Calcio Milan",
+      "position": "Attack",
+      "nationality": "United States",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Associazione Calcio Milan",
+        "date": "2023-07-13",
+        "fee": 20800000
+      }
+    },
+    {
+      "id": "318528",
+      "name": "Marcus Thuram",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Borussia Verein für Leibesübungen 1900 Mönchengladbach",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "355915",
+      "name": "Cristian Romero",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Defender",
+      "nationality": "Argentina",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Atalanta Bergamasca Calcio S.p.a.",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2022-08-30",
+        "fee": 52000000
+      }
+    },
+    {
+      "id": "357119",
+      "name": "Ibrahima Konaté",
+      "club": "Liverpool Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "Liverpool Football Club",
+        "date": "2021-07-01",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "398184",
+      "name": "Ferran Torres",
+      "club": "Futbol Club Barcelona",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Manchester City Football Club",
+        "to": "Futbol Club Barcelona",
+        "date": "2022-01-01",
+        "fee": 55000000
+      }
+    },
+    {
+      "id": "406640",
+      "name": "Felix Nmecha",
+      "club": "Borussia Dortmund",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Verein für Leibesübungen Wolfsburg",
+        "to": "Borussia Dortmund",
+        "date": "2023-07-03",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "412363",
+      "name": "Rodrygo",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Santos Futebol Clube",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2019-07-01",
+        "fee": 45000000
+      }
+    },
+    {
+      "id": "496094",
+      "name": "Karim Adeyemi",
+      "club": "Borussia Dortmund",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Fußballclub Red Bull Salzburg",
+        "to": "Borussia Dortmund",
+        "date": "2022-07-01",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "502821",
+      "name": "Riccardo Calafiori",
+      "club": "Arsenal Football Club",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Bologna Football Club 1909",
+        "to": "Arsenal Football Club",
+        "date": "2024-07-29",
+        "fee": 43700000
+      }
+    },
+    {
+      "id": "503987",
+      "name": "Noni Madueke",
+      "club": "Arsenal Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Arsenal Football Club",
+        "date": "2025-07-18",
+        "fee": 56000000
+      }
+    },
+    {
+      "id": "536835",
+      "name": "Amad Diallo",
+      "club": "Manchester United Football Club",
+      "position": "Attack",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Sunderland Association Football Club",
+        "to": "Manchester United Football Club",
+        "date": "2023-05-31",
+        "fee": 0
+      }
+    },
+    {
+      "id": "566931",
+      "name": "Xavi Simons",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2025-08-29",
+        "fee": 65000000
+      }
+    },
+    {
+      "id": "610442",
+      "name": "Rasmus Højlund",
+      "club": "Società Sportiva Calcio Napoli",
+      "position": "Attack",
+      "nationality": "Denmark",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Società Sportiva Calcio Napoli",
+        "to": "Manchester United Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "614258",
+      "name": "Levi Colwill",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Brighton and Hove Albion Football Club",
+        "to": "Chelsea Football Club",
+        "date": "2023-05-31",
+        "fee": 0
+      }
+    },
+    {
+      "id": "623570",
+      "name": "Iliman Ndiaye",
+      "club": "Everton Football Club",
+      "position": "Attack",
+      "nationality": "Senegal",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Olympique de Marseille",
+        "to": "Everton Football Club",
+        "date": "2024-07-03",
+        "fee": 18000000
+      }
+    },
+    {
+      "id": "624690",
+      "name": "Manu Koné",
+      "club": "Associazione Sportiva Roma",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Borussia Verein für Leibesübungen 1900 Mönchengladbach",
+        "to": "Associazione Sportiva Roma",
+        "date": "2024-08-30",
+        "fee": 18000000
+      }
+    },
+    {
+      "id": "640428",
+      "name": "Eduardo Camavinga",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Stade Rennais Football Club",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2021-08-31",
+        "fee": 31000000
+      }
+    },
+    {
+      "id": "659813",
+      "name": "Piero Hincapié",
+      "club": "Arsenal Football Club",
+      "position": "Defender",
+      "nationality": "Ecuador",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Bayer 04 Leverkusen Fußball",
+        "to": "Arsenal Football Club",
+        "date": "2026-07-01",
+        "fee": 52000000
+      }
+    },
+    {
+      "id": "709187",
+      "name": "Nico Williams",
+      "club": "Athletic Club Bilbao",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "to": "Athletic Club Bilbao",
+        "date": "2021-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "739443",
+      "name": "Igor Thiago",
+      "club": "Brentford Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Club Brugge Koninklijke Voetbalvereniging",
+        "to": "Brentford Football Club",
+        "date": "2024-07-01",
+        "fee": 33000000
+      }
+    },
+    {
+      "id": "743413",
+      "name": "Nico O'Reilly",
+      "club": "Manchester City Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "to": "Manchester City Football Club",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "745200",
+      "name": "Maghnes Akliouche",
+      "club": "Association sportive de Monaco Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "to": "Association sportive de Monaco Football Club",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "820374",
+      "name": "Kobbie Mainoo",
+      "club": "Manchester United Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "to": "Manchester United Football Club",
+        "date": "2023-01-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "923831",
+      "name": "Leny Yoro",
+      "club": "Manchester United Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Manchester United Football Club",
+        "date": "2024-07-18",
+        "fee": 62000000
+      }
+    },
+    {
+      "id": "1005649",
+      "name": "Murillo",
+      "club": "Nottingham Forest Football Club",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "from": "Sport Club Corinthians Paulista",
+        "to": "Nottingham Forest Football Club",
+        "date": "2023-08-31",
+        "fee": 12000000
+      }
+    },
+    {
+      "id": "1097139",
+      "name": "Ayyoub Bouaddi",
+      "club": "Lille Olympique Sporting Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 50000000,
+      "lastTransfer": {
+        "to": "Lille Olympique Sporting Club",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "315858",
+      "name": "Gianluigi Donnarumma",
+      "club": "Manchester City Football Club",
+      "position": "Goalkeeper",
+      "nationality": "Italy",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Paris Saint-Germain Football Club",
+        "to": "Manchester City Football Club",
+        "date": "2025-09-01",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "315969",
+      "name": "Scott McTominay",
+      "club": "Società Sportiva Calcio Napoli",
+      "position": "Midfield",
+      "nationality": "Scotland",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Manchester United Football Club",
+        "to": "Società Sportiva Calcio Napoli",
+        "date": "2024-08-30",
+        "fee": 30500000
+      }
+    },
+    {
+      "id": "326330",
+      "name": "Frenkie de Jong",
+      "club": "Futbol Club Barcelona",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "AFC Ajax Amsterdam",
+        "to": "Futbol Club Barcelona",
+        "date": "2019-07-01",
+        "fee": 86000000
+      }
+    },
+    {
+      "id": "424204",
+      "name": "Alphonso Davies",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "Canada",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Vancouver Whitecaps FC",
+        "to": "FC Bayern München",
+        "date": "2019-01-01",
+        "fee": 14000000
+      }
+    },
+    {
+      "id": "429983",
+      "name": "Jørgen Strand Larsen",
+      "club": "Crystal Palace Football Club",
+      "position": "Attack",
+      "nationality": "Norway",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Crystal Palace Football Club",
+        "date": "2026-02-02",
+        "fee": 49700000
+      }
+    },
+    {
+      "id": "443710",
+      "name": "Angelo Stiller",
+      "club": "Verein für Bewegungsspiele Stuttgart 1893",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "to": "Verein für Bewegungsspiele Stuttgart 1893",
+        "date": "2023-08-25",
+        "fee": 5500000
+      }
+    },
+    {
+      "id": "461496",
+      "name": "Morten Hjulmand",
+      "club": "Sporting Clube de Portugal",
+      "position": "Midfield",
+      "nationality": "Denmark",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Unione Sportiva Lecce",
+        "to": "Sporting Clube de Portugal",
+        "date": "2023-08-13",
+        "fee": 19500000
+      }
+    },
+    {
+      "id": "466805",
+      "name": "Nico González",
+      "club": "Manchester City Football Club",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Futebol Clube do Porto",
+        "to": "Manchester City Football Club",
+        "date": "2025-02-03",
+        "fee": 60000000
+      }
+    },
+    {
+      "id": "485706",
+      "name": "Amadou Onana",
+      "club": "Aston Villa Football Club",
+      "position": "Midfield",
+      "nationality": "Belgium",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Everton Football Club",
+        "to": "Aston Villa Football Club",
+        "date": "2024-07-22",
+        "fee": 59350000
+      }
+    },
+    {
+      "id": "521964",
+      "name": "Malick Thiaw",
+      "club": "Newcastle United Football Club",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Milan",
+        "to": "Newcastle United Football Club",
+        "date": "2025-08-12",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "548111",
+      "name": "Álex Baena",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Villarreal Club de Fútbol S.A.D.",
+        "to": "Club Atlético de Madrid S.A.D.",
+        "date": "2025-07-02",
+        "fee": 42000000
+      }
+    },
+    {
+      "id": "601883",
+      "name": "Matheus Nunes",
+      "club": "Manchester City Football Club",
+      "position": "Defender",
+      "nationality": "Portugal",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Manchester City Football Club",
+        "date": "2023-09-01",
+        "fee": 62000000
+      }
+    },
+    {
+      "id": "618472",
+      "name": "Castello Lukeba",
+      "club": "RasenBallsport Leipzig",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Olympique Lyonnais",
+        "to": "RasenBallsport Leipzig",
+        "date": "2023-08-11",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "632349",
+      "name": "Jarell Quansah",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2025-07-02",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "655488",
+      "name": "Gabriel Martinelli",
+      "club": "Arsenal Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "to": "Arsenal Football Club",
+        "date": "2019-07-02",
+        "fee": 7100000
+      }
+    },
+    {
+      "id": "659089",
+      "name": "Ilya Zabarnyi",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Defender",
+      "nationality": "Ukraine",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Association Football Club Bournemouth",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2025-08-12",
+        "fee": 63000000
+      }
+    },
+    {
+      "id": "661053",
+      "name": "Jarrad Branthwaite",
+      "club": "Everton Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "to": "Everton Football Club",
+        "date": "2023-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "743600",
+      "name": "Andrey Santos",
+      "club": "Chelsea Football Club",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Racing Club de Strasbourg Alsace",
+        "to": "Chelsea Football Club",
+        "date": "2025-05-31",
+        "fee": 0
+      }
+    },
+    {
+      "id": "816585",
+      "name": "Can Uzun",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Midfield",
+      "nationality": "Türkiye",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "1.FC Nuremberg",
+        "to": "Eintracht Frankfurt Fußball AG",
+        "date": "2024-07-02",
+        "fee": 11000000
+      }
+    },
+    {
+      "id": "930781",
+      "name": "Pio Esposito",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Attack",
+      "nationality": "Italy",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Spezia Calcio",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2025-06-10",
+        "fee": 0
+      }
+    },
+    {
+      "id": "974982",
+      "name": "Ousmane Diomande",
+      "club": "Sporting Clube de Portugal",
+      "position": "Defender",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Fodbold Club Midtjylland",
+        "to": "Sporting Clube de Portugal",
+        "date": "2023-01-31",
+        "fee": 14500000
+      }
+    },
+    {
+      "id": "991268",
+      "name": "Samu Aghehowa",
+      "club": "Futebol Clube do Porto",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Club Atlético de Madrid S.A.D.",
+        "to": "Futebol Clube do Porto",
+        "date": "2024-08-23",
+        "fee": 32000000
+      }
+    },
+    {
+      "id": "1057316",
+      "name": "Franco Mastantuono",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 45000000,
+      "lastTransfer": {
+        "from": "Club Atlético River Plate",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2025-08-14",
+        "fee": 45000000
+      }
+    },
+    {
+      "id": "1138758",
+      "name": "Geovany Quenda",
+      "club": "Sporting Clube de Portugal",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 42000000,
+      "lastTransfer": {
+        "from": "Sporting Clube de Portugal",
+        "to": "Chelsea Football Club",
+        "date": "2026-07-01",
+        "fee": 50780000
+      }
+    },
+    {
+      "id": "161056",
+      "name": "Joshua Kimmich",
+      "club": "FC Bayern München",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Verein für Bewegungsspiele Stuttgart 1893",
+        "to": "FC Bayern München",
+        "date": "2015-07-02",
+        "fee": 8500000
+      }
+    },
+    {
+      "id": "240306",
+      "name": "Bruno Fernandes",
+      "club": "Manchester United Football Club",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Sporting Clube de Portugal",
+        "to": "Manchester United Football Club",
+        "date": "2020-01-29",
+        "fee": 65000000
+      }
+    },
+    {
+      "id": "257814",
+      "name": "Gregor Kobel",
+      "club": "Borussia Dortmund",
+      "position": "Goalkeeper",
+      "nationality": "Switzerland",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Verein für Bewegungsspiele Stuttgart 1893",
+        "to": "Borussia Dortmund",
+        "date": "2021-07-01",
+        "fee": 15000000
+      }
+    },
+    {
+      "id": "258923",
+      "name": "Marcus Rashford",
+      "club": "Futbol Club Barcelona",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Futbol Club Barcelona",
+        "to": "Manchester United Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "270541",
+      "name": "Serhou Guirassy",
+      "club": "Borussia Dortmund",
+      "position": "Attack",
+      "nationality": "Guinea",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Verein für Bewegungsspiele Stuttgart 1893",
+        "to": "Borussia Dortmund",
+        "date": "2024-07-18",
+        "fee": 18000000
+      }
+    },
+    {
+      "id": "326031",
+      "name": "Matthijs de Ligt",
+      "club": "Manchester United Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "FC Bayern München",
+        "to": "Manchester United Football Club",
+        "date": "2024-08-13",
+        "fee": 45000000
+      }
+    },
+    {
+      "id": "340950",
+      "name": "Diogo Jota",
+      "club": "Unknown",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Liverpool Football Club",
+        "date": "2020-09-19",
+        "fee": 44700000
+      }
+    },
+    {
+      "id": "346314",
+      "name": "Trevoh Chalobah",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Crystal Palace Football Club",
+        "to": "Chelsea Football Club",
+        "date": "2025-01-15",
+        "fee": 0
+      }
+    },
+    {
+      "id": "350219",
+      "name": "Fabián Ruiz",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Società Sportiva Calcio Napoli",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2022-08-30",
+        "fee": 22500000
+      }
+    },
+    {
+      "id": "357153",
+      "name": "Diogo Costa",
+      "club": "Futebol Clube do Porto",
+      "position": "Goalkeeper",
+      "nationality": "Portugal",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "to": "Futebol Clube do Porto",
+        "date": "2019-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "364135",
+      "name": "Moise Kean",
+      "club": "Associazione Calcio Fiorentina",
+      "position": "Attack",
+      "nationality": "Italy",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Juventus Football Club",
+        "to": "Associazione Calcio Fiorentina",
+        "date": "2024-07-09",
+        "fee": 14500000
+      }
+    },
+    {
+      "id": "394327",
+      "name": "Boubacar Kamara",
+      "club": "Aston Villa Football Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Olympique de Marseille",
+        "to": "Aston Villa Football Club",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "406040",
+      "name": "Ademola Lookman",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Attack",
+      "nationality": "Nigeria",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Atalanta Bergamasca Calcio S.p.a.",
+        "to": "Club Atlético de Madrid S.A.D.",
+        "date": "2026-02-02",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "413403",
+      "name": "Ezri Konsa",
+      "club": "Aston Villa Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Brentford Football Club",
+        "to": "Aston Villa Football Club",
+        "date": "2019-07-11",
+        "fee": 13300000
+      }
+    },
+    {
+      "id": "434224",
+      "name": "Maxence Lacroix",
+      "club": "Crystal Palace Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Verein für Leibesübungen Wolfsburg",
+        "to": "Crystal Palace Football Club",
+        "date": "2024-08-30",
+        "fee": 18000000
+      }
+    },
+    {
+      "id": "441986",
+      "name": "Yann Bisseck",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Aarhus Gymnastik Forening",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2023-07-12",
+        "fee": 7200000
+      }
+    },
+    {
+      "id": "463618",
+      "name": "Khéphren Thuram",
+      "club": "Juventus Football Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Olympique Gymnaste Club Nice Côte d'Azur",
+        "to": "Juventus Football Club",
+        "date": "2024-07-10",
+        "fee": 20600000
+      }
+    },
+    {
+      "id": "480762",
+      "name": "Lisandro Martínez",
+      "club": "Manchester United Football Club",
+      "position": "Defender",
+      "nationality": "Argentina",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "AFC Ajax Amsterdam",
+        "to": "Manchester United Football Club",
+        "date": "2022-07-27",
+        "fee": 57370000
+      }
+    },
+    {
+      "id": "485963",
+      "name": "Pape Gueye",
+      "club": "Villarreal Club de Fútbol S.A.D.",
+      "position": "Midfield",
+      "nationality": "Senegal",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Olympique de Marseille",
+        "to": "Villarreal Club de Fútbol S.A.D.",
+        "date": "2024-07-05",
+        "fee": 0
+      }
+    },
+    {
+      "id": "503981",
+      "name": "Tino Livramento",
+      "club": "Newcastle United Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Southampton FC",
+        "to": "Newcastle United Football Club",
+        "date": "2023-08-08",
+        "fee": 37200000
+      }
+    },
+    {
+      "id": "518505",
+      "name": "Jamie Leweling",
+      "club": "Verein für Bewegungsspiele Stuttgart 1893",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "1. Fußballclub Union Berlin",
+        "to": "Verein für Bewegungsspiele Stuttgart 1893",
+        "date": "2024-07-01",
+        "fee": 6000000
+      }
+    },
+    {
+      "id": "549006",
+      "name": "Gonçalo Inácio",
+      "club": "Sporting Clube de Portugal",
+      "position": "Defender",
+      "nationality": "Portugal",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "to": "Sporting Clube de Portugal",
+        "date": "2020-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "553875",
+      "name": "Pedro Porro",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Sporting Clube de Portugal",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2023-07-01",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "561613",
+      "name": "Joan García",
+      "club": "Futbol Club Barcelona",
+      "position": "Goalkeeper",
+      "nationality": "Spain",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Reial Club Deportiu Espanyol de Barcelona S.A.D.",
+        "to": "Futbol Club Barcelona",
+        "date": "2025-07-01",
+        "fee": 25000000
+      }
+    },
+    {
+      "id": "565093",
+      "name": "Bart Verbruggen",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Goalkeeper",
+      "nationality": "Netherlands",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Royal Sporting Club Anderlecht",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2023-07-03",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "578391",
+      "name": "Rayan Aït-Nouri",
+      "club": "Manchester City Football Club",
+      "position": "Defender",
+      "nationality": "Algeria",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Manchester City Football Club",
+        "date": "2025-06-09",
+        "fee": 36800000
+      }
+    },
+    {
+      "id": "578392",
+      "name": "Maximilian Beier",
+      "club": "Borussia Dortmund",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "to": "Borussia Dortmund",
+        "date": "2024-08-12",
+        "fee": 28500000
+      }
+    },
+    {
+      "id": "583189",
+      "name": "Anthony Elanga",
+      "club": "Newcastle United Football Club",
+      "position": "Attack",
+      "nationality": "Sweden",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Nottingham Forest Football Club",
+        "to": "Newcastle United Football Club",
+        "date": "2025-07-11",
+        "fee": 61400000
+      }
+    },
+    {
+      "id": "602105",
+      "name": "Antony",
+      "club": "Real Betis Balompié S.A.D.",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Manchester United Football Club",
+        "to": "Real Betis Balompié S.A.D.",
+        "date": "2025-09-01",
+        "fee": 22000000
+      }
+    },
+    {
+      "id": "607854",
+      "name": "Éderson",
+      "club": "Atalanta Bergamasca Calcio S.p.a.",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "US Salernitana 1919",
+        "to": "Atalanta Bergamasca Calcio S.p.a.",
+        "date": "2022-07-06",
+        "fee": 22900000
+      }
+    },
+    {
+      "id": "730861",
+      "name": "Milos Kerkez",
+      "club": "Liverpool Football Club",
+      "position": "Defender",
+      "nationality": "Hungary",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Association Football Club Bournemouth",
+        "to": "Liverpool Football Club",
+        "date": "2025-07-01",
+        "fee": 46900000
+      }
+    },
+    {
+      "id": "733576",
+      "name": "Alberto Moleiro",
+      "club": "Villarreal Club de Fútbol S.A.D.",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "UD Las Palmas",
+        "to": "Villarreal Club de Fútbol S.A.D.",
+        "date": "2025-07-01",
+        "fee": 16000000
+      }
+    },
+    {
+      "id": "742201",
+      "name": "Giuliano Simeone",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Deportivo Alavés S. A. D.",
+        "to": "Club Atlético de Madrid S.A.D.",
+        "date": "2024-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "743591",
+      "name": "Savinho",
+      "club": "Manchester City Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "ESTAC Troyes",
+        "to": "Manchester City Football Club",
+        "date": "2024-07-18",
+        "fee": 25000000
+      }
+    },
+    {
+      "id": "776890",
+      "name": "Nicolas Jackson",
+      "club": "FC Bayern München",
+      "position": "Attack",
+      "nationality": "Senegal",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "FC Bayern München",
+        "to": "Chelsea Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "811779",
+      "name": "Alejandro Garnacho",
+      "club": "Chelsea Football Club",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Manchester United Football Club",
+        "to": "Chelsea Football Club",
+        "date": "2025-08-30",
+        "fee": 46200000
+      }
+    },
+    {
+      "id": "822959",
+      "name": "Tom Bischof",
+      "club": "FC Bayern München",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "to": "FC Bayern München",
+        "date": "2025-06-09",
+        "fee": 300000
+      }
+    },
+    {
+      "id": "855256",
+      "name": "Alex Scott",
+      "club": "Association Football Club Bournemouth",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "to": "Association Football Club Bournemouth",
+        "date": "2023-08-10",
+        "fee": 23000000
+      }
+    },
+    {
+      "id": "866246",
+      "name": "Lucas Bergvall",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Midfield",
+      "nationality": "Sweden",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Djurgårdens Idrottsförening",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2024-07-01",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "890719",
+      "name": "Ethan Nwaneri",
+      "club": "Olympique de Marseille",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Olympique de Marseille",
+        "to": "Arsenal Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "903693",
+      "name": "Senny Mayulu",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2024-01-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "905011",
+      "name": "Ibrahim Maza",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Midfield",
+      "nationality": "Algeria",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Hertha BSC",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2025-07-01",
+        "fee": 12000000
+      }
+    },
+    {
+      "id": "955357",
+      "name": "Junior Kroupi",
+      "club": "Association Football Club Bournemouth",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Football Club Lorient-Bretagne Sud",
+        "to": "Association Football Club Bournemouth",
+        "date": "2025-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "964580",
+      "name": "Wesley",
+      "club": "Associazione Sportiva Roma",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Clube de Regatas do Flamengo",
+        "to": "Associazione Sportiva Roma",
+        "date": "2025-07-28",
+        "fee": 25000000
+      }
+    },
+    {
+      "id": "1012534",
+      "name": "Yankuba Minteh",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Attack",
+      "nationality": "The Gambia",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Newcastle United Football Club",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2024-07-01",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "1012564",
+      "name": "Rayan",
+      "club": "Association Football Club Bournemouth",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "from": "Club de Regatas Vasco da Gama",
+        "to": "Association Football Club Bournemouth",
+        "date": "2026-01-27",
+        "fee": 28500000
+      }
+    },
+    {
+      "id": "1364454",
+      "name": "Christian Kofane",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Attack",
+      "nationality": "Cameroon",
+      "marketValue": 40000000,
+      "lastTransfer": {
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2025-07-11",
+        "fee": 5250000
+      }
+    },
+    {
+      "id": "943837",
+      "name": "Vitor Roque",
+      "club": "Sociedade Esportiva Palmeiras",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 38000000,
+      "lastTransfer": {
+        "from": "Futbol Club Barcelona",
+        "to": "Sociedade Esportiva Palmeiras",
+        "date": "2025-02-28",
+        "fee": 25500000
+      }
+    },
+    {
+      "id": "957653",
+      "name": "Rodrigo Mora",
+      "club": "Futebol Clube do Porto",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 38000000,
+      "lastTransfer": {
+        "to": "Futebol Clube do Porto",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "249565",
+      "name": "Youri Tielemans",
+      "club": "Aston Villa Football Club",
+      "position": "Midfield",
+      "nationality": "Belgium",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Leicester City",
+        "to": "Aston Villa Football Club",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "258889",
+      "name": "Dominic Solanke",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Association Football Club Bournemouth",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2024-08-10",
+        "fee": 64300000
+      }
+    },
+    {
+      "id": "262749",
+      "name": "David Raya",
+      "club": "Arsenal Football Club",
+      "position": "Goalkeeper",
+      "nationality": "Spain",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Brentford Football Club",
+        "to": "Arsenal Football Club",
+        "date": "2024-07-04",
+        "fee": 31900000
+      }
+    },
+    {
+      "id": "314678",
+      "name": "Brahim Díaz",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Attack",
+      "nationality": "Morocco",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Milan",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2023-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "314875",
+      "name": "Jarrod Bowen",
+      "club": "West Ham United Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Hull City",
+        "to": "West Ham United Football Club",
+        "date": "2020-01-31",
+        "fee": 21300000
+      }
+    },
+    {
+      "id": "326029",
+      "name": "Donyell Malen",
+      "club": "Associazione Sportiva Roma",
+      "position": "Attack",
+      "nationality": "Netherlands",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Associazione Sportiva Roma",
+        "to": "Aston Villa Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "333647",
+      "name": "Jonathan Burkardt",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "1. Fußball- und Sportverein Mainz 05",
+        "to": "Eintracht Frankfurt Fußball AG",
+        "date": "2025-07-04",
+        "fee": 21000000
+      }
+    },
+    {
+      "id": "338670",
+      "name": "Mile Svilar",
+      "club": "Associazione Sportiva Roma",
+      "position": "Goalkeeper",
+      "nationality": "Serbia",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Associazione Sportiva Roma",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "357498",
+      "name": "Dušan Vlahović",
+      "club": "Juventus Football Club",
+      "position": "Attack",
+      "nationality": "Serbia",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Fiorentina",
+        "to": "Juventus Football Club",
+        "date": "2022-01-28",
+        "fee": 85400000
+      }
+    },
+    {
+      "id": "361093",
+      "name": "Sven Botman",
+      "club": "Newcastle United Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Newcastle United Football Club",
+        "date": "2022-07-01",
+        "fee": 37000000
+      }
+    },
+    {
+      "id": "365108",
+      "name": "Dan Ndoye",
+      "club": "Nottingham Forest Football Club",
+      "position": "Attack",
+      "nationality": "Switzerland",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Bologna Football Club 1909",
+        "to": "Nottingham Forest Football Club",
+        "date": "2025-07-31",
+        "fee": 42000000
+      }
+    },
+    {
+      "id": "371149",
+      "name": "Evan Ndicka",
+      "club": "Associazione Sportiva Roma",
+      "position": "Defender",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Eintracht Frankfurt Fußball AG",
+        "to": "Associazione Sportiva Roma",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "386446",
+      "name": "Alessandro Buongiorno",
+      "club": "Società Sportiva Calcio Napoli",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Torino Calcio",
+        "to": "Società Sportiva Calcio Napoli",
+        "date": "2024-07-13",
+        "fee": 36500000
+      }
+    },
+    {
+      "id": "404418",
+      "name": "Dávid Hancko",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Defender",
+      "nationality": "Slovakia",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Feyenoord Rotterdam",
+        "to": "Club Atlético de Madrid S.A.D.",
+        "date": "2025-07-24",
+        "fee": 26000000
+      }
+    },
+    {
+      "id": "410225",
+      "name": "Ismaïla Sarr",
+      "club": "Crystal Palace Football Club",
+      "position": "Attack",
+      "nationality": "Senegal",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Olympique de Marseille",
+        "to": "Crystal Palace Football Club",
+        "date": "2024-08-01",
+        "fee": 15000000
+      }
+    },
+    {
+      "id": "412669",
+      "name": "Francisco Trincão",
+      "club": "Sporting Clube de Portugal",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Futbol Club Barcelona",
+        "to": "Sporting Clube de Portugal",
+        "date": "2023-07-01",
+        "fee": 18000000
+      }
+    },
+    {
+      "id": "420002",
+      "name": "Jean-Philippe Mateta",
+      "club": "Crystal Palace Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "1. Fußball- und Sportverein Mainz 05",
+        "to": "Crystal Palace Football Club",
+        "date": "2022-01-31",
+        "fee": 11000000
+      }
+    },
+    {
+      "id": "431755",
+      "name": "Dejan Kulusevski",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Midfield",
+      "nationality": "Sweden",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Juventus Football Club",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2023-07-01",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "433188",
+      "name": "Curtis Jones",
+      "club": "Liverpool Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "to": "Liverpool Football Club",
+        "date": "2020-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "435772",
+      "name": "Charles De Ketelaere",
+      "club": "Atalanta Bergamasca Calcio S.p.a.",
+      "position": "Midfield",
+      "nationality": "Belgium",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Milan",
+        "to": "Atalanta Bergamasca Calcio S.p.a.",
+        "date": "2024-07-01",
+        "fee": 23700000
+      }
+    },
+    {
+      "id": "444523",
+      "name": "Lucas Paquetá",
+      "club": "Clube de Regatas do Flamengo",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "West Ham United Football Club",
+        "to": "Clube de Regatas do Flamengo",
+        "date": "2026-01-28",
+        "fee": 42000000
+      }
+    },
+    {
+      "id": "466794",
+      "name": "Eric García",
+      "club": "Futbol Club Barcelona",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Girona Fútbol Club S. A. D.",
+        "to": "Futbol Club Barcelona",
+        "date": "2024-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "470607",
+      "name": "Brennan Johnson",
+      "club": "Crystal Palace Football Club",
+      "position": "Attack",
+      "nationality": "Wales",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Tottenham Hotspur Football Club",
+        "to": "Crystal Palace Football Club",
+        "date": "2026-01-02",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "473050",
+      "name": "Kevin Schade",
+      "club": "Brentford Football Club",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Sport-Club Freiburg",
+        "to": "Brentford Football Club",
+        "date": "2023-07-01",
+        "fee": 25000000
+      }
+    },
+    {
+      "id": "483046",
+      "name": "Josip Stanisic",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "Croatia",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Bayer 04 Leverkusen Fußball",
+        "to": "FC Bayern München",
+        "date": "2024-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "484547",
+      "name": "Jeremie Frimpong",
+      "club": "Liverpool Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Bayer 04 Leverkusen Fußball",
+        "to": "Liverpool Football Club",
+        "date": "2025-07-01",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "488362",
+      "name": "Conor Gallagher",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Club Atlético de Madrid S.A.D.",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2026-01-14",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "503749",
+      "name": "Jacob Ramsey",
+      "club": "Newcastle United Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Aston Villa Football Club",
+        "to": "Newcastle United Football Club",
+        "date": "2025-08-17",
+        "fee": 45150000
+      }
+    },
+    {
+      "id": "505219",
+      "name": "James Garner",
+      "club": "Everton Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Manchester United Football Club",
+        "to": "Everton Football Club",
+        "date": "2022-09-01",
+        "fee": 10400000
+      }
+    },
+    {
+      "id": "516716",
+      "name": "Bremer",
+      "club": "Juventus Football Club",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Torino Calcio",
+        "to": "Juventus Football Club",
+        "date": "2022-07-20",
+        "fee": 51300000
+      }
+    },
+    {
+      "id": "533738",
+      "name": "Jonathan David",
+      "club": "Juventus Football Club",
+      "position": "Attack",
+      "nationality": "Canada",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Juventus Football Club",
+        "date": "2025-07-04",
+        "fee": 0
+      }
+    },
+    {
+      "id": "550550",
+      "name": "Gonçalo Ramos",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2024-01-01",
+        "fee": 65000000
+      }
+    },
+    {
+      "id": "554903",
+      "name": "Mateo Retegui",
+      "club": "Al-Qadsiah Saudi Football Club",
+      "position": "Attack",
+      "nationality": "Italy",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Atalanta Bergamasca Calcio S.p.a.",
+        "to": "Al-Qadsiah Saudi Football Club",
+        "date": "2025-07-21",
+        "fee": 68250000
+      }
+    },
+    {
+      "id": "556385",
+      "name": "Destiny Udogie",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Udinese Calcio",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2023-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "564545",
+      "name": "Edmond Tapsoba",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Defender",
+      "nationality": "Burkina Faso",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Vitória Sport Clube",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2020-01-31",
+        "fee": 20200000
+      }
+    },
+    {
+      "id": "568157",
+      "name": "Yéremy Pino",
+      "club": "Crystal Palace Football Club",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Villarreal Club de Fútbol S.A.D.",
+        "to": "Crystal Palace Football Club",
+        "date": "2025-08-29",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "571020",
+      "name": "Oihan Sancet",
+      "club": "Athletic Club Bilbao",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "to": "Athletic Club Bilbao",
+        "date": "2020-08-04",
+        "fee": 0
+      }
+    },
+    {
+      "id": "574671",
+      "name": "Strahinja Pavlović",
+      "club": "Associazione Calcio Milan",
+      "position": "Defender",
+      "nationality": "Serbia",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Fußballclub Red Bull Salzburg",
+        "to": "Associazione Calcio Milan",
+        "date": "2024-07-31",
+        "fee": 18500000
+      }
+    },
+    {
+      "id": "576314",
+      "name": "Jan Paul van Hecke",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2022-05-31",
+        "fee": 0
+      }
+    },
+    {
+      "id": "620322",
+      "name": "Malo Gusto",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Olympique Lyonnais",
+        "to": "Chelsea Football Club",
+        "date": "2023-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "646750",
+      "name": "Cristhian Mosquera",
+      "club": "Arsenal Football Club",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Valencia Club de Fútbol S. A. D.",
+        "to": "Arsenal Football Club",
+        "date": "2025-07-24",
+        "fee": 15000000
+      }
+    },
+    {
+      "id": "653610",
+      "name": "Igor Paixão",
+      "club": "Olympique de Marseille",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Feyenoord Rotterdam",
+        "to": "Olympique de Marseille",
+        "date": "2025-08-01",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "668951",
+      "name": "Matías Soulé",
+      "club": "Associazione Sportiva Roma",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Juventus Football Club",
+        "to": "Associazione Sportiva Roma",
+        "date": "2024-07-30",
+        "fee": 25600000
+      }
+    },
+    {
+      "id": "670858",
+      "name": "Lewis Hall",
+      "club": "Newcastle United Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Newcastle United Football Club",
+        "date": "2024-07-01",
+        "fee": 33000000
+      }
+    },
+    {
+      "id": "670882",
+      "name": "Jamie Gittens",
+      "club": "Chelsea Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Borussia Dortmund",
+        "to": "Chelsea Football Club",
+        "date": "2025-07-05",
+        "fee": 56000000
+      }
+    },
+    {
+      "id": "691892",
+      "name": "Nathaniel Brown",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "1.FC Nuremberg",
+        "to": "Eintracht Frankfurt Fußball AG",
+        "date": "2024-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "711337",
+      "name": "Evanilson",
+      "club": "Association Football Club Bournemouth",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Futebol Clube do Porto",
+        "to": "Association Football Club Bournemouth",
+        "date": "2024-08-16",
+        "fee": 37000000
+      }
+    },
+    {
+      "id": "735570",
+      "name": "João Gomes",
+      "club": "Wolverhampton Wanderers Football Club",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Clube de Regatas do Flamengo",
+        "to": "Wolverhampton Wanderers Football Club",
+        "date": "2023-01-30",
+        "fee": 18700000
+      }
+    },
+    {
+      "id": "763079",
+      "name": "Abdukodir Khusanov",
+      "club": "Manchester City Football Club",
+      "position": "Defender",
+      "nationality": "Uzbekistan",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Racing Club de Lens",
+        "to": "Manchester City Football Club",
+        "date": "2025-01-20",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "823231",
+      "name": "Dango Ouattara",
+      "club": "Brentford Football Club",
+      "position": "Attack",
+      "nationality": "Burkina Faso",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Association Football Club Bournemouth",
+        "to": "Brentford Football Club",
+        "date": "2025-08-16",
+        "fee": 42800000
+      }
+    },
+    {
+      "id": "823486",
+      "name": "Michael Kayode",
+      "club": "Brentford Football Club",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Fiorentina",
+        "to": "Brentford Football Club",
+        "date": "2025-07-01",
+        "fee": 17500000
+      }
+    },
+    {
+      "id": "827734",
+      "name": "Ange-Yoan Bonny",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Attack",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Parma Calcio 1913",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2025-07-05",
+        "fee": 23000000
+      }
+    },
+    {
+      "id": "849410",
+      "name": "Valentín Barco",
+      "club": "Racing Club de Strasbourg Alsace",
+      "position": "Midfield",
+      "nationality": "Argentina",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Brighton and Hove Albion Football Club",
+        "to": "Racing Club de Strasbourg Alsace",
+        "date": "2025-07-02",
+        "fee": 10000000
+      }
+    },
+    {
+      "id": "849520",
+      "name": "Santiago Castro",
+      "club": "Bologna Football Club 1909",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Club Atlético Vélez Sársfield",
+        "to": "Bologna Football Club 1909",
+        "date": "2024-01-30",
+        "fee": 13200000
+      }
+    },
+    {
+      "id": "880245",
+      "name": "Mateus Fernandes",
+      "club": "West Ham United Football Club",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Southampton FC",
+        "to": "West Ham United Football Club",
+        "date": "2025-08-29",
+        "fee": 44000000
+      }
+    },
+    {
+      "id": "890721",
+      "name": "Myles Lewis-Skelly",
+      "club": "Arsenal Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "to": "Arsenal Football Club",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "904802",
+      "name": "Jorrel Hato",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "AFC Ajax Amsterdam",
+        "to": "Chelsea Football Club",
+        "date": "2025-08-03",
+        "fee": 44180000
+      }
+    },
+    {
+      "id": "918969",
+      "name": "Lamine Camara",
+      "club": "Association sportive de Monaco Football Club",
+      "position": "Midfield",
+      "nationality": "Senegal",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Football Club de Metz",
+        "to": "Association sportive de Monaco Football Club",
+        "date": "2024-07-30",
+        "fee": 15000000
+      }
+    },
+    {
+      "id": "922693",
+      "name": "Archie Gray",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Leeds United Association Football Club",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2024-07-02",
+        "fee": 41250000
+      }
+    },
+    {
+      "id": "926952",
+      "name": "Patrick Dorgu",
+      "club": "Manchester United Football Club",
+      "position": "Defender",
+      "nationality": "Denmark",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Unione Sportiva Lecce",
+        "to": "Manchester United Football Club",
+        "date": "2025-02-02",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "927353",
+      "name": "Johan Manzambi",
+      "club": "Sport-Club Freiburg",
+      "position": "Midfield",
+      "nationality": "Switzerland",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "to": "Sport-Club Freiburg",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "938729",
+      "name": "Mikel Jauregizar",
+      "club": "Athletic Club Bilbao",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "to": "Athletic Club Bilbao",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "971570",
+      "name": "Endrick",
+      "club": "Olympique Lyonnais",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Olympique Lyonnais",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "990148",
+      "name": "Konstantinos Karetsas",
+      "club": "Koninklijke Racing Club Genk",
+      "position": "Midfield",
+      "nationality": "Greece",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "to": "Koninklijke Racing Club Genk",
+        "date": "2024-01-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1064871",
+      "name": "Joaquín Panichelli",
+      "club": "Racing Club de Strasbourg Alsace",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Deportivo Alavés S. A. D.",
+        "to": "Racing Club de Strasbourg Alsace",
+        "date": "2025-07-27",
+        "fee": 17000000
+      }
+    },
+    {
+      "id": "1067904",
+      "name": "Bazoumana Touré",
+      "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+      "position": "Attack",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "from": "Hammarby IF",
+        "to": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "date": "2025-02-01",
+        "fee": 10000000
+      }
+    },
+    {
+      "id": "1168219",
+      "name": "Said El Mala",
+      "club": "1. Fußball-Club Köln",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 35000000,
+      "lastTransfer": {
+        "to": "1. Fußball-Club Köln",
+        "date": "2025-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "893661",
+      "name": "Joel Ordóñez",
+      "club": "Club Brugge Koninklijke Voetbalvereniging",
+      "position": "Defender",
+      "nationality": "Ecuador",
+      "marketValue": 33000000,
+      "lastTransfer": {
+        "to": "Club Brugge Koninklijke Voetbalvereniging",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "223967",
+      "name": "Konrad Laimer",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "Austria",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "FC Bayern München",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "324503",
+      "name": "Vangelis Pavlidis",
+      "club": "Sport Lisboa e Benfica",
+      "position": "Attack",
+      "nationality": "Greece",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Alkmaar Zaanstreek",
+        "to": "Sport Lisboa e Benfica",
+        "date": "2024-07-01",
+        "fee": 18000000
+      }
+    },
+    {
+      "id": "368887",
+      "name": "Loïs Openda",
+      "club": "Juventus Football Club",
+      "position": "Attack",
+      "nationality": "Belgium",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Juventus Football Club",
+        "to": "RasenBallsport Leipzig",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "398065",
+      "name": "Harvey Barnes",
+      "club": "Newcastle United Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Leicester City",
+        "to": "Newcastle United Football Club",
+        "date": "2023-07-23",
+        "fee": 44000000
+      }
+    },
+    {
+      "id": "475188",
+      "name": "Kiernan Dewsbury-Hall",
+      "club": "Everton Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Everton Football Club",
+        "date": "2025-08-06",
+        "fee": 28650000
+      }
+    },
+    {
+      "id": "541231",
+      "name": "Sepp van den Berg",
+      "club": "Brentford Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "Brentford Football Club",
+        "date": "2024-08-22",
+        "fee": 23600000
+      }
+    },
+    {
+      "id": "568693",
+      "name": "Pape Matar Sarr",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Midfield",
+      "nationality": "Senegal",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Football Club de Metz",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2022-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "585949",
+      "name": "Pierre Kalulu",
+      "club": "Juventus Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Milan",
+        "to": "Juventus Football Club",
+        "date": "2025-07-01",
+        "fee": 14300000
+      }
+    },
+    {
+      "id": "610849",
+      "name": "Liam Delap",
+      "club": "Chelsea Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Ipswich Town",
+        "to": "Chelsea Football Club",
+        "date": "2025-06-04",
+        "fee": 35500000
+      }
+    },
+    {
+      "id": "654982",
+      "name": "Bilal El Khannouss",
+      "club": "Verein für Bewegungsspiele Stuttgart 1893",
+      "position": "Midfield",
+      "nationality": "Morocco",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Verein für Bewegungsspiele Stuttgart 1893",
+        "to": "Leicester City",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "701057",
+      "name": "Rico Lewis",
+      "club": "Manchester City Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "to": "Manchester City Football Club",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "702869",
+      "name": "Ismael Saibari",
+      "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+      "position": "Midfield",
+      "nationality": "Morocco",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "to": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "756990",
+      "name": "Alan Varela",
+      "club": "Futebol Clube do Porto",
+      "position": "Midfield",
+      "nationality": "Argentina",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Club Atlético Boca Juniors",
+        "to": "Futebol Clube do Porto",
+        "date": "2023-08-16",
+        "fee": 8000000
+      }
+    },
+    {
+      "id": "876631",
+      "name": "Habib Diarra",
+      "club": "Sunderland Association Football Club",
+      "position": "Midfield",
+      "nationality": "Senegal",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Racing Club de Strasbourg Alsace",
+        "to": "Sunderland Association Football Club",
+        "date": "2025-07-01",
+        "fee": 31500000
+      }
+    },
+    {
+      "id": "894914",
+      "name": "Antonio Nusa",
+      "club": "RasenBallsport Leipzig",
+      "position": "Attack",
+      "nationality": "Norway",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Club Brugge Koninklijke Voetbalvereniging",
+        "to": "RasenBallsport Leipzig",
+        "date": "2024-08-13",
+        "fee": 21000000
+      }
+    },
+    {
+      "id": "931838",
+      "name": "Hugo Larsson",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Midfield",
+      "nationality": "Sweden",
+      "marketValue": 32000000,
+      "lastTransfer": {
+        "from": "Malmö Fotbollförening",
+        "to": "Eintracht Frankfurt Fußball AG",
+        "date": "2023-07-01",
+        "fee": 9000000
+      }
+    },
+    {
+      "id": "148455",
+      "name": "Mohamed Salah",
+      "club": "Liverpool Football Club",
+      "position": "Attack",
+      "nationality": "Egypt",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "date": "2026-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "181767",
+      "name": "Marquinhos",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Associazione Sportiva Roma",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2013-07-19",
+        "fee": 31400000
+      }
+    },
+    {
+      "id": "196357",
+      "name": "Jonathan Tah",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Bayer 04 Leverkusen Fußball",
+        "to": "FC Bayern München",
+        "date": "2025-06-09",
+        "fee": 2000000
+      }
+    },
+    {
+      "id": "324278",
+      "name": "Christoph Baumgartner",
+      "club": "RasenBallsport Leipzig",
+      "position": "Midfield",
+      "nationality": "Austria",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "to": "RasenBallsport Leipzig",
+        "date": "2023-07-01",
+        "fee": 25500000
+      }
+    },
+    {
+      "id": "324358",
+      "name": "Ollie Watkins",
+      "club": "Aston Villa Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Brentford Football Club",
+        "to": "Aston Villa Football Club",
+        "date": "2020-09-09",
+        "fee": 34000000
+      }
+    },
+    {
+      "id": "330659",
+      "name": "Justin Kluivert",
+      "club": "Association Football Club Bournemouth",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Associazione Sportiva Roma",
+        "to": "Association Football Club Bournemouth",
+        "date": "2023-07-01",
+        "fee": 10800000
+      }
+    },
+    {
+      "id": "332697",
+      "name": "Weston McKennie",
+      "club": "Juventus Football Club",
+      "position": "Midfield",
+      "nationality": "United States",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Leeds United Association Football Club",
+        "to": "Juventus Football Club",
+        "date": "2023-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "333241",
+      "name": "Joelinton",
+      "club": "Newcastle United Football Club",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "to": "Newcastle United Football Club",
+        "date": "2019-07-23",
+        "fee": 43500000
+      }
+    },
+    {
+      "id": "335721",
+      "name": "Ben White",
+      "club": "Arsenal Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Brighton and Hove Albion Football Club",
+        "to": "Arsenal Football Club",
+        "date": "2021-07-30",
+        "fee": 58500000
+      }
+    },
+    {
+      "id": "338424",
+      "name": "Mikel Merino",
+      "club": "Arsenal Football Club",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Real Sociedad de Fútbol S.A.D.",
+        "to": "Arsenal Football Club",
+        "date": "2024-08-27",
+        "fee": 32000000
+      }
+    },
+    {
+      "id": "346483",
+      "name": "Mason Mount",
+      "club": "Manchester United Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Manchester United Football Club",
+        "date": "2023-07-05",
+        "fee": 67700000
+      }
+    },
+    {
+      "id": "357147",
+      "name": "Diogo Dalot",
+      "club": "Manchester United Football Club",
+      "position": "Defender",
+      "nationality": "Portugal",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Milan",
+        "to": "Manchester United Football Club",
+        "date": "2021-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "369316",
+      "name": "Ferdi Kadıoğlu",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Defender",
+      "nationality": "Türkiye",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Fenerbahçe Spor Kulübü",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2024-08-24",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "388165",
+      "name": "Yoane Wissa",
+      "club": "Newcastle United Football Club",
+      "position": "Attack",
+      "nationality": "DR Congo",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Brentford Football Club",
+        "to": "Newcastle United Football Club",
+        "date": "2025-09-01",
+        "fee": 57700000
+      }
+    },
+    {
+      "id": "392768",
+      "name": "Callum Hudson-Odoi",
+      "club": "Nottingham Forest Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Nottingham Forest Football Club",
+        "date": "2023-09-01",
+        "fee": 3500000
+      }
+    },
+    {
+      "id": "401578",
+      "name": "Exequiel Palacios",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Midfield",
+      "nationality": "Argentina",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Club Atlético River Plate",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2020-01-01",
+        "fee": 17000000
+      }
+    },
+    {
+      "id": "405398",
+      "name": "Takefusa Kubo",
+      "club": "Real Sociedad de Fútbol S.A.D.",
+      "position": "Attack",
+      "nationality": "Japan",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Real Madrid Club de Fútbol",
+        "to": "Real Sociedad de Fútbol S.A.D.",
+        "date": "2022-07-19",
+        "fee": 6500000
+      }
+    },
+    {
+      "id": "413507",
+      "name": "Nikola Milenković",
+      "club": "Nottingham Forest Football Club",
+      "position": "Defender",
+      "nationality": "Serbia",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Fiorentina",
+        "to": "Nottingham Forest Football Club",
+        "date": "2024-07-18",
+        "fee": 12300000
+      }
+    },
+    {
+      "id": "451677",
+      "name": "Christos Tzolis",
+      "club": "Club Brugge Koninklijke Voetbalvereniging",
+      "position": "Attack",
+      "nationality": "Greece",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Fortuna Düsseldorf",
+        "to": "Club Brugge Koninklijke Voetbalvereniging",
+        "date": "2024-07-04",
+        "fee": 6500000
+      }
+    },
+    {
+      "id": "459658",
+      "name": "Andrea Cambiaso",
+      "club": "Juventus Football Club",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Bologna Football Club 1909",
+        "to": "Juventus Football Club",
+        "date": "2023-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "463600",
+      "name": "Lucas Chevalier",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Goalkeeper",
+      "nationality": "France",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2025-08-09",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "463605",
+      "name": "Bafodé Diakité",
+      "club": "Association Football Club Bournemouth",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Association Football Club Bournemouth",
+        "date": "2025-08-13",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "467437",
+      "name": "Malik Tillman",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Midfield",
+      "nationality": "United States",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2025-07-12",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "469050",
+      "name": "Nathan Collins",
+      "club": "Brentford Football Club",
+      "position": "Defender",
+      "nationality": "Ireland",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Brentford Football Club",
+        "date": "2023-07-04",
+        "fee": 26850000
+      }
+    },
+    {
+      "id": "474701",
+      "name": "Crysencio Summerville",
+      "club": "West Ham United Football Club",
+      "position": "Attack",
+      "nationality": "Netherlands",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Leeds United Association Football Club",
+        "to": "West Ham United Football Club",
+        "date": "2024-08-03",
+        "fee": 29300000
+      }
+    },
+    {
+      "id": "476701",
+      "name": "Manuel Ugarte",
+      "club": "Manchester United Football Club",
+      "position": "Midfield",
+      "nationality": "Uruguay",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Paris Saint-Germain Football Club",
+        "to": "Manchester United Football Club",
+        "date": "2024-08-30",
+        "fee": 50000000
+      }
+    },
+    {
+      "id": "483348",
+      "name": "Djed Spence",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Genoa Cricket and Football Club",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2024-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "485585",
+      "name": "Ian Maatsen",
+      "club": "Aston Villa Football Club",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Aston Villa Football Club",
+        "date": "2024-07-01",
+        "fee": 44500000
+      }
+    },
+    {
+      "id": "487474",
+      "name": "Francisco Conceição",
+      "club": "Juventus Football Club",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Futebol Clube do Porto",
+        "to": "Juventus Football Club",
+        "date": "2025-07-22",
+        "fee": 32000000
+      }
+    },
+    {
+      "id": "503770",
+      "name": "Folarin Balogun",
+      "club": "Association sportive de Monaco Football Club",
+      "position": "Attack",
+      "nationality": "United States",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Arsenal Football Club",
+        "to": "Association sportive de Monaco Football Club",
+        "date": "2023-08-30",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "503883",
+      "name": "Senne Lammens",
+      "club": "Manchester United Football Club",
+      "position": "Goalkeeper",
+      "nationality": "Belgium",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Royal Antwerp Football Club",
+        "to": "Manchester United Football Club",
+        "date": "2025-09-01",
+        "fee": 21000000
+      }
+    },
+    {
+      "id": "524290",
+      "name": "Fisnik Asllani",
+      "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+      "position": "Attack",
+      "nationality": "Kosovo",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "date": "2025-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "538977",
+      "name": "Georginio Rutter",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Leeds United Association Football Club",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2024-08-19",
+        "fee": 46700000
+      }
+    },
+    {
+      "id": "540941",
+      "name": "Mikkel Damsgaard",
+      "club": "Brentford Football Club",
+      "position": "Midfield",
+      "nationality": "Denmark",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "UC Sampdoria",
+        "to": "Brentford Football Club",
+        "date": "2022-08-10",
+        "fee": 15000000
+      }
+    },
+    {
+      "id": "548193",
+      "name": "Zeno Debast",
+      "club": "Sporting Clube de Portugal",
+      "position": "Defender",
+      "nationality": "Belgium",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Royal Sporting Club Anderlecht",
+        "to": "Sporting Clube de Portugal",
+        "date": "2024-07-04",
+        "fee": 18050000
+      }
+    },
+    {
+      "id": "571604",
+      "name": "Giorgio Scalvini",
+      "club": "Atalanta Bergamasca Calcio S.p.a.",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Atalanta Bergamasca Calcio S.p.a.",
+        "date": "2021-07-09",
+        "fee": 0
+      }
+    },
+    {
+      "id": "608172",
+      "name": "Ardon Jashari",
+      "club": "Associazione Calcio Milan",
+      "position": "Midfield",
+      "nationality": "Switzerland",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Club Brugge Koninklijke Voetbalvereniging",
+        "to": "Associazione Calcio Milan",
+        "date": "2025-08-06",
+        "fee": 36000000
+      }
+    },
+    {
+      "id": "618341",
+      "name": "Mario Gila",
+      "club": "Società Sportiva Lazio S.p.A.",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Società Sportiva Lazio S.p.A.",
+        "date": "2022-07-12",
+        "fee": 6000000
+      }
+    },
+    {
+      "id": "624258",
+      "name": "Conor Bradley",
+      "club": "Liverpool Football Club",
+      "position": "Defender",
+      "nationality": "Northern Ireland",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Liverpool Football Club",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "646740",
+      "name": "Gavi",
+      "club": "Futbol Club Barcelona",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Futbol Club Barcelona",
+        "date": "2021-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "661207",
+      "name": "Oscar Bobb",
+      "club": "Fulham Football Club",
+      "position": "Attack",
+      "nationality": "Norway",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Manchester City Football Club",
+        "to": "Fulham Football Club",
+        "date": "2026-01-30",
+        "fee": 31200000
+      }
+    },
+    {
+      "id": "667287",
+      "name": "Yasin Ayari",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Midfield",
+      "nationality": "Sweden",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2024-05-31",
+        "fee": 0
+      }
+    },
+    {
+      "id": "668207",
+      "name": "Petar Sučić",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Midfield",
+      "nationality": "Croatia",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "GNK Dinamo Zagreb",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2025-06-01",
+        "fee": 14600000
+      }
+    },
+    {
+      "id": "668547",
+      "name": "Máximo Perrone",
+      "club": "Calcio Como",
+      "position": "Midfield",
+      "nationality": "Argentina",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Manchester City Football Club",
+        "to": "Calcio Como",
+        "date": "2025-07-18",
+        "fee": 13000000
+      }
+    },
+    {
+      "id": "717411",
+      "name": "Yegor Yarmolyuk",
+      "club": "Brentford Football Club",
+      "position": "Midfield",
+      "nationality": "Ukraine",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Brentford Football Club",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "724129",
+      "name": "Matías Fernández-Pardo",
+      "club": "Lille Olympique Sporting Club",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Koninklijke Atletiek Associatie Gent",
+        "to": "Lille Olympique Sporting Club",
+        "date": "2024-08-30",
+        "fee": 11500000
+      }
+    },
+    {
+      "id": "724520",
+      "name": "Abde Ezzalzouli",
+      "club": "Real Betis Balompié S.A.D.",
+      "position": "Attack",
+      "nationality": "Morocco",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Futbol Club Barcelona",
+        "to": "Real Betis Balompié S.A.D.",
+        "date": "2023-09-01",
+        "fee": 7500000
+      }
+    },
+    {
+      "id": "727089",
+      "name": "Noah Sadiki",
+      "club": "Sunderland Association Football Club",
+      "position": "Midfield",
+      "nationality": "DR Congo",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Royale Union Saint-Gilloise",
+        "to": "Sunderland Association Football Club",
+        "date": "2025-07-04",
+        "fee": 17000000
+      }
+    },
+    {
+      "id": "741238",
+      "name": "Omari Hutchinson",
+      "club": "Nottingham Forest Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Ipswich Town",
+        "to": "Nottingham Forest Football Club",
+        "date": "2025-08-16",
+        "fee": 43400000
+      }
+    },
+    {
+      "id": "743386",
+      "name": "Malick Fofana",
+      "club": "Olympique Lyonnais",
+      "position": "Attack",
+      "nationality": "Belgium",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Koninklijke Atletiek Associatie Gent",
+        "to": "Olympique Lyonnais",
+        "date": "2024-01-10",
+        "fee": 19500000
+      }
+    },
+    {
+      "id": "796297",
+      "name": "Jobe Bellingham",
+      "club": "Borussia Dortmund",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Sunderland Association Football Club",
+        "to": "Borussia Dortmund",
+        "date": "2025-06-10",
+        "fee": 30500000
+      }
+    },
+    {
+      "id": "808348",
+      "name": "Mamadou Sangaré",
+      "club": "Racing Club de Lens",
+      "position": "Midfield",
+      "nationality": "Mali",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Sportklub Rapid",
+        "to": "Racing Club de Lens",
+        "date": "2025-08-20",
+        "fee": 8000000
+      }
+    },
+    {
+      "id": "895937",
+      "name": "Marco Palestra",
+      "club": "Cagliari Calcio",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Cagliari Calcio",
+        "to": "Atalanta Bergamasca Calcio S.p.a.",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "900195",
+      "name": "Kevin",
+      "club": "Fulham Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "FC Shakhtar Donetsk",
+        "to": "Fulham Football Club",
+        "date": "2025-09-01",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "924117",
+      "name": "Finn Jeltsch",
+      "club": "Verein für Bewegungsspiele Stuttgart 1893",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "1.FC Nuremberg",
+        "to": "Verein für Bewegungsspiele Stuttgart 1893",
+        "date": "2025-02-03",
+        "fee": 9500000
+      }
+    },
+    {
+      "id": "926993",
+      "name": "Victor Froholdt",
+      "club": "Futebol Clube do Porto",
+      "position": "Midfield",
+      "nationality": "Denmark",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Football Club København",
+        "to": "Futebol Clube do Porto",
+        "date": "2025-07-23",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "935230",
+      "name": "Gonzalo García",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2025-06-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "937941",
+      "name": "Thierno Barry",
+      "club": "Everton Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Villarreal Club de Fútbol S.A.D.",
+        "to": "Everton Football Club",
+        "date": "2025-07-09",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "957874",
+      "name": "Rômulo",
+      "club": "RasenBallsport Leipzig",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Göztepe Sportif Yatırımlar A.Ş.",
+        "to": "RasenBallsport Leipzig",
+        "date": "2025-08-15",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "1005575",
+      "name": "Vitor Reis",
+      "club": "Girona Fútbol Club S. A. D.",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Girona Fútbol Club S. A. D.",
+        "to": "Manchester City Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1018920",
+      "name": "Marc Bernal",
+      "club": "Futbol Club Barcelona",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Futbol Club Barcelona",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1061282",
+      "name": "Assane Diao",
+      "club": "Calcio Como",
+      "position": "Attack",
+      "nationality": "Senegal",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Real Betis Balompié S.A.D.",
+        "to": "Calcio Como",
+        "date": "2025-01-07",
+        "fee": 12000000
+      }
+    },
+    {
+      "id": "1185888",
+      "name": "Ibrahim Mbaye",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Attack",
+      "nationality": "Senegal",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2025-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1190411",
+      "name": "Jesús Rodríguez",
+      "club": "Calcio Como",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 30000000,
+      "lastTransfer": {
+        "from": "Real Betis Balompié S.A.D.",
+        "to": "Calcio Como",
+        "date": "2025-07-02",
+        "fee": 22500000
+      }
+    },
+    {
+      "id": "51152",
+      "name": "Aleksandar Mitrović",
+      "club": "Unknown",
+      "position": "Attack",
+      "nationality": "Serbia",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Fulham Football Club",
+        "to": "Al-Hilal Saudi Football Club",
+        "date": "2023-08-19",
+        "fee": 52600000
+      }
+    },
+    {
+      "id": "258919",
+      "name": "Dean Henderson",
+      "club": "Crystal Palace Football Club",
+      "position": "Goalkeeper",
+      "nationality": "England",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Manchester United Football Club",
+        "to": "Crystal Palace Football Club",
+        "date": "2023-08-31",
+        "fee": 17500000
+      }
+    },
+    {
+      "id": "339808",
+      "name": "Theo Hernández",
+      "club": "Al-Hilal Saudi Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Associazione Calcio Milan",
+        "to": "Al-Hilal Saudi Football Club",
+        "date": "2025-07-10",
+        "fee": 25000000
+      }
+    },
+    {
+      "id": "344381",
+      "name": "Christopher Nkunku",
+      "club": "Associazione Calcio Milan",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Associazione Calcio Milan",
+        "date": "2025-08-30",
+        "fee": 37000000
+      }
+    },
+    {
+      "id": "378710",
+      "name": "Richarlison",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Everton Football Club",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2022-07-01",
+        "fee": 58000000
+      }
+    },
+    {
+      "id": "395516",
+      "name": "Moussa Diaby",
+      "club": "Al-Ittihad Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Aston Villa Football Club",
+        "to": "Al-Ittihad Football Club",
+        "date": "2024-07-24",
+        "fee": 60000000
+      }
+    },
+    {
+      "id": "418659",
+      "name": "Amine Gouiri",
+      "club": "Olympique de Marseille",
+      "position": "Attack",
+      "nationality": "Algeria",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Stade Rennais Football Club",
+        "to": "Olympique de Marseille",
+        "date": "2025-01-31",
+        "fee": 19000000
+      }
+    },
+    {
+      "id": "424784",
+      "name": "Luis Suárez",
+      "club": "Sporting Clube de Portugal",
+      "position": "Attack",
+      "nationality": "Colombia",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "UD Almería",
+        "to": "Sporting Clube de Portugal",
+        "date": "2025-07-28",
+        "fee": 22950000
+      }
+    },
+    {
+      "id": "426620",
+      "name": "Pedro Gonçalves",
+      "club": "Sporting Clube de Portugal",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Futebol Clube de Famalicão",
+        "to": "Sporting Clube de Portugal",
+        "date": "2020-08-18",
+        "fee": 13500000
+      }
+    },
+    {
+      "id": "461883",
+      "name": "Calvin Bassey",
+      "club": "Fulham Football Club",
+      "position": "Defender",
+      "nationality": "Nigeria",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "AFC Ajax Amsterdam",
+        "to": "Fulham Football Club",
+        "date": "2023-07-28",
+        "fee": 22500000
+      }
+    },
+    {
+      "id": "465555",
+      "name": "Djordje Petrovic",
+      "club": "Association Football Club Bournemouth",
+      "position": "Goalkeeper",
+      "nationality": "Serbia",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Association Football Club Bournemouth",
+        "date": "2025-07-16",
+        "fee": 28900000
+      }
+    },
+    {
+      "id": "465830",
+      "name": "Mattéo Guendouzi",
+      "club": "Fenerbahçe Spor Kulübü",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Società Sportiva Lazio S.p.A.",
+        "to": "Fenerbahçe Spor Kulübü",
+        "date": "2026-01-08",
+        "fee": 28000000
+      }
+    },
+    {
+      "id": "469822",
+      "name": "David Neres",
+      "club": "Società Sportiva Calcio Napoli",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Società Sportiva Calcio Napoli",
+        "date": "2024-08-21",
+        "fee": 28000000
+      }
+    },
+    {
+      "id": "475411",
+      "name": "Wesley Fofana",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Leicester City",
+        "to": "Chelsea Football Club",
+        "date": "2022-08-31",
+        "fee": 80400000
+      }
+    },
+    {
+      "id": "500689",
+      "name": "Evann Guessand",
+      "club": "Crystal Palace Football Club",
+      "position": "Attack",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Crystal Palace Football Club",
+        "to": "Aston Villa Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "502676",
+      "name": "Giorgi Mamardashvili",
+      "club": "Liverpool Football Club",
+      "position": "Goalkeeper",
+      "nationality": "Georgia",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Valencia Club de Fútbol S. A. D.",
+        "to": "Liverpool Football Club",
+        "date": "2025-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "504087",
+      "name": "Tomás Araújo",
+      "club": "Sport Lisboa e Benfica",
+      "position": "Defender",
+      "nationality": "Portugal",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Gil Vicente Futebol Clube",
+        "to": "Sport Lisboa e Benfica",
+        "date": "2023-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "505653",
+      "name": "Fábio Silva",
+      "club": "Borussia Dortmund",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Borussia Dortmund",
+        "date": "2025-08-29",
+        "fee": 22500000
+      }
+    },
+    {
+      "id": "522784",
+      "name": "Taty Castellanos",
+      "club": "West Ham United Football Club",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Società Sportiva Lazio S.p.A.",
+        "to": "West Ham United Football Club",
+        "date": "2026-01-05",
+        "fee": 29000000
+      }
+    },
+    {
+      "id": "540664",
+      "name": "Dilane Bakwa",
+      "club": "Nottingham Forest Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Racing Club de Strasbourg Alsace",
+        "to": "Nottingham Forest Football Club",
+        "date": "2025-09-01",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "557149",
+      "name": "Kang-in Lee",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Midfield",
+      "nationality": "Korea, South",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Real Club Deportivo Mallorca S.A.D.",
+        "to": "Paris Saint-Germain Football Club",
+        "date": "2023-07-08",
+        "fee": 22000000
+      }
+    },
+    {
+      "id": "559328",
+      "name": "Emmanuel Emegha",
+      "club": "Racing Club de Strasbourg Alsace",
+      "position": "Attack",
+      "nationality": "Netherlands",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Racing Club de Strasbourg Alsace",
+        "to": "Chelsea Football Club",
+        "date": "2026-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "569366",
+      "name": "Enzo Millot",
+      "club": "Al-Ahli Saudi Football Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Verein für Bewegungsspiele Stuttgart 1893",
+        "to": "Al-Ahli Saudi Football Club",
+        "date": "2025-08-09",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "623325",
+      "name": "Georgiy Sudakov",
+      "club": "Sport Lisboa e Benfica",
+      "position": "Midfield",
+      "nationality": "Ukraine",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "FC Shakhtar Donetsk",
+        "to": "Sport Lisboa e Benfica",
+        "date": "2026-07-01",
+        "fee": 20250000
+      }
+    },
+    {
+      "id": "650568",
+      "name": "António Silva",
+      "club": "Sport Lisboa e Benfica",
+      "position": "Defender",
+      "nationality": "Portugal",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "to": "Sport Lisboa e Benfica",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "700106",
+      "name": "Brajan Gruda",
+      "club": "RasenBallsport Leipzig",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "RasenBallsport Leipzig",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "729814",
+      "name": "Georges Mikautadze",
+      "club": "Villarreal Club de Fútbol S.A.D.",
+      "position": "Attack",
+      "nationality": "Georgia",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "Olympique Lyonnais",
+        "to": "Villarreal Club de Fútbol S.A.D.",
+        "date": "2025-09-01",
+        "fee": 31000000
+      }
+    },
+    {
+      "id": "844637",
+      "name": "Marc Pubill",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "UD Almería",
+        "to": "Club Atlético de Madrid S.A.D.",
+        "date": "2025-07-23",
+        "fee": 16000000
+      }
+    },
+    {
+      "id": "897424",
+      "name": "Assan Ouédraogo",
+      "club": "RasenBallsport Leipzig",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "FC Schalke 04",
+        "to": "RasenBallsport Leipzig",
+        "date": "2024-07-01",
+        "fee": 10000000
+      }
+    },
+    {
+      "id": "1111589",
+      "name": "El Hadji Malick Diouf",
+      "club": "West Ham United Football Club",
+      "position": "Defender",
+      "nationality": "Senegal",
+      "marketValue": 28000000,
+      "lastTransfer": {
+        "from": "SK Slavia Praha, a.s.",
+        "to": "West Ham United Football Club",
+        "date": "2025-07-15",
+        "fee": 22000000
+      }
+    },
+    {
+      "id": "241641",
+      "name": "Bernardo Silva",
+      "club": "Manchester City Football Club",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 27000000,
+      "lastTransfer": {
+        "from": "Association sportive de Monaco Football Club",
+        "to": "Manchester City Football Club",
+        "date": "2017-07-01",
+        "fee": 50000000
+      }
+    },
+    {
+      "id": "408574",
+      "name": "Joey Veerman",
+      "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 27000000,
+      "lastTransfer": {
+        "from": "Sportclub Heerenveen",
+        "to": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "date": "2022-01-04",
+        "fee": 6000000
+      }
+    },
+    {
+      "id": "425918",
+      "name": "Jakub Kiwior",
+      "club": "Futebol Clube do Porto",
+      "position": "Defender",
+      "nationality": "Poland",
+      "marketValue": 27000000,
+      "lastTransfer": {
+        "from": "Futebol Clube do Porto",
+        "to": "Arsenal Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "493003",
+      "name": "Daniel Muñoz",
+      "club": "Crystal Palace Football Club",
+      "position": "Defender",
+      "nationality": "Colombia",
+      "marketValue": 27000000,
+      "lastTransfer": {
+        "from": "Koninklijke Racing Club Genk",
+        "to": "Crystal Palace Football Club",
+        "date": "2024-01-30",
+        "fee": 8000000
+      }
+    },
+    {
+      "id": "746910",
+      "name": "Mohamed Amoura",
+      "club": "Verein für Leibesübungen Wolfsburg",
+      "position": "Attack",
+      "nationality": "Algeria",
+      "marketValue": 27000000,
+      "lastTransfer": {
+        "from": "Royale Union Saint-Gilloise",
+        "to": "Verein für Leibesübungen Wolfsburg",
+        "date": "2025-07-01",
+        "fee": 14750000
+      }
+    },
+    {
+      "id": "541537",
+      "name": "Barış Alper Yılmaz",
+      "club": "Galatasaray Spor Kulübü",
+      "position": "Attack",
+      "nationality": "Türkiye",
+      "marketValue": 26000000,
+      "lastTransfer": {
+        "to": "Galatasaray Spor Kulübü",
+        "date": "2021-07-10",
+        "fee": 2100000
+      }
+    },
+    {
+      "id": "585982",
+      "name": "Carlos Augusto",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 26000000,
+      "lastTransfer": {
+        "from": "AC Monza",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2024-07-01",
+        "fee": 13250000
+      }
+    },
+    {
+      "id": "620477",
+      "name": "Kaio Jorge",
+      "club": "Cruzeiro Esporte Clube",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 26000000,
+      "lastTransfer": {
+        "from": "Juventus Football Club",
+        "to": "Cruzeiro Esporte Clube",
+        "date": "2024-07-10",
+        "fee": 7200000
+      }
+    },
+    {
+      "id": "102558",
+      "name": "Marco Verratti",
+      "club": "Paris Saint-Germain Football Club",
+      "position": "Midfield",
+      "nationality": "Italy",
+      "marketValue": 25000000,
+      "lastTransfer": null
+    },
+    {
+      "id": "157509",
+      "name": "Kurt Zouma",
+      "club": "Al-Orobah FC",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "West Ham United Football Club",
+        "date": "2021-08-28",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "182906",
+      "name": "Mike Maignan",
+      "club": "Associazione Calcio Milan",
+      "position": "Goalkeeper",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Lille Olympique Sporting Club",
+        "to": "Associazione Calcio Milan",
+        "date": "2021-07-01",
+        "fee": 16400000
+      }
+    },
+    {
+      "id": "203460",
+      "name": "Jack Grealish",
+      "club": "Everton Football Club",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Everton Football Club",
+        "to": "Manchester City Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "225161",
+      "name": "Rúben Neves",
+      "club": "Al-Hilal Saudi Football Club",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Wolverhampton Wanderers Football Club",
+        "to": "Al-Hilal Saudi Football Club",
+        "date": "2023-07-01",
+        "fee": 55000000
+      }
+    },
+    {
+      "id": "242631",
+      "name": "Alex Iwobi",
+      "club": "Fulham Football Club",
+      "position": "Attack",
+      "nationality": "Nigeria",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Everton Football Club",
+        "to": "Fulham Football Club",
+        "date": "2023-09-01",
+        "fee": 25700000
+      }
+    },
+    {
+      "id": "260827",
+      "name": "Joachim Andersen",
+      "club": "Fulham Football Club",
+      "position": "Defender",
+      "nationality": "Denmark",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Crystal Palace Football Club",
+        "to": "Fulham Football Club",
+        "date": "2024-08-23",
+        "fee": 29500000
+      }
+    },
+    {
+      "id": "262396",
+      "name": "Unai Simón",
+      "club": "Athletic Club Bilbao",
+      "position": "Goalkeeper",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Athletic Club Bilbao",
+        "date": "2018-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "265088",
+      "name": "Manuel Locatelli",
+      "club": "Juventus Football Club",
+      "position": "Midfield",
+      "nationality": "Italy",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Unione Sportiva Sassuolo Calcio",
+        "to": "Juventus Football Club",
+        "date": "2023-07-01",
+        "fee": 36400000
+      }
+    },
+    {
+      "id": "279455",
+      "name": "Harry Wilson",
+      "club": "Fulham Football Club",
+      "position": "Attack",
+      "nationality": "Wales",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "Fulham Football Club",
+        "date": "2021-07-24",
+        "fee": 14000000
+      }
+    },
+    {
+      "id": "294057",
+      "name": "James Maddison",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Leicester City",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2023-07-01",
+        "fee": 46300000
+      }
+    },
+    {
+      "id": "315867",
+      "name": "Gianluca Scamacca",
+      "club": "Atalanta Bergamasca Calcio S.p.a.",
+      "position": "Attack",
+      "nationality": "Italy",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "West Ham United Football Club",
+        "to": "Atalanta Bergamasca Calcio S.p.a.",
+        "date": "2023-08-07",
+        "fee": 28000000
+      }
+    },
+    {
+      "id": "321528",
+      "name": "Denzel Dumfries",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2021-08-14",
+        "fee": 14250000
+      }
+    },
+    {
+      "id": "332705",
+      "name": "Tyler Adams",
+      "club": "Association Football Club Bournemouth",
+      "position": "Midfield",
+      "nationality": "United States",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Leeds United Association Football Club",
+        "to": "Association Football Club Bournemouth",
+        "date": "2023-08-20",
+        "fee": 26900000
+      }
+    },
+    {
+      "id": "333014",
+      "name": "Sander Berge",
+      "club": "Fulham Football Club",
+      "position": "Midfield",
+      "nationality": "Norway",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Burnley Football Club",
+        "to": "Fulham Football Club",
+        "date": "2024-08-22",
+        "fee": 23550000
+      }
+    },
+    {
+      "id": "334526",
+      "name": "Denis Zakaria",
+      "club": "Association sportive de Monaco Football Club",
+      "position": "Midfield",
+      "nationality": "Switzerland",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Juventus Football Club",
+        "to": "Association sportive de Monaco Football Club",
+        "date": "2023-08-14",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "339332",
+      "name": "Noa Lang",
+      "club": "Galatasaray Spor Kulübü",
+      "position": "Attack",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Galatasaray Spor Kulübü",
+        "to": "Società Sportiva Calcio Napoli",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "340918",
+      "name": "Caoimhín Kelleher",
+      "club": "Brentford Football Club",
+      "position": "Goalkeeper",
+      "nationality": "Ireland",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "Brentford Football Club",
+        "date": "2025-07-01",
+        "fee": 14800000
+      }
+    },
+    {
+      "id": "344069",
+      "name": "Anton Stach",
+      "club": "Leeds United Association Football Club",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "to": "Leeds United Association Football Club",
+        "date": "2025-07-22",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "349701",
+      "name": "Antonee Robinson",
+      "club": "Fulham Football Club",
+      "position": "Defender",
+      "nationality": "United States",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Wigan Athletic",
+        "to": "Fulham Football Club",
+        "date": "2020-08-20",
+        "fee": 2100000
+      }
+    },
+    {
+      "id": "351478",
+      "name": "Mikel Oyarzabal",
+      "club": "Real Sociedad de Fútbol S.A.D.",
+      "position": "Attack",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Real Sociedad de Fútbol S.A.D.",
+        "date": "2016-01-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "351809",
+      "name": "Robin Le Normand",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Real Sociedad de Fútbol S.A.D.",
+        "to": "Club Atlético de Madrid S.A.D.",
+        "date": "2024-07-27",
+        "fee": 34500000
+      }
+    },
+    {
+      "id": "370789",
+      "name": "Julian Ryerson",
+      "club": "Borussia Dortmund",
+      "position": "Defender",
+      "nationality": "Norway",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "1. Fußballclub Union Berlin",
+        "to": "Borussia Dortmund",
+        "date": "2023-01-17",
+        "fee": 5000000
+      }
+    },
+    {
+      "id": "381950",
+      "name": "Alexis Saelemaekers",
+      "club": "Associazione Calcio Milan",
+      "position": "Midfield",
+      "nationality": "Belgium",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Associazione Sportiva Roma",
+        "to": "Associazione Calcio Milan",
+        "date": "2025-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "392771",
+      "name": "Ethan Ampadu",
+      "club": "Leeds United Association Football Club",
+      "position": "Midfield",
+      "nationality": "Wales",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Leeds United Association Football Club",
+        "date": "2023-07-19",
+        "fee": 8100000
+      }
+    },
+    {
+      "id": "401530",
+      "name": "Éder Militão",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Futebol Clube do Porto",
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2019-07-01",
+        "fee": 50000000
+      }
+    },
+    {
+      "id": "404842",
+      "name": "Vitaliy Mykolenko",
+      "club": "Everton Football Club",
+      "position": "Defender",
+      "nationality": "Ukraine",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Futbolniy Klub Dynamo Kyiv",
+        "to": "Everton Football Club",
+        "date": "2022-01-01",
+        "fee": 23500000
+      }
+    },
+    {
+      "id": "413565",
+      "name": "Jhon Lucumí",
+      "club": "Bologna Football Club 1909",
+      "position": "Defender",
+      "nationality": "Colombia",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Koninklijke Racing Club Genk",
+        "to": "Bologna Football Club 1909",
+        "date": "2022-08-18",
+        "fee": 8000000
+      }
+    },
+    {
+      "id": "415381",
+      "name": "Mats Wieffer",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Feyenoord Rotterdam",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2024-07-05",
+        "fee": 32000000
+      }
+    },
+    {
+      "id": "418543",
+      "name": "Perr Schuurs",
+      "club": "Torino Calcio",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "AFC Ajax Amsterdam",
+        "to": "Torino Calcio",
+        "date": "2022-08-18",
+        "fee": 9400000
+      }
+    },
+    {
+      "id": "420213",
+      "name": "Quinten Timber",
+      "club": "Olympique de Marseille",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Feyenoord Rotterdam",
+        "to": "Olympique de Marseille",
+        "date": "2026-01-23",
+        "fee": 4500000
+      }
+    },
+    {
+      "id": "433984",
+      "name": "Sam Beukema",
+      "club": "Società Sportiva Calcio Napoli",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Bologna Football Club 1909",
+        "to": "Società Sportiva Calcio Napoli",
+        "date": "2025-07-20",
+        "fee": 31000000
+      }
+    },
+    {
+      "id": "434433",
+      "name": "Nikola Krstović",
+      "club": "Atalanta Bergamasca Calcio S.p.a.",
+      "position": "Attack",
+      "nationality": "Montenegro",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Unione Sportiva Lecce",
+        "to": "Atalanta Bergamasca Calcio S.p.a.",
+        "date": "2025-08-20",
+        "fee": 25000000
+      }
+    },
+    {
+      "id": "454567",
+      "name": "Orkun Kökçü",
+      "club": "Beşiktaş Jimnastik Kulübü",
+      "position": "Midfield",
+      "nationality": "Türkiye",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Beşiktaş Jimnastik Kulübü",
+        "date": "2026-07-01",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "459763",
+      "name": "Marco Carnesecchi",
+      "club": "Atalanta Bergamasca Calcio S.p.a.",
+      "position": "Goalkeeper",
+      "nationality": "Italy",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Unione Sportiva Cremonese S.p.A.",
+        "to": "Atalanta Bergamasca Calcio S.p.a.",
+        "date": "2023-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "462250",
+      "name": "João Félix",
+      "club": "Al-Nassr Football Club",
+      "position": "Attack",
+      "nationality": "Portugal",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Al-Nassr Football Club",
+        "date": "2025-07-29",
+        "fee": 30000000
+      }
+    },
+    {
+      "id": "467992",
+      "name": "Samuele Ricci",
+      "club": "Associazione Calcio Milan",
+      "position": "Midfield",
+      "nationality": "Italy",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Torino Calcio",
+        "to": "Associazione Calcio Milan",
+        "date": "2025-07-03",
+        "fee": 23000000
+      }
+    },
+    {
+      "id": "473169",
+      "name": "Brian Brobbey",
+      "club": "Sunderland Association Football Club",
+      "position": "Attack",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "AFC Ajax Amsterdam",
+        "to": "Sunderland Association Football Club",
+        "date": "2025-09-01",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "489893",
+      "name": "Yuri Alberto",
+      "club": "Sport Club Corinthians Paulista",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "AO FK Zenit Sankt-Peterburg",
+        "to": "Sport Club Corinthians Paulista",
+        "date": "2023-01-09",
+        "fee": 0
+      }
+    },
+    {
+      "id": "503482",
+      "name": "Min-jae Kim",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "Korea, South",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Società Sportiva Calcio Napoli",
+        "to": "FC Bayern München",
+        "date": "2023-07-18",
+        "fee": 50000000
+      }
+    },
+    {
+      "id": "503680",
+      "name": "Neco Williams",
+      "club": "Nottingham Forest Football Club",
+      "position": "Defender",
+      "nationality": "Wales",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "Nottingham Forest Football Club",
+        "date": "2022-07-10",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "504849",
+      "name": "Kaoru Mitoma",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Attack",
+      "nationality": "Japan",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Royale Union Saint-Gilloise",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2022-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "515744",
+      "name": "Eduard Spertsyan",
+      "club": "FK Krasnodar",
+      "position": "Midfield",
+      "nationality": "Armenia",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "FK Krasnodar",
+        "date": "2021-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "524000",
+      "name": "Dani Vivian",
+      "club": "Athletic Club Bilbao",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Athletic Club Bilbao",
+        "date": "2021-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "537844",
+      "name": "Anatoliy Trubin",
+      "club": "Sport Lisboa e Benfica",
+      "position": "Goalkeeper",
+      "nationality": "Ukraine",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "FC Shakhtar Donetsk",
+        "to": "Sport Lisboa e Benfica",
+        "date": "2023-08-10",
+        "fee": 10000000
+      }
+    },
+    {
+      "id": "546543",
+      "name": "Darwin Núñez",
+      "club": "Al-Hilal Saudi Football Club",
+      "position": "Attack",
+      "nationality": "Uruguay",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "Al-Hilal Saudi Football Club",
+        "date": "2025-08-09",
+        "fee": 53000000
+      }
+    },
+    {
+      "id": "566799",
+      "name": "James Trafford",
+      "club": "Manchester City Football Club",
+      "position": "Goalkeeper",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Burnley Football Club",
+        "to": "Manchester City Football Club",
+        "date": "2025-07-29",
+        "fee": 31200000
+      }
+    },
+    {
+      "id": "569598",
+      "name": "Youssouf Fofana",
+      "club": "Associazione Calcio Milan",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Association sportive de Monaco Football Club",
+        "to": "Associazione Calcio Milan",
+        "date": "2024-08-17",
+        "fee": 26000000
+      }
+    },
+    {
+      "id": "572265",
+      "name": "Lorenzo Lucca",
+      "club": "Nottingham Forest Football Club",
+      "position": "Attack",
+      "nationality": "Italy",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Nottingham Forest Football Club",
+        "to": "Società Sportiva Calcio Napoli",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "572675",
+      "name": "Maxi Araújo",
+      "club": "Sporting Clube de Portugal",
+      "position": "Defender",
+      "nationality": "Uruguay",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Deportivo Toluca Futbol Club, S. A. de C. V.",
+        "to": "Sporting Clube de Portugal",
+        "date": "2024-08-27",
+        "fee": 13730000
+      }
+    },
+    {
+      "id": "578539",
+      "name": "Chris Richards",
+      "club": "Crystal Palace Football Club",
+      "position": "Defender",
+      "nationality": "United States",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "FC Bayern München",
+        "to": "Crystal Palace Football Club",
+        "date": "2022-07-27",
+        "fee": 12000000
+      }
+    },
+    {
+      "id": "585959",
+      "name": "Arnaud Kalimuendo",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Eintracht Frankfurt Fußball AG",
+        "to": "Nottingham Forest Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "597659",
+      "name": "Charlie Cresswell",
+      "club": "Toulouse Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Leeds United Association Football Club",
+        "to": "Toulouse Football Club",
+        "date": "2024-07-08",
+        "fee": 4500000
+      }
+    },
+    {
+      "id": "618494",
+      "name": "Tyler Morton",
+      "club": "Olympique Lyonnais",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Liverpool Football Club",
+        "to": "Olympique Lyonnais",
+        "date": "2025-08-05",
+        "fee": 10000000
+      }
+    },
+    {
+      "id": "627207",
+      "name": "Ricardo Pepi",
+      "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+      "position": "Attack",
+      "nationality": "United States",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Fußball-Club Augsburg 1907",
+        "to": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "date": "2023-07-07",
+        "fee": 11000000
+      }
+    },
+    {
+      "id": "628451",
+      "name": "Roméo Lavia",
+      "club": "Chelsea Football Club",
+      "position": "Midfield",
+      "nationality": "Belgium",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Southampton FC",
+        "to": "Chelsea Football Club",
+        "date": "2023-08-18",
+        "fee": 62100000
+      }
+    },
+    {
+      "id": "633992",
+      "name": "Enzo Le Fée",
+      "club": "Sunderland Association Football Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Associazione Sportiva Roma",
+        "to": "Sunderland Association Football Club",
+        "date": "2025-07-01",
+        "fee": 23000000
+      }
+    },
+    {
+      "id": "643574",
+      "name": "Kaishu Sano",
+      "club": "1. Fußball- und Sportverein Mainz 05",
+      "position": "Midfield",
+      "nationality": "Japan",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Kashima Antlers FC",
+        "to": "1. Fußball- und Sportverein Mainz 05",
+        "date": "2024-07-03",
+        "fee": 2500000
+      }
+    },
+    {
+      "id": "644401",
+      "name": "Keane Lewis-Potter",
+      "club": "Brentford Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Hull City",
+        "to": "Brentford Football Club",
+        "date": "2022-07-12",
+        "fee": 19000000
+      }
+    },
+    {
+      "id": "646991",
+      "name": "Robin Roefs",
+      "club": "Sunderland Association Football Club",
+      "position": "Goalkeeper",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Nijmegen Eendracht Combinatie",
+        "to": "Sunderland Association Football Club",
+        "date": "2025-08-01",
+        "fee": 10500000
+      }
+    },
+    {
+      "id": "648046",
+      "name": "Evan Ferguson",
+      "club": "Associazione Sportiva Roma",
+      "position": "Attack",
+      "nationality": "Ireland",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Associazione Sportiva Roma",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "648779",
+      "name": "Wilfried Singo",
+      "club": "Galatasaray Spor Kulübü",
+      "position": "Defender",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Association sportive de Monaco Football Club",
+        "to": "Galatasaray Spor Kulübü",
+        "date": "2025-08-28",
+        "fee": 30770000
+      }
+    },
+    {
+      "id": "649317",
+      "name": "Jhon Durán",
+      "club": "AO FK Zenit Sankt-Peterburg",
+      "position": "Attack",
+      "nationality": "Colombia",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "AO FK Zenit Sankt-Peterburg",
+        "to": "Al-Nassr Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "654539",
+      "name": "Adrien Truffert",
+      "club": "Association Football Club Bournemouth",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Stade Rennais Football Club",
+        "to": "Association Football Club Bournemouth",
+        "date": "2025-07-01",
+        "fee": 13500000
+      }
+    },
+    {
+      "id": "655006",
+      "name": "Diego Moreira",
+      "club": "Racing Club de Strasbourg Alsace",
+      "position": "Midfield",
+      "nationality": "Belgium",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Racing Club de Strasbourg Alsace",
+        "date": "2024-08-16",
+        "fee": 8500000
+      }
+    },
+    {
+      "id": "655217",
+      "name": "Samson Baidoo",
+      "club": "Racing Club de Lens",
+      "position": "Defender",
+      "nationality": "Austria",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Fußballclub Red Bull Salzburg",
+        "to": "Racing Club de Lens",
+        "date": "2025-07-17",
+        "fee": 8000000
+      }
+    },
+    {
+      "id": "658536",
+      "name": "Simon Adingra",
+      "club": "Association sportive de Monaco Football Club",
+      "position": "Attack",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Association sportive de Monaco Football Club",
+        "to": "Sunderland Association Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "667457",
+      "name": "Leon Avdullahu",
+      "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+      "position": "Midfield",
+      "nationality": "Kosovo",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "FC Basel 1893 AG",
+        "to": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "date": "2025-07-01",
+        "fee": 8000000
+      }
+    },
+    {
+      "id": "669380",
+      "name": "Konstantinos Koulierakis",
+      "club": "Verein für Leibesübungen Wolfsburg",
+      "position": "Defender",
+      "nationality": "Greece",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Panthessalonikios Athlitikos Omilos Konstantinoupoliton",
+        "to": "Verein für Leibesübungen Wolfsburg",
+        "date": "2024-08-30",
+        "fee": 11750000
+      }
+    },
+    {
+      "id": "699704",
+      "name": "Gabri Veiga",
+      "club": "Futebol Clube do Porto",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Al-Ahli Saudi Football Club",
+        "to": "Futebol Clube do Porto",
+        "date": "2025-06-05",
+        "fee": 14970000
+      }
+    },
+    {
+      "id": "705395",
+      "name": "Gerard Martín",
+      "club": "Futbol Club Barcelona",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Futbol Club Barcelona",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "709372",
+      "name": "Carlos Romero",
+      "club": "Reial Club Deportiu Espanyol de Barcelona S.A.D.",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Reial Club Deportiu Espanyol de Barcelona S.A.D.",
+        "to": "Villarreal Club de Fútbol S.A.D.",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "711374",
+      "name": "Jon Gorrotxategi",
+      "club": "Real Sociedad de Fútbol S.A.D.",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Real Sociedad de Fútbol S.A.D.",
+        "date": "2025-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "711999",
+      "name": "Lesley Ugochukwu",
+      "club": "Burnley Football Club",
+      "position": "Midfield",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Burnley Football Club",
+        "date": "2025-08-06",
+        "fee": 28700000
+      }
+    },
+    {
+      "id": "718303",
+      "name": "Ernest Poku",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Attack",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Alkmaar Zaanstreek",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2025-08-12",
+        "fee": 10000000
+      }
+    },
+    {
+      "id": "720286",
+      "name": "Aleksey Batrakov",
+      "club": "Футбольный клуб \"Локомотив\" Москва",
+      "position": "Midfield",
+      "nationality": "Russia",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Футбольный клуб \"Локомотив\" Москва",
+        "date": "2024-01-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "730581",
+      "name": "Loïc Badé",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Sevilla Fútbol Club S.A.D.",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2025-08-21",
+        "fee": 25000000
+      }
+    },
+    {
+      "id": "730893",
+      "name": "Tyrick Mitchell",
+      "club": "Crystal Palace Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Crystal Palace Football Club",
+        "date": "2020-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "735568",
+      "name": "Natan",
+      "club": "Real Betis Balompié S.A.D.",
+      "position": "Defender",
+      "nationality": "Brazil",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Società Sportiva Calcio Napoli",
+        "to": "Real Betis Balompié S.A.D.",
+        "date": "2025-07-01",
+        "fee": 9000000
+      }
+    },
+    {
+      "id": "735571",
+      "name": "Rodrigo Muniz",
+      "club": "Fulham Football Club",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Middlesbrough FC",
+        "to": "Fulham Football Club",
+        "date": "2023-05-31",
+        "fee": 0
+      }
+    },
+    {
+      "id": "743384",
+      "name": "Chemsdine Talbi",
+      "club": "Sunderland Association Football Club",
+      "position": "Attack",
+      "nationality": "Morocco",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Club Brugge Koninklijke Voetbalvereniging",
+        "to": "Sunderland Association Football Club",
+        "date": "2025-07-09",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "743515",
+      "name": "Robin Risser",
+      "club": "Racing Club de Lens",
+      "position": "Goalkeeper",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Racing Club de Strasbourg Alsace",
+        "to": "Racing Club de Lens",
+        "date": "2025-07-04",
+        "fee": 3000000
+      }
+    },
+    {
+      "id": "748804",
+      "name": "Mika Godts",
+      "club": "AFC Ajax Amsterdam",
+      "position": "Attack",
+      "nationality": "Belgium",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "AFC Ajax Amsterdam",
+        "date": "2024-01-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "780136",
+      "name": "Aleksandar Stanković",
+      "club": "Club Brugge Koninklijke Voetbalvereniging",
+      "position": "Midfield",
+      "nationality": "Serbia",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Football Club Internazionale Milano S.p.A.",
+        "to": "Club Brugge Koninklijke Voetbalvereniging",
+        "date": "2025-07-24",
+        "fee": 9500000
+      }
+    },
+    {
+      "id": "800176",
+      "name": "André",
+      "club": "Wolverhampton Wanderers Football Club",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Fluminense Football Club",
+        "to": "Wolverhampton Wanderers Football Club",
+        "date": "2024-08-30",
+        "fee": 22000000
+      }
+    },
+    {
+      "id": "801734",
+      "name": "Mathys Tel",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "FC Bayern München",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2025-07-01",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "805714",
+      "name": "Renato Veiga",
+      "club": "Villarreal Club de Fútbol S.A.D.",
+      "position": "Defender",
+      "nationality": "Portugal",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Chelsea Football Club",
+        "to": "Villarreal Club de Fútbol S.A.D.",
+        "date": "2025-08-22",
+        "fee": 24500000
+      }
+    },
+    {
+      "id": "834764",
+      "name": "Javi Guerra",
+      "club": "Valencia Club de Fútbol S. A. D.",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Valencia Club de Fútbol S. A. D.",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "842341",
+      "name": "Maxime Estève",
+      "club": "Burnley Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Montpellier HSC",
+        "to": "Burnley Football Club",
+        "date": "2024-07-01",
+        "fee": 12000000
+      }
+    },
+    {
+      "id": "859035",
+      "name": "Kees Smit",
+      "club": "Alkmaar Zaanstreek",
+      "position": "Midfield",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Alkmaar Zaanstreek",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "910905",
+      "name": "Mamadou Sarr",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "Senegal",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Racing Club de Strasbourg Alsace",
+        "to": "Chelsea Football Club",
+        "date": "2026-02-02",
+        "fee": 0
+      }
+    },
+    {
+      "id": "922769",
+      "name": "Lewis Miley",
+      "club": "Newcastle United Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Newcastle United Football Club",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "935245",
+      "name": "Raúl Asencio",
+      "club": "Real Madrid Club de Fútbol",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Real Madrid Club de Fútbol",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "939964",
+      "name": "Jean-Mattéo Bahoya",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Angers Sporting Club de l'Ouest",
+        "to": "Eintracht Frankfurt Fußball AG",
+        "date": "2024-01-25",
+        "fee": 8000000
+      }
+    },
+    {
+      "id": "947411",
+      "name": "Chris Rigg",
+      "club": "Sunderland Association Football Club",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Sunderland Association Football Club",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "948278",
+      "name": "Jacobo Ramón",
+      "club": "Calcio Como",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Calcio Como",
+        "date": "2025-07-31",
+        "fee": 2500000
+      }
+    },
+    {
+      "id": "964426",
+      "name": "Christos Mouzakitis",
+      "club": "Olympiakos Syndesmos Filathlon Peiraios",
+      "position": "Midfield",
+      "nationality": "Greece",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Olympiakos Syndesmos Filathlon Peiraios",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "996897",
+      "name": "Diego Gómez",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Midfield",
+      "nationality": "Paraguay",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Club Internacional de Fútbol Miami",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2025-01-01",
+        "fee": 13000000
+      }
+    },
+    {
+      "id": "997903",
+      "name": "Givairo Read",
+      "club": "Feyenoord Rotterdam",
+      "position": "Defender",
+      "nationality": "Netherlands",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Feyenoord Rotterdam",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1004708",
+      "name": "Josh Acheampong",
+      "club": "Chelsea Football Club",
+      "position": "Defender",
+      "nationality": "England",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Chelsea Football Club",
+        "date": "2024-12-18",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1060087",
+      "name": "Charalampos Kostoulas",
+      "club": "Brighton and Hove Albion Football Club",
+      "position": "Attack",
+      "nationality": "Greece",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Olympiakos Syndesmos Filathlon Peiraios",
+        "to": "Brighton and Hove Albion Football Club",
+        "date": "2025-07-01",
+        "fee": 35000000
+      }
+    },
+    {
+      "id": "1077175",
+      "name": "Honest Ahanor",
+      "club": "Atalanta Bergamasca Calcio S.p.a.",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Genoa Cricket and Football Club",
+        "to": "Atalanta Bergamasca Calcio S.p.a.",
+        "date": "2025-07-04",
+        "fee": 17000000
+      }
+    },
+    {
+      "id": "1086619",
+      "name": "Giovanni Leoni",
+      "club": "Liverpool Football Club",
+      "position": "Defender",
+      "nationality": "Italy",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "from": "Parma Calcio 1913",
+        "to": "Liverpool Football Club",
+        "date": "2025-08-15",
+        "fee": 31000000
+      }
+    },
+    {
+      "id": "1105541",
+      "name": "Nathan De Cat",
+      "club": "Royal Sporting Club Anderlecht",
+      "position": "Midfield",
+      "nationality": "Belgium",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Royal Sporting Club Anderlecht",
+        "date": "2025-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "1241207",
+      "name": "Tylel Tati",
+      "club": "Football Club de Nantes",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 25000000,
+      "lastTransfer": {
+        "to": "Football Club de Nantes",
+        "date": "2025-08-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "193082",
+      "name": "Alejandro Grimaldo",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Defender",
+      "nationality": "Spain",
+      "marketValue": 24000000,
+      "lastTransfer": {
+        "from": "Sport Lisboa e Benfica",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2023-07-01",
+        "fee": 0
+      }
+    },
+    {
+      "id": "486031",
+      "name": "Nico González",
+      "club": "Club Atlético de Madrid S.A.D.",
+      "position": "Attack",
+      "nationality": "Argentina",
+      "marketValue": 24000000,
+      "lastTransfer": {
+        "from": "Club Atlético de Madrid S.A.D.",
+        "to": "Juventus Football Club",
+        "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "580451",
+      "name": "Martin Baturina",
+      "club": "Calcio Como",
+      "position": "Midfield",
+      "nationality": "Croatia",
+      "marketValue": 24000000,
+      "lastTransfer": {
+        "from": "GNK Dinamo Zagreb",
+        "to": "Calcio Como",
+        "date": "2025-07-01",
+        "fee": 18000000
+      }
+    },
+    {
+      "id": "800175",
+      "name": "Luiz Henrique",
+      "club": "AO FK Zenit Sankt-Peterburg",
+      "position": "Attack",
+      "nationality": "Brazil",
+      "marketValue": 24000000,
+      "lastTransfer": {
+        "from": "S. A. F. Botafogo",
+        "to": "AO FK Zenit Sankt-Peterburg",
+        "date": "2025-01-20",
+        "fee": 33000000
+      }
+    },
+    {
+      "id": "808509",
+      "name": "Danilo",
+      "club": "S. A. F. Botafogo",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 24000000,
+      "lastTransfer": {
+        "from": "Nottingham Forest Football Club",
+        "to": "S. A. F. Botafogo",
+        "date": "2025-07-18",
+        "fee": 23000000
+      }
+    },
+    {
+      "id": "286047",
+      "name": "Guglielmo Vicario",
+      "club": "Tottenham Hotspur Football Club",
+      "position": "Goalkeeper",
+      "nationality": "Italy",
+      "marketValue": 23000000,
+      "lastTransfer": {
+        "from": "FC Empoli",
+        "to": "Tottenham Hotspur Football Club",
+        "date": "2023-07-01",
+        "fee": 18500000
+      }
+    },
+    {
+      "id": "399434",
+      "name": "Marcus Tavernier",
+      "club": "Association Football Club Bournemouth",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 23000000,
+      "lastTransfer": {
+        "from": "Middlesbrough FC",
+        "to": "Association Football Club Bournemouth",
+        "date": "2022-08-01",
+        "fee": 11900000
+      }
+    },
+    {
+      "id": "490384",
+      "name": "Koni De Winter",
+      "club": "Associazione Calcio Milan",
+      "position": "Defender",
+      "nationality": "Belgium",
+      "marketValue": 23000000,
+      "lastTransfer": {
+        "from": "Genoa Cricket and Football Club",
+        "to": "Associazione Calcio Milan",
+        "date": "2025-08-13",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "525704",
+      "name": "Nicolò Rovella",
+      "club": "Società Sportiva Lazio S.p.A.",
+      "position": "Midfield",
+      "nationality": "Italy",
+      "marketValue": 23000000,
+      "lastTransfer": {
+        "from": "Juventus Football Club",
+        "to": "Società Sportiva Lazio S.p.A.",
+        "date": "2025-07-01",
+        "fee": 17000000
+      }
+    },
+    {
+      "id": "605184",
+      "name": "Jean-Clair Todibo",
+      "club": "West Ham United Football Club",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 23000000,
+      "lastTransfer": {
+        "from": "Olympique Gymnaste Club Nice Côte d'Azur",
+        "to": "West Ham United Football Club",
+        "date": "2025-07-01",
+        "fee": 40000000
+      }
+    },
+    {
+      "id": "691316",
+      "name": "Luis Henrique",
+      "club": "Football Club Internazionale Milano S.p.A.",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 23000000,
+      "lastTransfer": {
+        "from": "Olympique de Marseille",
+        "to": "Football Club Internazionale Milano S.p.A.",
+        "date": "2025-06-07",
+        "fee": 22800000
+      }
+    }
+  ],
+  "generatedAt": "2026-04-23T08:47:20.503Z",
+  "count": 500
+}
