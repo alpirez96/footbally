@@ -1,0 +1,13 @@
+# Node bağımlılıkları
+node_modules/
+
+# Build artıkları
+*.log
+.DS_Store
+
+# Raw CSV dosyaları
+backend/raw/
+
+# IDE ayarları
+.vscode/
+.idea/
