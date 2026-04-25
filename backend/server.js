@@ -13,11 +13,13 @@ const io = new Server(server, { cors: { origin: '*' } });
 
 const rooms = new Map();
 
-const ROOM_MAX     = 5;
-const Q_DURATION_MS = 10_000;
-const Q_COUNT      = 10;
-const BASE_POINTS  = 1000;
-const VALID_MODES  = ['europe', 'turkey'];
+const ROOM_MAX    = 5;
+const Q_COUNT     = 10;
+const BASE_POINTS = 1000;
+
+// Moda göre süre (ms)
+const MODE_DURATION = { europe: 10000, turkey: 10000, hard: 8000, blitz: 5000 };
+const VALID_MODES   = Object.keys(MODE_DURATION);
 
 const makeCode = () => Math.random().toString(36).slice(2, 8).toUpperCase();
 
@@ -28,16 +30,11 @@ app.get('/', (_, res) => {
 app.post('/create-room', (req, res) => {
   const code = makeCode();
   rooms.set(code, {
-    code,
-    hostId:   null,
-    players:  new Map(),
-    questions: [],
-    currentQ: -1,
-    state:    'lobby',
-    mode:     'europe',
-    answers:  new Map(),
-    qStartTs: 0,
-    timer:    null,
+    code, hostId: null,
+    players: new Map(), questions: [],
+    currentQ: -1, state: 'lobby',
+    mode: 'europe', durationMs: 10000,
+    answers: new Map(), qStartTs: 0, timer: null,
   });
   console.log(`[${code}] oda oluşturuldu`);
   res.json({ code });
@@ -59,10 +56,10 @@ function broadcast(room, event, payload) {
   io.to(room.code).emit(event, payload);
 }
 
-function calcScore(correct, responseMs) {
+function calcScore(correct, responseMs, durationMs) {
   if (!correct) return 0;
-  const remaining = Math.max(0, Q_DURATION_MS - responseMs);
-  return BASE_POINTS + Math.round((remaining / Q_DURATION_MS) * BASE_POINTS);
+  const remaining = Math.max(0, durationMs - responseMs);
+  return BASE_POINTS + Math.round((remaining / durationMs) * BASE_POINTS);
 }
 
 function nextQuestion(room) {
@@ -83,13 +80,15 @@ function nextQuestion(room) {
   broadcast(room, 'question', {
     index:      room.currentQ,
     total:      room.questions.length,
-    question:   q.question,
-    sub:        q.sub,
+    questionTR: q.tr.question,
+    questionEN: q.en.question,
+    subTR:      q.tr.sub  || null,
+    subEN:      q.en.sub  || null,
     options:    q.options,
-    durationMs: Q_DURATION_MS,
+    durationMs: room.durationMs,
   });
 
-  room.timer = setTimeout(() => revealAndAdvance(room), Q_DURATION_MS);
+  room.timer = setTimeout(() => revealAndAdvance(room), room.durationMs);
 }
 
 function revealAndAdvance(room) {
@@ -98,14 +97,14 @@ function revealAndAdvance(room) {
     correct:     q.correct,
     leaderboard: buildLeaderboard(room),
   });
-  setTimeout(() => nextQuestion(room), 2500);
+  setTimeout(() => nextQuestion(room), 3000);
 }
 
 io.on('connection', (socket) => {
   socket.on('join_room', ({ code, name }, ack) => {
     const room = rooms.get(code);
-    if (!room)                     return ack({ ok: false, error: 'Oda bulunamadı' });
-    if (room.state !== 'lobby')    return ack({ ok: false, error: 'Oyun başlamış' });
+    if (!room)                         return ack({ ok: false, error: 'Oda bulunamadı' });
+    if (room.state !== 'lobby')        return ack({ ok: false, error: 'Oyun başlamış' });
     if (room.players.size >= ROOM_MAX) return ack({ ok: false, error: 'Oda dolu' });
 
     room.players.set(socket.id, { name: (name || 'Anon').slice(0, 16), score: 0 });
@@ -116,46 +115,49 @@ io.on('connection', (socket) => {
     ack({ ok: true, isHost: room.hostId === socket.id });
     broadcast(room, 'lobby_update', {
       players: [...room.players.values()].map(p => p.name),
-      mode:    room.mode,
+      mode: room.mode,
     });
     console.log(`[${code}] ${name} katıldı (${room.players.size}/${ROOM_MAX})`);
   });
 
-  // Host mod seçer, lobi güncellenir
+  // Host modu günceller → lobi yenilenir
   socket.on('set_mode', ({ mode }, ack) => {
     const room = rooms.get(socket.data.roomCode);
-    if (!room)                      return ack?.({ ok: false, error: 'Oda yok' });
-    if (room.hostId !== socket.id)  return ack?.({ ok: false, error: 'Sadece host mod seçebilir' });
-    if (room.state !== 'lobby')     return ack?.({ ok: false, error: 'Oyun başlamış' });
+    if (!room)                     return ack?.({ ok: false, error: 'Oda yok' });
+    if (room.hostId !== socket.id) return ack?.({ ok: false, error: 'Sadece host mod seçebilir' });
+    if (room.state !== 'lobby')    return ack?.({ ok: false, error: 'Oyun başlamış' });
 
-    room.mode = VALID_MODES.includes(mode) ? mode : 'europe';
+    room.mode      = VALID_MODES.includes(mode) ? mode : 'europe';
+    room.durationMs = MODE_DURATION[room.mode];
     ack?.({ ok: true });
     broadcast(room, 'lobby_update', {
       players: [...room.players.values()].map(p => p.name),
-      mode:    room.mode,
+      mode: room.mode,
     });
-    console.log(`[${room.code}] mod → ${room.mode}`);
+    console.log(`[${room.code}] mod → ${room.mode} (${room.durationMs}ms)`);
   });
 
   socket.on('start_game', async ({ mode } = {}, ack) => {
     const room = rooms.get(socket.data.roomCode);
-    if (!room)                      return ack?.({ ok: false, error: 'Oda yok' });
-    if (room.hostId !== socket.id)  return ack?.({ ok: false, error: 'Sadece host başlatabilir' });
-    if (room.state !== 'lobby')     return ack?.({ ok: false, error: 'Zaten çalışıyor' });
+    if (!room)                     return ack?.({ ok: false, error: 'Oda yok' });
+    if (room.hostId !== socket.id) return ack?.({ ok: false, error: 'Sadece host başlatabilir' });
+    if (room.state !== 'lobby')    return ack?.({ ok: false, error: 'Zaten çalışıyor' });
 
-    // mode parametresi gelirse güncelle
-    if (mode && VALID_MODES.includes(mode)) room.mode = mode;
+    if (mode && VALID_MODES.includes(mode)) {
+      room.mode       = mode;
+      room.durationMs = MODE_DURATION[mode];
+    }
 
     try {
       room.questions = await generateQuestions(Q_COUNT, room.mode);
       room.state = 'playing';
-      broadcast(room, 'game_started', { totalQuestions: Q_COUNT, mode: room.mode });
+      broadcast(room, 'game_started', { totalQuestions: room.questions.length, mode: room.mode });
       setTimeout(() => nextQuestion(room), 1500);
       ack?.({ ok: true });
-      console.log(`[${room.code}] oyun başladı (mod: ${room.mode})`);
+      console.log(`[${room.code}] başladı (${room.mode}, ${room.durationMs}ms, ${room.questions.length} soru)`);
     } catch (err) {
       console.error(`[${room.code}] soru üretilemedi:`, err.message);
-      ack?.({ ok: false, error: 'Sorular üretilemedi: ' + err.message });
+      ack?.({ ok: false, error: err.message });
     }
   });
 
@@ -165,9 +167,9 @@ io.on('connection', (socket) => {
     if (room.answers.has(socket.id)) return;
 
     const responseMs = Date.now() - room.qStartTs;
-    const q = room.questions[room.currentQ];
-    const correct = answer === q.correct;
-    const gained  = calcScore(correct, responseMs);
+    const q          = room.questions[room.currentQ];
+    const correct    = answer === q.correct;
+    const gained     = calcScore(correct, responseMs, room.durationMs);
 
     room.answers.set(socket.id, { answer, ts: responseMs });
     const player = room.players.get(socket.id);
@@ -192,12 +194,12 @@ io.on('connection', (socket) => {
     if (room.players.size === 0) {
       clearTimeout(room.timer);
       rooms.delete(room.code);
-      console.log(`[${room.code}] oda kapatıldı (boş)`);
+      console.log(`[${room.code}] oda kapatıldı`);
       return;
     }
     broadcast(room, 'lobby_update', {
       players: [...room.players.values()].map(p => p.name),
-      mode:    room.mode,
+      mode: room.mode,
     });
   });
 });

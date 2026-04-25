@@ -1,6 +1,6 @@
-// questionGenerator.js — her restart'ta GitHub'dan taze seed yükler
-const fs   = require('fs');
-const path = require('path');
+// questionGenerator.js
+const fs    = require('fs');
+const path  = require('path');
 const https = require('https');
 
 const GITHUB_USER = process.env.GH_USER || 'yourusername';
@@ -8,17 +8,17 @@ const GITHUB_REPO = process.env.GH_REPO || 'footbally';
 const SEED_URL    = `https://cdn.jsdelivr.net/gh/${GITHUB_USER}/${GITHUB_REPO}@main/backend/seed.json`;
 const LOCAL_SEED  = path.join(__dirname, 'seed.json');
 
-let PLAYERS   = [];
-let loadedAt  = null;
+let PLAYERS  = [];
+let loadedAt = null;
 
-// ── Seed yükleme ────────────────────────────────────────────────────────────
+// ── Seed yükleme ─────────────────────────────────────────────────────────────
 function fetchRemote() {
   return new Promise((resolve, reject) => {
     const req = https.get(SEED_URL, { timeout: 5000 }, (res) => {
       if (res.statusCode !== 200) return reject(new Error(`HTTP ${res.statusCode}`));
       let data = '';
       res.setEncoding('utf8');
-      res.on('data', chunk => data += chunk);
+      res.on('data', c => data += c);
       res.on('end', () => { try { resolve(JSON.parse(data)); } catch (e) { reject(e); } });
     });
     req.on('error', reject);
@@ -31,22 +31,21 @@ async function loadSeed() {
     const seed = await fetchRemote();
     PLAYERS = seed.players;
     loadedAt = new Date();
-    console.log(`✓ Seed jsDelivr'dan yüklendi: ${PLAYERS.length} oyuncu (${seed.generatedAt})`);
+    console.log(`✓ Seed jsDelivr: ${PLAYERS.length} oyuncu (${seed.generatedAt})`);
     fs.writeFileSync(LOCAL_SEED, JSON.stringify(seed));
   } catch (err) {
-    console.warn(`⚠ jsDelivr başarısız (${err.message}), lokal seed kullanılıyor`);
-    if (!fs.existsSync(LOCAL_SEED)) throw new Error('Ne uzaktan ne de lokal seed bulunamadı');
+    console.warn(`⚠ jsDelivr başarısız (${err.message}), lokal seed`);
+    if (!fs.existsSync(LOCAL_SEED)) throw new Error('Seed bulunamadı');
     const seed = JSON.parse(fs.readFileSync(LOCAL_SEED, 'utf8'));
     PLAYERS = seed.players;
     loadedAt = new Date();
-    console.log(`✓ Seed lokal dosyadan yüklendi: ${PLAYERS.length} oyuncu`);
+    console.log(`✓ Lokal seed: ${PLAYERS.length} oyuncu`);
   }
 }
-
 loadSeed();
 setInterval(() => loadSeed().catch(e => console.error('Seed refresh:', e.message)), 6 * 60 * 60 * 1000);
 
-// ── Yardımcılar ─────────────────────────────────────────────────────────────
+// ── Yardımcılar ───────────────────────────────────────────────────────────────
 const shuffle = arr => {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -59,13 +58,43 @@ const pickN   = (arr, n) => shuffle(arr).slice(0, n);
 const pick1   = arr => arr[Math.floor(Math.random() * arr.length)];
 const formatMV = v => v >= 1e6 ? `€${(v / 1e6).toFixed(0)}M` : `€${(v / 1e3).toFixed(0)}K`;
 
-// ── Havuz seçimi ─────────────────────────────────────────────────────────────
+// ── Havuz seçimi ──────────────────────────────────────────────────────────────
+// Türkiye anahtar kelimeleri (tam ad da dahil)
+const TR_KEYWORDS = [
+  'Galatasaray', 'Fenerbahçe', 'Beşiktaş', 'Trabzonspor', 'Başakşehir',
+  'Konyaspor', 'Sivasspor', 'Antalyaspor', 'Alanyaspor', 'Kayserispor',
+  'Adana Demirspor', 'Kasımpaşa', 'Rizespor', 'Samsunspor', 'Pendikspor',
+  'Hatayspor', 'Ankaragücü', 'Karagümrük', 'Eyüpspor', 'Bodrum',
+];
+
 function getPool(mode) {
-  if (mode === 'turkey') return PLAYERS.filter(p => p.leagueId === 'TR1');
+  if (mode === 'turkey') {
+    // 1. Yeni seed: leagueId = TR1
+    const byLeague = PLAYERS.filter(p => p.leagueId === 'TR1');
+    if (byLeague.length >= 8) return byLeague;
+    // 2. Fallback: Türk kulübü adı eşleşmesi
+    const byClub = PLAYERS.filter(p =>
+      TR_KEYWORDS.some(k => p.club && p.club.includes(k))
+    );
+    // 3. Fallback: Türk milli takımı oyuncuları (Avrupa kulübünde olabilir)
+    const byNat = PLAYERS.filter(p => p.nationality === 'Türkiye');
+    // Birleştir, tekrarı kaldır
+    const combined = [...new Map(
+      [...byClub, ...byNat].map(p => [p.id, p])
+    ).values()];
+    return combined;
+  }
+  if (mode === 'hard') return PLAYERS; // hard: tüm oyuncular, sadece zor sorular
   return PLAYERS;
 }
 
-// ── Mevcut soru tipleri (pool parametresi aldı) ──────────────────────────────
+// ── Bilingual soru yardımcısı ─────────────────────────────────────────────────
+const q = (tr, en, trSub, enSub) => ({
+  tr: { question: tr, sub: trSub || null },
+  en: { question: en, sub: enSub || trSub || null },
+});
+
+// ── Mevcut soru tipleri ───────────────────────────────────────────────────────
 
 function qHigherValue(pool) {
   if (pool.length < 2) return null;
@@ -74,232 +103,314 @@ function qHigherValue(pool) {
   const correct = a.marketValue > b.marketValue ? a.name : b.name;
   return {
     type: 'higher_value',
-    question: 'Kimin piyasa değeri daha yüksek?',
-    sub: `${a.name} vs ${b.name}`,
-    options: shuffle([a.name, b.name]),
-    correct,
+    ...q('Kimin piyasa değeri daha yüksek?', 'Who has a higher market value?',
+        `${a.name} vs ${b.name}`),
+    options: shuffle([a.name, b.name]), correct,
   };
 }
 
 function qPlayerClub(pool) {
-  const candidates = pool.filter(p => p.club !== 'Unknown');
-  if (candidates.length < 4) return null;
-  const target = pick1(candidates);
+  const cands = pool.filter(p => p.club !== 'Unknown');
+  if (cands.length < 4) return null;
+  const target = pick1(cands);
   const distractors = pickN(
-    [...new Set(pool.filter(p => p.club !== target.club && p.club !== 'Unknown').map(p => p.club))],
-    3
+    [...new Set(pool.filter(p => p.club !== target.club && p.club !== 'Unknown').map(p => p.club))], 3
   );
   if (distractors.length < 3) return null;
   return {
     type: 'player_club',
-    question: `${target.name} hangi kulüpte oynuyor?`,
-    options: shuffle([target.club, ...distractors]),
-    correct: target.club,
+    ...q(`${target.name} hangi kulüpte oynuyor?`, `Which club does ${target.name} play for?`),
+    options: shuffle([target.club, ...distractors]), correct: target.club,
   };
 }
 
 function qGuessPlayer(pool) {
-  const candidates = pool.filter(p => p.club !== 'Unknown');
-  if (candidates.length < 4) return null;
-  const target = pick1(candidates);
+  const cands = pool.filter(p => p.club !== 'Unknown');
+  if (cands.length < 4) return null;
+  const target = pick1(cands);
   const distractors = pickN(pool.filter(p => p.name !== target.name).map(p => p.name), 3);
   if (distractors.length < 3) return null;
   return {
     type: 'guess_player',
-    question: `${target.club}'te oynayan, ${formatMV(target.marketValue)} değerinde bir oyuncu. Kim?`,
-    options: shuffle([target.name, ...distractors]),
-    correct: target.name,
+    ...q(
+      `${target.club}'deki ${formatMV(target.marketValue)} değerli oyuncu kim?`,
+      `A ${formatMV(target.marketValue)} player at ${target.club}. Who?`,
+    ),
+    options: shuffle([target.name, ...distractors]), correct: target.name,
   };
 }
 
 function qNationality(pool) {
-  const candidates = pool.filter(p => p.nationality);
-  if (candidates.length < 4) return null;
-  const target = pick1(candidates);
+  const cands = pool.filter(p => p.nationality);
+  if (cands.length < 4) return null;
+  const target = pick1(cands);
   const distractors = pickN(
-    [...new Set(pool.filter(p => p.nationality !== target.nationality).map(p => p.nationality))],
-    3
+    [...new Set(pool.filter(p => p.nationality !== target.nationality).map(p => p.nationality))], 3
   );
   if (distractors.length < 3) return null;
   return {
     type: 'nationality',
-    question: `${target.name} hangi ülkeli?`,
-    options: shuffle([target.nationality, ...distractors]),
-    correct: target.nationality,
+    ...q(`${target.name} hangi ülkeli?`, `What nationality is ${target.name}?`),
+    options: shuffle([target.nationality, ...distractors]), correct: target.nationality,
   };
 }
 
 function qPosition(pool) {
-  const candidates = pool.filter(p => p.position && p.position !== 'Unknown');
-  if (candidates.length < 4) return null;
-  const target = pick1(candidates);
+  const cands = pool.filter(p => p.position && p.position !== 'Unknown');
+  if (cands.length < 4) return null;
+  const target = pick1(cands);
   const positions = [...new Set(pool.map(p => p.position).filter(p => p && p !== 'Unknown'))];
   const distractors = pickN(positions.filter(p => p !== target.position), 3);
   if (distractors.length < 3) return null;
   return {
     type: 'position',
-    question: `${target.name} hangi mevkide oynuyor?`,
-    options: shuffle([target.position, ...distractors]),
-    correct: target.position,
+    ...q(`${target.name} hangi mevkide oynuyor?`, `What position does ${target.name} play?`),
+    options: shuffle([target.position, ...distractors]), correct: target.position,
   };
 }
 
 function qPreviousClub(pool) {
-  const candidates = pool.filter(p => p.lastTransfer?.from && p.lastTransfer?.to);
-  if (candidates.length < 4) return null;
-  const target = pick1(candidates);
+  const cands = pool.filter(p => p.lastTransfer?.from && p.lastTransfer?.to);
+  if (cands.length < 4) return null;
+  const target = pick1(cands);
   const distractors = pickN(
-    [...new Set(pool.filter(p => p.club && p.club !== target.lastTransfer.from).map(p => p.club))],
-    3
+    [...new Set(pool.filter(p => p.club && p.club !== target.lastTransfer.from).map(p => p.club))], 3
   );
   if (distractors.length < 3) return null;
   return {
     type: 'previous_club',
-    question: `${target.name} ${target.lastTransfer.to}'e gelmeden önce hangi kulüpteydi?`,
-    options: shuffle([target.lastTransfer.from, ...distractors]),
-    correct: target.lastTransfer.from,
+    ...q(
+      `${target.name} şu anki kulübüne geçmeden önce nerede oynuyordu?`,
+      `Where did ${target.name} play before their current club?`,
+      `... → ${target.lastTransfer.to}`,
+    ),
+    options: shuffle([target.lastTransfer.from, ...distractors]), correct: target.lastTransfer.from,
   };
 }
 
 function qHigherTransferFee(pool) {
-  const candidates = pool.filter(p => p.lastTransfer?.fee > 0);
-  if (candidates.length < 2) return null;
-  const [a, b] = pickN(candidates, 2);
+  const cands = pool.filter(p => p.lastTransfer?.fee > 0);
+  if (cands.length < 2) return null;
+  const [a, b] = pickN(cands, 2);
   if (a.lastTransfer.fee === b.lastTransfer.fee) return null;
   const correct = a.lastTransfer.fee > b.lastTransfer.fee ? a.name : b.name;
   return {
     type: 'higher_fee',
-    question: 'Son transferinde daha yüksek bonservis ödenen oyuncu hangisi?',
-    sub: `${a.name} vs ${b.name}`,
-    options: shuffle([a.name, b.name]),
-    correct,
+    ...q(
+      'Hangisi için daha fazla bonservis ödendi?',
+      'Who commanded a higher transfer fee?',
+      `${a.name} vs ${b.name}`,
+    ),
+    options: shuffle([a.name, b.name]), correct,
   };
 }
 
 // ── Yeni soru tipleri ────────────────────────────────────────────────────────
 
-// "Bu kariyer yolunu hangi oyuncu izledi?"
-function qCareerPath(pool) {
-  const candidates = pool.filter(p => p.careerPath && p.careerPath.length >= 3);
-  if (candidates.length < 4) return null;
-  const target = pick1(candidates);
-  const pathStr = target.careerPath.map(e => e.club).join(' → ');
-  const distractors = pickN(
-    candidates.filter(p => p.name !== target.name).map(p => p.name),
-    3
-  );
-  if (distractors.length < 3) return null;
+// 4 oyuncudan en değerlisi kim?
+function qMostExpensive(pool) {
+  if (pool.length < 4) return null;
+  const group = pickN(pool, 4);
+  const vals = new Set(group.map(p => p.marketValue));
+  if (vals.size < 4) return null;
+  const richest = group.reduce((max, p) => p.marketValue > max.marketValue ? p : max, group[0]);
   return {
-    type: 'career_path',
-    question: 'Bu kariyer yolunu hangi oyuncu izledi?',
-    sub: pathStr,
-    options: shuffle([target.name, ...distractors]),
-    correct: target.name,
+    type: 'most_expensive',
+    ...q(
+      'Piyasa değeri en yüksek oyuncu hangisi?',
+      'Which player has the highest market value?',
+    ),
+    options: shuffle(group.map(p => p.name)), correct: richest.name,
   };
 }
 
-// "X ile Y'den hangisi daha yaşlı?"
-function qOlderPlayer(pool) {
-  const candidates = pool.filter(p => p.birthYear);
-  if (candidates.length < 2) return null;
-  const [a, b] = pickN(candidates, 2);
+// Hangisi daha genç?
+function qYounger(pool) {
+  const cands = pool.filter(p => p.birthYear);
+  if (cands.length < 2) return null;
+  const [a, b] = pickN(cands, 2);
   if (a.birthYear === b.birthYear) return null;
-  const correct = a.birthYear < b.birthYear ? a.name : b.name; // küçük yıl = daha yaşlı
+  const correct = a.birthYear > b.birthYear ? a.name : b.name;
+  return {
+    type: 'younger',
+    ...q(
+      'Hangisi daha genç?', 'Who is younger?',
+      `${a.name} (d. ${a.birthYear}) vs ${b.name} (d. ${b.birthYear})`,
+      `${a.name} (b. ${a.birthYear}) vs ${b.name} (b. ${b.birthYear})`,
+    ),
+    options: shuffle([a.name, b.name]), correct,
+  };
+}
+
+// Hangisi daha yaşlı?
+function qOlderPlayer(pool) {
+  const cands = pool.filter(p => p.birthYear);
+  if (cands.length < 2) return null;
+  const [a, b] = pickN(cands, 2);
+  if (a.birthYear === b.birthYear) return null;
+  const correct = a.birthYear < b.birthYear ? a.name : b.name;
   return {
     type: 'older_player',
-    question: 'Hangisi daha yaşlı?',
-    sub: `${a.name} (d. ${a.birthYear}) vs ${b.name} (d. ${b.birthYear})`,
-    options: shuffle([a.name, b.name]),
-    correct,
+    ...q(
+      'Hangisi daha yaşlı?', 'Who is older?',
+      `${a.name} (d. ${a.birthYear}) vs ${b.name} (d. ${b.birthYear})`,
+      `${a.name} (b. ${a.birthYear}) vs ${b.name} (b. ${b.birthYear})`,
+    ),
+    options: shuffle([a.name, b.name]), correct,
   };
 }
 
-// "Şu oyunculardan hangisi en uzun?"
+// En uzun boylu kim?
 function qTallest(pool) {
-  const candidates = pool.filter(p => p.height && p.height > 150);
-  if (candidates.length < 4) return null;
-  const group = pickN(candidates, 4);
+  const cands = pool.filter(p => p.height && p.height > 150);
+  if (cands.length < 4) return null;
+  const group = pickN(cands, 4);
   const tallest = group.reduce((max, p) => p.height > max.height ? p : max, group[0]);
   return {
     type: 'tallest',
-    question: 'Şu oyunculardan hangisi en uzun?',
-    options: shuffle(group.map(p => p.name)),
-    correct: tallest.name,
+    ...q('Hangisi en uzun boylu?', 'Who is the tallest?'),
+    options: shuffle(group.map(p => p.name)), correct: tallest.name,
   };
 }
 
-// "Hangisi [ülke] milli takımında OYNAMADI?"
+// Hangisi [ülke] milli takımında OYNAMADI?
 function qNationalityNotFrom(pool) {
-  const nationalities = [...new Set(pool.map(p => p.nationality).filter(Boolean))];
-  // En az 3 oyuncusu olan milliyetler
-  const abundant = nationalities.filter(
-    nat => pool.filter(p => p.nationality === nat).length >= 3
-  );
+  const nats = [...new Set(pool.map(p => p.nationality).filter(Boolean))];
+  const abundant = nats.filter(n => pool.filter(p => p.nationality === n).length >= 3);
   if (abundant.length === 0) return null;
   const nat = pick1(abundant);
-  const fromNat = pickN(pool.filter(p => p.nationality === nat), 3);
-  const notFromNat = pool.filter(p => p.nationality !== nat && p.nationality);
-  if (notFromNat.length === 0) return null;
-  const outsider = pick1(notFromNat);
-  const options = shuffle([...fromNat.map(p => p.name), outsider.name]);
+  const fromNat  = pickN(pool.filter(p => p.nationality === nat), 3);
+  const notFrom  = pool.filter(p => p.nationality !== nat && p.nationality);
+  if (notFrom.length === 0) return null;
+  const outsider = pick1(notFrom);
   return {
     type: 'nationality_not_from',
-    question: `Şu oyunculardan hangisi ${nat} milli takımında OYNAMADI?`,
-    options,
+    ...q(
+      `Hangisi ${nat} milli takımında OYNAMADI?`,
+      `Which player did NOT play for ${nat}?`,
+    ),
+    options: shuffle([...fromNat.map(p => p.name), outsider.name]),
     correct: outsider.name,
   };
 }
 
-// "X'in kariyer yolundaki ikinci kulübü neydi?"
-function qSecondClub(pool) {
-  const candidates = pool.filter(p => p.careerPath && p.careerPath.length >= 2);
-  if (candidates.length < 4) return null;
-  const target = pick1(candidates);
-  const secondClub = target.careerPath[1].club;
-  const allClubs = [...new Set(pool.filter(p => p.club !== 'Unknown').map(p => p.club))];
-  const distractors = pickN(allClubs.filter(c => c !== secondClub), 3);
-  if (distractors.length < 3) return null;
+// Kariyer yolunu hangi oyuncu izledi?
+function qCareerPath(pool) {
+  const cands = pool.filter(p => p.careerPath && p.careerPath.length >= 3);
+  if (cands.length < 4) return null;
+  const target   = pick1(cands);
+  const pathStr  = target.careerPath.map(e => e.club).join(' → ');
+  const distract = pickN(cands.filter(p => p.name !== target.name).map(p => p.name), 3);
+  if (distract.length < 3) return null;
   return {
-    type: 'second_club',
-    question: `${target.name}'in kariyer yolundaki ikinci kulübü neydi?`,
-    options: shuffle([secondClub, ...distractors]),
-    correct: secondClub,
+    type: 'career_path',
+    ...q(
+      'Bu kariyer yolunu hangi oyuncu izledi?',
+      'Which player followed this career path?',
+      pathStr,
+    ),
+    options: shuffle([target.name, ...distract]), correct: target.name,
   };
 }
 
-// ── Generator listesi ────────────────────────────────────────────────────────
-const GENERATORS = [
-  qHigherValue,
-  qPlayerClub,
-  qGuessPlayer,
-  qNationality,
-  qPosition,
-  qPreviousClub,
-  qHigherTransferFee,
-  qCareerPath,
-  qOlderPlayer,
-  qTallest,
-  qNationalityNotFrom,
-  qSecondClub,
+// İkinci kulübü neydi?
+function qSecondClub(pool) {
+  const cands = pool.filter(p => p.careerPath && p.careerPath.length >= 2);
+  if (cands.length < 4) return null;
+  const target     = pick1(cands);
+  const secondClub = target.careerPath[1].club;
+  const allClubs   = [...new Set(pool.filter(p => p.club !== 'Unknown').map(p => p.club))];
+  const distract   = pickN(allClubs.filter(c => c !== secondClub), 3);
+  if (distract.length < 3) return null;
+  return {
+    type: 'second_club',
+    ...q(
+      `${target.name}'in kariyer yolundaki ikinci kulübü neydi?`,
+      `What was ${target.name}'s second club in their career?`,
+    ),
+    options: shuffle([secondClub, ...distract]), correct: secondClub,
+  };
+}
+
+// Hangisi diğerleriyle aynı mevkide oynamıyor?
+function qPositionOddOne(pool) {
+  const cands = pool.filter(p => p.position && p.position !== 'Unknown');
+  if (cands.length < 4) return null;
+  const positions = [...new Set(cands.map(p => p.position))];
+  const goodPos   = positions.filter(pos => cands.filter(p => p.position === pos).length >= 3);
+  if (goodPos.length === 0) return null;
+  const pos    = pick1(goodPos);
+  const same3  = pickN(cands.filter(p => p.position === pos), 3);
+  const others = cands.filter(p => p.position !== pos);
+  if (others.length === 0) return null;
+  const odd = pick1(others);
+  return {
+    type: 'position_odd_one',
+    ...q(
+      'Hangi oyuncu diğerleriyle aynı mevkide oynamıyor?',
+      'Which player does NOT play the same position as the others?',
+    ),
+    options: shuffle([...same3.map(p => p.name), odd.name]),
+    correct: odd.name,
+  };
+}
+
+// ── Generator listeleri ───────────────────────────────────────────────────────
+const BASE_GENERATORS = [
+  qHigherValue, qPlayerClub, qGuessPlayer, qNationality,
+  qPosition, qPreviousClub, qHigherTransferFee,
+  qMostExpensive, qPositionOddOne,
 ];
 
-// ── Ana export ───────────────────────────────────────────────────────────────
+const ALL_GENERATORS = [
+  ...BASE_GENERATORS,
+  qNationalityNotFrom, qCareerPath, qSecondClub,
+  qOlderPlayer, qYounger, qTallest,
+];
+
+const HARD_GENERATORS = [
+  qNationalityNotFrom, qCareerPath, qSecondClub,
+  qOlderPlayer, qYounger, qTallest,
+  qMostExpensive, qPositionOddOne,
+];
+
+function getGenerators(mode) {
+  if (mode === 'hard') return HARD_GENERATORS;
+  return ALL_GENERATORS;
+}
+
+// ── Ana export ────────────────────────────────────────────────────────────────
 async function generateQuestions(count = 10, mode = 'europe') {
   if (PLAYERS.length === 0) await loadSeed();
 
   const pool = getPool(mode);
-  if (pool.length < 10) throw new Error(`Yeterli oyuncu yok (${mode} modunda ${pool.length} oyuncu)`);
+  if (pool.length < 5) {
+    throw new Error(
+      mode === 'turkey'
+        ? 'Türkiye modu için yeterli oyuncu yok. Seed güncellenmeli — GitHub Actions çalıştır.'
+        : `Yeterli oyuncu yok (${pool.length})`
+    );
+  }
 
+  const gens = getGenerators(mode);
   const questions = [];
   let attempts = 0;
-  while (questions.length < count && attempts < count * 20) {
-    const gen = GENERATORS[Math.floor(Math.random() * GENERATORS.length)];
-    const q = gen(pool);
-    if (q && !questions.some(e => e.question === q.question)) questions.push(q);
+  while (questions.length < count && attempts < count * 25) {
+    const gen = gens[Math.floor(Math.random() * gens.length)];
+    const q   = gen(pool);
+    // deduplicate: question text + sub birlikte kontrol et
+    const key = (q?.tr.question || '') + '|' + (q?.tr.sub || '');
+    if (q && !questions.some(e => (e.tr.question + '|' + (e.tr.sub || '')) === key)) {
+      questions.push(q);
+    }
     attempts++;
   }
 
-  if (questions.length < count) throw new Error(`Yetersiz soru üretildi (${questions.length}/${count})`);
+  if (questions.length < count) {
+    // Turkey pool çok küçük olabilir, üretilebildiği kadarını döndür
+    if (mode === 'turkey' && questions.length >= 5) return questions;
+    throw new Error(`Yetersiz soru: ${questions.length}/${count}`);
+  }
   return questions;
 }
 
