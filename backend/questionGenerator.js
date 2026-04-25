@@ -233,11 +233,7 @@ function qYounger(pool) {
   const correct = a.birthYear > b.birthYear ? a.name : b.name;
   return {
     type: 'younger',
-    ...q(
-      'Hangisi daha genç?', 'Who is younger?',
-      `${a.name} (d. ${a.birthYear}) vs ${b.name} (d. ${b.birthYear})`,
-      `${a.name} (b. ${a.birthYear}) vs ${b.name} (b. ${b.birthYear})`,
-    ),
+    ...q('Hangisi daha genç?', 'Who is younger?', `${a.name} vs ${b.name}`),
     options: shuffle([a.name, b.name]), correct,
   };
 }
@@ -251,11 +247,7 @@ function qOlderPlayer(pool) {
   const correct = a.birthYear < b.birthYear ? a.name : b.name;
   return {
     type: 'older_player',
-    ...q(
-      'Hangisi daha yaşlı?', 'Who is older?',
-      `${a.name} (d. ${a.birthYear}) vs ${b.name} (d. ${b.birthYear})`,
-      `${a.name} (b. ${a.birthYear}) vs ${b.name} (b. ${b.birthYear})`,
-    ),
+    ...q('Hangisi daha yaşlı?', 'Who is older?', `${a.name} vs ${b.name}`),
     options: shuffle([a.name, b.name]), correct,
   };
 }
@@ -332,6 +324,70 @@ function qSecondClub(pool) {
   };
 }
 
+// [Oyuncu]'nun son transferinde gittiği kulüp hangisi?
+function qTransferDestination(pool) {
+  const cands = pool.filter(p => p.lastTransfer?.to && p.lastTransfer?.from);
+  if (cands.length < 4) return null;
+  const target = pick1(cands);
+  const allClubs = [...new Set(pool.filter(p => p.club !== 'Unknown').map(p => p.club))];
+  const distract = pickN(allClubs.filter(c => c !== target.lastTransfer.to), 3);
+  if (distract.length < 3) return null;
+  return {
+    type: 'transfer_destination',
+    ...q(
+      `${target.name} son transferinde hangi kulübe gitti?`,
+      `Which club did ${target.name} join in their last transfer?`,
+      `${target.lastTransfer.from} → ?`,
+    ),
+    options: shuffle([target.lastTransfer.to, ...distract]), correct: target.lastTransfer.to,
+  };
+}
+
+// Hangi oyuncu [oyuncu] ile aynı milliyetten?
+function qSameNationality(pool) {
+  const cands = pool.filter(p => p.nationality);
+  if (cands.length < 4) return null;
+  const nats = [...new Set(cands.map(p => p.nationality))];
+  const goodNat = nats.filter(n => cands.filter(p => p.nationality === n).length >= 2);
+  if (goodNat.length === 0) return null;
+  const nat    = pick1(goodNat);
+  const fromNat = cands.filter(p => p.nationality === nat);
+  const [anchor, correct_p] = pickN(fromNat, 2);
+  const others = cands.filter(p => p.nationality !== nat);
+  if (others.length < 3) return null;
+  const distract = pickN(others, 3);
+  return {
+    type: 'same_nationality',
+    ...q(
+      `Hangi oyuncu ${anchor.name} ile aynı milliyetten?`,
+      `Which player shares ${anchor.name}'s nationality?`,
+    ),
+    options: shuffle([correct_p.name, ...distract.map(p => p.name)]), correct: correct_p.name,
+  };
+}
+
+// [Oyuncu]'nun piyasa değeri hangisine en yakın?
+function qMarketValueGuess(pool) {
+  if (pool.length < 2) return null;
+  const target = pick1(pool);
+  const mv = target.marketValue;
+  const step = mv >= 50e6 ? 10e6 : mv >= 10e6 ? 5e6 : 1e6;
+  const base = Math.round(mv / step) * step;
+  const offsets = shuffle([-3, -2, -1, 1, 2, 3]).slice(0, 3);
+  const wrong = offsets.map(o => base + o * step).filter(v => v > 0 && v !== mv);
+  if (wrong.length < 3) return null;
+  const correctStr = formatMV(mv);
+  const options = shuffle([correctStr, ...wrong.map(formatMV)]);
+  return {
+    type: 'market_value_guess',
+    ...q(
+      `${target.name}'in piyasa değeri hangisine en yakın?`,
+      `Which figure is closest to ${target.name}'s market value?`,
+    ),
+    options, correct: correctStr,
+  };
+}
+
 // Hangisi diğerleriyle aynı mevkide oynamıyor?
 function qPositionOddOne(pool) {
   const cands = pool.filter(p => p.position && p.position !== 'Unknown');
@@ -360,6 +416,7 @@ const BASE_GENERATORS = [
   qHigherValue, qPlayerClub, qGuessPlayer, qNationality,
   qPosition, qPreviousClub, qHigherTransferFee,
   qMostExpensive, qPositionOddOne,
+  qTransferDestination, qSameNationality, qMarketValueGuess,
 ];
 
 const ALL_GENERATORS = [
@@ -372,6 +429,7 @@ const HARD_GENERATORS = [
   qNationalityNotFrom, qCareerPath, qSecondClub,
   qOlderPlayer, qYounger, qTallest,
   qMostExpensive, qPositionOddOne,
+  qSameNationality, qMarketValueGuess,
 ];
 
 function getGenerators(mode) {
