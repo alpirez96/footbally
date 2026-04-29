@@ -82,9 +82,10 @@ function nextQuestion(room) {
     total:      room.questions.length,
     questionTR: q.tr.question,
     questionEN: q.en.question,
-    subTR:      q.tr.sub  || null,
-    subEN:      q.en.sub  || null,
+    subTR:      q.tr.sub    || null,
+    subEN:      q.en.sub    || null,
     options:    q.options,
+    optionsTR:  q.optionsTR || null,
     durationMs: room.durationMs,
   });
 

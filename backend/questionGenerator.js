@@ -94,6 +94,45 @@ const q = (tr, en, trSub, enSub) => ({
   en: { question: en, sub: enSub || trSub || null },
 });
 
+// ── Mevki çevirisi (EN → TR) ──────────────────────────────────────────────────
+const POSITION_TR = {
+  'Goalkeeper':         'Kaleci',
+  'Centre-Back':        'Stoper',
+  'Left-Back':          'Sol Bek',
+  'Right-Back':         'Sağ Bek',
+  'Defensive Midfield': 'Defansif Orta Saha',
+  'Central Midfield':   'Orta Saha',
+  'Attacking Midfield': 'Ofansif Orta Saha',
+  'Left Winger':        'Sol Kanat',
+  'Right Winger':       'Sağ Kanat',
+  'Left Midfield':      'Sol Orta Saha',
+  'Right Midfield':     'Sağ Orta Saha',
+  'Centre-Forward':     'Santrafor',
+  'Second Striker':     'İkinci Forvet',
+  'Attack':             'Forvet',
+  'Defender':           'Defans',
+  'Midfield':           'Orta Saha',
+  'Winger':             'Kanat',
+};
+const posTR   = pos => POSITION_TR[pos] || pos;
+const posOpts = opts => opts.map(posTR);
+
+// ── Lig adları ────────────────────────────────────────────────────────────────
+const LEAGUE_NAMES = {
+  TR1: { tr: 'Süper Lig',         en: 'Süper Lig' },
+  GB1: { tr: 'Premier Lig',       en: 'Premier League' },
+  ES1: { tr: 'La Liga',           en: 'La Liga' },
+  IT1: { tr: 'Serie A',           en: 'Serie A' },
+  L1:  { tr: 'Bundesliga',        en: 'Bundesliga' },
+  FR1: { tr: 'Ligue 1',           en: 'Ligue 1' },
+  NL1: { tr: 'Eredivisie',        en: 'Eredivisie' },
+  PO1: { tr: 'Primeira Liga',     en: 'Primeira Liga' },
+  BE1: { tr: 'Pro Ligi',          en: 'Pro League' },
+  SC1: { tr: 'İskoç Ligi',        en: 'Scottish Premiership' },
+};
+const ligTR = id => LEAGUE_NAMES[id]?.tr || id;
+const ligEN = id => LEAGUE_NAMES[id]?.en || id;
+
 // ── Mevcut soru tipleri ───────────────────────────────────────────────────────
 
 function qHigherValue(pool) {
@@ -162,10 +201,11 @@ function qPosition(pool) {
   const positions = [...new Set(pool.map(p => p.position).filter(p => p && p !== 'Unknown'))];
   const distractors = pickN(positions.filter(p => p !== target.position), 3);
   if (distractors.length < 3) return null;
+  const opts = shuffle([target.position, ...distractors]);
   return {
     type: 'position',
     ...q(`${target.name} hangi mevkide oynuyor?`, `What position does ${target.name} play?`),
-    options: shuffle([target.position, ...distractors]), correct: target.position,
+    options: opts, correct: target.position, optionsTR: posOpts(opts),
   };
 }
 
@@ -405,9 +445,99 @@ function qPositionOddOne(pool) {
     ...q(
       'Hangi oyuncu diğerleriyle aynı mevkide oynamıyor?',
       'Which player does NOT play the same position as the others?',
+      `Ortak mevki: ${posTR(pos)}`, `Common position: ${pos}`,
     ),
     options: shuffle([...same3.map(p => p.name), odd.name]),
     correct: odd.name,
+  };
+}
+
+// Hangi oyuncu diğerlerinden farklı bir ligde oynuyor?
+function qLeagueOddOne(pool) {
+  const cands = pool.filter(p => p.leagueId && LEAGUE_NAMES[p.leagueId]);
+  if (cands.length < 4) return null;
+  const leagues = [...new Set(cands.map(p => p.leagueId))];
+  const goodLeague = leagues.filter(l => cands.filter(p => p.leagueId === l).length >= 3);
+  if (goodLeague.length === 0) return null;
+  const mainLeague = pick1(goodLeague);
+  const same3 = pickN(cands.filter(p => p.leagueId === mainLeague), 3);
+  const others = cands.filter(p => p.leagueId !== mainLeague);
+  if (others.length === 0) return null;
+  const odd = pick1(others);
+  return {
+    type: 'league_odd_one',
+    ...q(
+      'Hangi oyuncu diğerleriyle aynı ligde oynamıyor?',
+      'Which player does NOT play in the same league as the others?',
+    ),
+    options: shuffle([...same3.map(p => p.name), odd.name]),
+    correct: odd.name,
+  };
+}
+
+// Hangi oyuncu X ile aynı ligde oynuyor?
+function qSameLeague(pool) {
+  const cands = pool.filter(p => p.leagueId && LEAGUE_NAMES[p.leagueId]);
+  if (cands.length < 4) return null;
+  const anchor = pick1(cands);
+  const sameLeaguePlayers = cands.filter(p => p.leagueId === anchor.leagueId && p.name !== anchor.name);
+  if (sameLeaguePlayers.length === 0) return null;
+  const correctP = pick1(sameLeaguePlayers);
+  const others   = cands.filter(p => p.leagueId !== anchor.leagueId);
+  if (others.length < 3) return null;
+  const distract = pickN(others, 3);
+  return {
+    type: 'same_league',
+    ...q(
+      `Hangi oyuncu ${anchor.name} ile aynı ligde oynuyor?`,
+      `Which player plays in the same league as ${anchor.name}?`,
+      `${anchor.club} — ${ligTR(anchor.leagueId)}?`,
+      `${anchor.club} — ${ligEN(anchor.leagueId)}?`,
+    ),
+    options: shuffle([correctP.name, ...distract.map(p => p.name)]),
+    correct: correctP.name,
+  };
+}
+
+// X kaç yaşında?
+function qAgeGuess(pool) {
+  const cands = pool.filter(p => p.age && p.age > 15 && p.age < 45);
+  if (cands.length < 2) return null;
+  const target = pick1(cands);
+  const age = target.age;
+  const wrongSet = new Set();
+  for (const o of shuffle([-4, -3, -2, -1, 1, 2, 3, 4])) {
+    const w = age + o;
+    if (w > 15 && w < 45 && !wrongSet.has(w)) wrongSet.add(w);
+    if (wrongSet.size === 3) break;
+  }
+  if (wrongSet.size < 3) return null;
+  return {
+    type: 'age_guess',
+    ...q(`${target.name} kaç yaşında?`, `How old is ${target.name}?`),
+    options: shuffle([age, ...[...wrongSet]]).map(String),
+    correct: String(age),
+  };
+}
+
+// X kaç cm boyunda?
+function qHeightGuess(pool) {
+  const cands = pool.filter(p => p.height && p.height > 160 && p.height < 210);
+  if (cands.length < 2) return null;
+  const target = pick1(cands);
+  const h = target.height;
+  const wrongSet = new Set();
+  for (const s of shuffle([-9, -6, -3, 3, 6, 9])) {
+    const w = h + s;
+    if (w > 160 && w < 210 && !wrongSet.has(w)) wrongSet.add(w);
+    if (wrongSet.size === 3) break;
+  }
+  if (wrongSet.size < 3) return null;
+  return {
+    type: 'height_guess',
+    ...q(`${target.name} kaç cm boyunda?`, `How tall is ${target.name}? (cm)`),
+    options: shuffle([h, ...[...wrongSet]]).map(String),
+    correct: String(h),
   };
 }
 
@@ -423,6 +553,7 @@ const ALL_GENERATORS = [
   ...BASE_GENERATORS,
   qNationalityNotFrom, qCareerPath, qSecondClub,
   qOlderPlayer, qYounger, qTallest,
+  qLeagueOddOne, qSameLeague, qAgeGuess, qHeightGuess,
 ];
 
 const HARD_GENERATORS = [
@@ -430,6 +561,7 @@ const HARD_GENERATORS = [
   qOlderPlayer, qYounger, qTallest,
   qMostExpensive, qPositionOddOne,
   qSameNationality, qMarketValueGuess,
+  qLeagueOddOne, qSameLeague, qAgeGuess, qHeightGuess,
 ];
 
 function getGenerators(mode) {

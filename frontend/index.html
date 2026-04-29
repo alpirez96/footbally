@@ -416,13 +416,14 @@ function setConnected(v) {
 
 // ── Durum ─────────────────────────────────────────────────────────────────────
 const root = document.getElementById('root');
-let socket       = null;
-let myName       = '';
-let isHost       = false;
-let currentCode  = '';
-let selectedMode = 'europe';
-let roomMode     = 'europe';
-let myScore      = 0;
+let socket           = null;
+let myName           = '';
+let isHost           = false;
+let currentCode      = '';
+let selectedMode     = 'europe';
+let roomMode         = 'europe';
+let myScore          = 0;
+let _optionsDisplayMap = null; // canonical → display text (for translated options)
 
 function render(html) { root.innerHTML = html; }
 
@@ -660,12 +661,18 @@ function renderLobby(players) {
 // ── Soru ekranı ───────────────────────────────────────────────────────────────
 let qStartTs = 0, timerRaf = null, answered = false;
 
-function renderQuestion({ index, total, questionTR, questionEN, subTR, subEN, options, durationMs }) {
+function renderQuestion({ index, total, questionTR, questionEN, subTR, subEN, options, optionsTR, durationMs }) {
   qStartTs = Date.now(); answered = false;
   if (timerRaf) cancelAnimationFrame(timerRaf);
 
   const question = lang === 'en' ? (questionEN || questionTR) : questionTR;
   const sub      = lang === 'en' ? (subEN || subTR) : subTR;
+
+  // Build display map: canonical value → translated display text
+  _optionsDisplayMap = optionsTR
+    ? Object.fromEntries(options.map((o, i) => [o, optionsTR[i]]))
+    : null;
+  const displayOpts = (lang === 'tr' && optionsTR) ? optionsTR : options;
 
   render(`
     <div class="header-row">
@@ -681,7 +688,7 @@ function renderQuestion({ index, total, questionTR, questionEN, subTR, subEN, op
       ${options.map((opt, i) => `
         <button class="opt-btn" data-opt="${encodeURIComponent(opt)}">
           <span class="opt-letter">${String.fromCharCode(65+i)}</span>
-          <span>${opt}</span>
+          <span>${displayOpts[i]}</span>
         </button>
       `).join('')}
     </div>
@@ -734,10 +741,12 @@ function renderReveal({ correct, leaderboard }) {
     if (opt === correct) btn.classList.add('correct');
     else btn.style.opacity = '0.35';
   });
+  const displayCorrect = (lang === 'tr' && _optionsDisplayMap?.[correct])
+    ? _optionsDisplayMap[correct] : correct;
   document.getElementById('feedback').innerHTML = `
     <div style="margin-bottom:10px;">
       <span class="ball-anim">⚽</span>
-      ${t('correctAnswer')} <strong style="color:#f4c430;">${correct}</strong>
+      ${t('correctAnswer')} <strong style="color:#f4c430;">${displayCorrect}</strong>
     </div>
     <div style="text-align:left;max-width:360px;margin:0 auto;">
       ${leaderboard.slice(0, 5).map((p, i) => `
