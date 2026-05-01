@@ -398,6 +398,7 @@ function qCareerPathChallenge(pool) {
   return {
     type: 'career_challenge',
     careerSteps,
+    _realClubs: target.careerPath.map(s => s.club || '?'),
     hints: [
       { type:'nationality',  labelTR:'Milliyet',             labelEN:'Nationality',       value: target.nationality },
       { type:'position',     labelTR:'Mevki',                labelEN:'Position',          value: target.position, valueTR: posTR(target.position) },
@@ -432,15 +433,15 @@ function qSquadBuilder(pool) {
   if (distract4.length < 4) return null;
 
   const allCards = shuffle([
-    ...squad8.map(p   => ({ id: p.id, name: p.name, position: p.position || '' })),
-    ...distract4.map(p => ({ id: p.id, name: p.name, position: p.position || '' })),
+    ...squad8.map(p   => ({ id: String(p.id), name: p.name, position: p.position || '' })),
+    ...distract4.map(p => ({ id: String(p.id), name: p.name, position: p.position || '' })),
   ]);
 
   return {
     type:         'squad_builder',
     clubName,
     squadPlayers: allCards,
-    correctIds:   squad8.map(p => p.id),
+    correctIds:   squad8.map(p => String(p.id)),
     ...q(`${clubName} kadrosuna kimin dahil olduğunu bul!`, `Find who belongs to ${clubName}'s squad!`),
     options: [],
     correct: '',
@@ -509,15 +510,21 @@ async function generateQuestions(count = 10, gameMode = 'quickfire', settings = 
   }
 
   if (gameMode === 'squad') {
+    // Pre-count eligible clubs so we never request more than available
+    const clubMap = new Map();
+    pool.forEach(p => { if (p.club && p.club !== 'Unknown') { if (!clubMap.has(p.club)) clubMap.set(p.club, []); clubMap.get(p.club).push(p); } });
+    const eligibleClubCount = [...clubMap.values()].filter(ps => ps.length >= 8).length;
+    if (eligibleClubCount === 0) throw new Error('Bu havuzda yeterli oyuncuya sahip kulüp yok');
+    const target = Math.min(count, eligibleClubCount);
     const usedClubs = new Set();
     const questions = [];
     let attempts = 0;
-    while (questions.length < count && attempts < count * 15) {
+    while (questions.length < target && attempts < target * 20) {
       const q = qSquadBuilder(pool);
       if (q && !usedClubs.has(q.clubName)) { usedClubs.add(q.clubName); questions.push(q); }
       attempts++;
     }
-    if (questions.length < count) throw new Error(`Yetersiz kulüp: ${questions.length}/${count}`);
+    if (questions.length === 0) throw new Error('Yetersiz kulüp');
     return questions;
   }
 

@@ -178,7 +178,8 @@ function revealAndAdvance(room) {
   }
 
   broadcast(room, 'reveal', {
-    correct:     q.correct,
+    correct:    q.correct,
+    realClubs:  q._realClubs || null,
     leaderboard: buildLeaderboard(room),
   });
   setTimeout(() => nextQuestion(room), 3000);

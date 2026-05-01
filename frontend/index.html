@@ -224,7 +224,7 @@ fetch(BACKEND_URL + '/').catch(() => {});
 // ── i18n ──────────────────────────────────────────────────────────────────────
 const i18n = {
   tr: {
-    subtitle:'Multiplayer futbol trivia',namePlaceholder:'Adın',createRoom:'Oda oluştur',joinRoom:'Odaya katıl',enterName:'Ad girmen gerek',
+    subtitle:'Futbol trivia — online & tek oyuncu',namePlaceholder:'Adın',createRoom:'Oda oluştur',joinRoom:'Odaya katıl',enterName:'Ad girmen gerek',soloPlay:'Tek Oyuncu',playAgain:'Tekrar Oyna',squadSelected:'seçildi',
     selectMode:'Mod Seç',selectModeSub:'Hangi oyun modunu oynamak istiyorsun?',
     modeQFTitle:'Quickfire',modeQFSub:'Klasik soru-cevap, hızlı tempolu',
     modeCPTitle:'Career Path',modeCPSub:'Kariyer tablosundan oyuncuyu bul',
@@ -256,7 +256,7 @@ const i18n = {
     historyModeQF:'Quickfire',historyModeCP:'Career',historyModeSQ:'Squad',historyModeHL:'Higher/Lower',
   },
   en: {
-    subtitle:'Multiplayer football trivia',namePlaceholder:'Your name',createRoom:'Create room',joinRoom:'Join room',enterName:'Please enter your name',
+    subtitle:'Football trivia — online & singleplayer',namePlaceholder:'Your name',createRoom:'Create room',joinRoom:'Join room',enterName:'Please enter your name',soloPlay:'Solo Play',playAgain:'Play Again',squadSelected:'selected',
     selectMode:'Select Mode',selectModeSub:'Which game mode do you want to play?',
     modeQFTitle:'Quickfire',modeQFSub:'Classic Q&A, fast-paced',
     modeCPTitle:'Career Path',modeCPSub:'Identify the player from their career',
@@ -312,6 +312,7 @@ const root = document.getElementById('root');
 let socket              = null;
 let myName              = '';
 let isHost              = false;
+let isSolo              = false;
 let currentCode         = '';
 let myScore             = 0;
 let roomSettings        = { gameMode:'quickfire', questionCount:10, questionDurationMs:10000, difficulty:'normal', playerPool:'europe', speedBonus:true, showLeaderboardLive:true, hintsEnabled:true };
@@ -322,6 +323,7 @@ let _optionsDisplayMap  = null;
 let _careerRevealedHints = [];
 let _careerWrongAnswers  = [];
 let _careerGuessesLeft   = 4;
+let _lastCareerAnswer    = null;
 // Squad mode state
 let _squadSelected       = [];
 let _squadPlayers        = [];
@@ -357,6 +359,15 @@ function medalIcon(rank) {
   return `<svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="${c}" stroke="rgba(0,0,0,.15)" stroke-width="1"/><text x="10" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#083d1f">${rank}</text></svg>`;
 }
 const formatMV = v => v >= 1e6 ? `€${(v/1e6).toFixed(0)}M` : `€${(v/1e3).toFixed(0)}K`;
+
+const POSITION_TR = {
+  'Goalkeeper':'Kaleci','Centre-Back':'Stoper','Left-Back':'Sol Bek','Right-Back':'Sağ Bek',
+  'Defensive Midfield':'Defansif OS','Central Midfield':'Orta Saha','Attacking Midfield':'Ofansif OS',
+  'Left Winger':'Sol Kanat','Right Winger':'Sağ Kanat','Left Midfield':'Sol OS','Right Midfield':'Sağ OS',
+  'Centre-Forward':'Santrafor','Second Striker':'İkinci Forvet','Attack':'Forvet',
+  'Defender':'Defans','Midfield':'Orta Saha','Winger':'Kanat',
+};
+const displayPos = pos => (lang === 'tr' && POSITION_TR[pos]) ? POSITION_TR[pos] : (pos || '');
 
 function modePillClass(mode) {
   return {career:'career',squad:'squad',higherlower:'hl'}[mode]||'';
@@ -405,23 +416,29 @@ function renderHome() {
       <p class="muted" style="margin-bottom:2rem;">${t('subtitle')}</p>
       <div style="max-width:320px;margin:0 auto;">
         <input id="name-input" placeholder="${t('namePlaceholder')}" maxlength="16"/>
-        <div class="btn-row">
-          <button id="create-btn" class="btn-primary">${t('createRoom')}</button>
+        <button id="solo-btn" class="btn-primary" style="width:100%;margin-bottom:8px;">🎮 ${t('soloPlay')}</button>
+        <div class="btn-row" style="margin-bottom:8px;">
+          <button id="create-btn">${t('createRoom')}</button>
           <button id="join-btn">${t('joinRoom')}</button>
         </div>
-        <button id="history-btn" style="width:100%;margin-top:8px;font-size:13px;opacity:.7;">📊 ${t('historyTitle')}</button>
+        <button id="history-btn" style="width:100%;font-size:13px;opacity:.7;">📊 ${t('historyTitle')}</button>
       </div>
     </div>
   `);
+  document.getElementById('solo-btn').onclick = () => {
+    const name = document.getElementById('name-input').value.trim();
+    if (!name) return alert(t('enterName'));
+    myName = name; isSolo = true; renderModeSelect();
+  };
   document.getElementById('create-btn').onclick = () => {
     const name = document.getElementById('name-input').value.trim();
     if (!name) return alert(t('enterName'));
-    myName = name; renderModeSelect();
+    myName = name; isSolo = false; renderModeSelect();
   };
   document.getElementById('join-btn').onclick = () => {
     const name = document.getElementById('name-input').value.trim();
     if (!name) return alert(t('enterName'));
-    myName = name; renderJoinForm();
+    myName = name; isSolo = false; renderJoinForm();
   };
   document.getElementById('history-btn').onclick = renderPastGames;
 }
@@ -592,7 +609,14 @@ function joinRoom(code) {
   socket.emit('join_room', { code, name: myName }, (res) => {
     if (!res.ok) { const el = document.getElementById('error'); if (el) el.textContent = res.error; return; }
     isHost = res.isHost;
-    if (res.settings) roomSettings = res.settings;
+    // Only guests take settings from server; the host already has the right settings from startCreate
+    if (!isHost && res.settings) roomSettings = res.settings;
+    if (isHost && isSolo) {
+      socket.emit('start_game', { settings: roomSettings }, r => {
+        if (!r?.ok) alert(r?.error || 'Hata');
+      });
+      return;
+    }
     if (isHost) socket.emit('update_settings', roomSettings);
     renderLobby([]);
   });
@@ -605,7 +629,7 @@ function renderLobby(players) {
   render(`
     <h1>${t('lobbyTitle')}</h1>
     <div class="mode-pill ${modePillClass(gm)}">${modePillLabel(gm)}</div>
-    <p class="muted" style="font-size:12px;margin-bottom:4px;">${t('settingDifficulty')}: ${t('diff'+roomSettings.difficulty.charAt(0).toUpperCase()+roomSettings.difficulty.slice(1))} · ${t('settingPool')}: ${t('pool'+roomSettings.playerPool.charAt(0).toUpperCase()+roomSettings.playerPool.replace('_only','').split('_').map((w,i)=>i?w.charAt(0).toUpperCase()+w.slice(1):w).join(''))}</p>
+    <p class="muted" style="font-size:12px;margin-bottom:4px;">${t('settingDifficulty')}: ${t('diff'+roomSettings.difficulty.charAt(0).toUpperCase()+roomSettings.difficulty.slice(1))} · ${t('settingPool')}: ${t('pool'+roomSettings.playerPool.replace('_only','').split('_').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(''))}</p>
     <p class="muted">${t('shareCode')}</p>
     <div class="code-display">${currentCode}</div>
     <h2 style="margin-bottom:12px;">${t('players')} (${players.length}/5)</h2>
@@ -754,7 +778,9 @@ function renderCareerQuestion(data) {
 
     document.querySelectorAll('.opt-btn:not([disabled])').forEach(btn => {
       btn.onclick = () => {
+        if (answered) return;
         const opt = decodeURIComponent(btn.dataset.opt);
+        _lastCareerAnswer = opt;
         socket.emit('submit_answer', { answer: opt });
         btn.disabled = true;
       };
@@ -773,7 +799,7 @@ function renderCareerQuestion(data) {
 function renderSquadQuestion(data) {
   const { index, total, squadClub, squadPlayers, durationMs } = data;
   _squadSelected  = [];
-  _squadPlayers   = squadPlayers || [];
+  _squadPlayers   = (squadPlayers || []).map(p => ({ ...p, id: String(p.id) }));
   _squadCorrectIds = null;
   qStartTs = Date.now(); answered = false;
   if (timerRaf) cancelAnimationFrame(timerRaf);
@@ -787,7 +813,7 @@ function renderSquadQuestion(data) {
       return `<div class="squad-card ${cls}" data-id="${p.id}" onclick="toggleSquad('${p.id}')">
         <div style="font-size:22px;">👤</div>
         <div class="squad-card-name">${p.name}</div>
-        <div class="squad-card-pos">${p.position||''}</div>
+        <div class="squad-card-pos">${displayPos(p.position)}</div>
       </div>`;
     }).join('');
 
@@ -801,13 +827,13 @@ function renderSquadQuestion(data) {
         <div class="squad-club">${squadClub}</div>
         <div class="squad-instruction">${t('squadInstruction')}</div>
       </div>
-      <div class="squad-counter vt">${_squadSelected.length} / 8 ${t('question').toLowerCase()}</div>
+      <div class="squad-counter vt">${_squadSelected.length} / 8 ${t('squadSelected')}</div>
       <div class="squad-grid" id="squad-grid">${cards}</div>
       ${!_squadCorrectIds ? `<button class="btn-primary" style="width:100%;" onclick="submitSquad()">${t('squadSubmit')}</button>` : ''}
       <div id="feedback" class="center muted" style="margin-top:.8rem;min-height:20px;"></div>
     `;
 
-    startTimer(durationMs);
+    if (!_squadCorrectIds) startTimer(durationMs);
   };
 
   window._refreshSquadUI = renderSquadUI;
@@ -837,7 +863,7 @@ function renderHLScreen() {
         <div style="font-size:48px;margin-bottom:1rem;">🏦</div>
         <div style="color:#f4c430;">${_hlScore.toLocaleString()} pts</div>
         <p class="muted" style="margin-top:.5rem;">${t('hlBanked')}</p>
-        <p class="muted" style="font-size:13px;margin-top:.5rem;">${t('waitingHost')}</p>
+        ${!isSolo ? `<p class="muted" style="font-size:13px;margin-top:.5rem;">${t('waitingHost')}</p>` : ''}
       </div>`;
     return;
   }
@@ -906,7 +932,7 @@ function handleHLResult(data) {
         <div style="font-size:48px;margin-bottom:.5rem;">${correct?'✅':'❌'}</div>
         <div style="font-family:'VT323',monospace;font-size:28px;color:#f4c430;">${formatMV(revealedValue)}</div>
         <div style="margin:.5rem 0;color:#86efac;">${_hlScore.toLocaleString()} pts</div>
-        <p class="muted" style="font-size:13px;">${t('waitingHost')}</p>
+        ${!isSolo ? `<p class="muted" style="font-size:13px;">${t('waitingHost')}</p>` : ''}
       </div>`;
     return;
   }
@@ -925,21 +951,32 @@ function handleAnswerAck({ correct, gained, outOfHints }) {
   const fb = document.getElementById('feedback');
   if (!fb) return;
   if (correct) {
+    answered = true;
+    document.querySelectorAll('.opt-btn').forEach(b => {
+      b.disabled = true;
+      const opt = decodeURIComponent(b.dataset.opt || '');
+      if (opt === _lastCareerAnswer) b.classList.add('correct');
+    });
+    _lastCareerAnswer = null;
     fb.innerHTML = `<span class="score-flash" style="color:#4ade80;">✓ ${t('answerCorrect')}</span> <span class="score-flash" style="color:#f4c430;">+${(gained||0).toLocaleString()}</span>`;
   } else if (outOfHints) {
+    answered = true;
+    _lastCareerAnswer = null;
+    document.querySelectorAll('.opt-btn').forEach(b => b.disabled = true);
     fb.innerHTML = `<span style="color:#f87171;">${t('careerOutOfHints')}</span>`;
   } else {
+    // Quickfire / career-without-hints wrong answer
     fb.innerHTML = `<span class="score-flash" style="color:#f87171;">✗ ${t('answerWrong')}</span>`;
   }
 }
 
 // ── Reveal ────────────────────────────────────────────────────────────────────
-function renderReveal({ correct, correctIds, leaderboard }) {
+function renderReveal({ correct, correctIds, leaderboard, realClubs }) {
   cancelAnimationFrame(timerRaf);
 
   if (correctIds) {
     // Squad builder reveal
-    _squadCorrectIds = correctIds;
+    _squadCorrectIds = correctIds.map(String);
     if (window._refreshSquadUI) window._refreshSquadUI();
     const fb = document.getElementById('feedback');
     if (fb) fb.innerHTML = `<div style="margin-top:.5rem;text-align:left;max-width:360px;margin:0 auto;">${leaderboard.slice(0,5).map((p,i)=>`<div class="leaderboard-row"><span class="rank">${medalIcon(i+1)}</span><span style="flex:1;">${p.name}</span><span style="font-weight:600;color:#f4c430;">${p.score.toLocaleString()}</span></div>`).join('')}</div>`;
@@ -956,10 +993,10 @@ function renderReveal({ correct, correctIds, leaderboard }) {
     else if (!btn.classList.contains('used-wrong')) btn.style.opacity = '0.35';
   });
 
-  // Unhide career clubs
+  // Unhide career clubs with real names from server
   document.querySelectorAll('.club-hidden').forEach((el,i) => {
-    const step = (window._currentCareerStepsReal||[])[i];
-    if (step) el.textContent = step;
+    const name = (realClubs||[])[i];
+    if (name) el.textContent = name;
     el.style.color = '#f4c430';
   });
 
@@ -979,6 +1016,32 @@ function renderReveal({ correct, correctIds, leaderboard }) {
 function renderGameOver({ leaderboard }) {
   _lastRender = () => renderGameOver({ leaderboard });
   saveMatch(leaderboard);
+
+  if (isSolo) {
+    const myEntry = leaderboard[0];
+    render(`
+      <div class="center" style="padding:2rem 1rem;">
+        <div style="font-size:58px;line-height:1;margin-bottom:8px;">🎉</div>
+        <h1 style="font-size:32px;letter-spacing:3px;">${t('matchOver')}</h1>
+        <div style="font-family:'VT323',monospace;font-size:54px;color:#f4c430;margin:1rem 0;line-height:1;">
+          ${(myEntry?.score||0).toLocaleString()}
+        </div>
+        <p class="muted" style="margin-bottom:1.8rem;">pts</p>
+        <div class="btn-row" style="max-width:320px;margin:0 auto 8px;">
+          <button id="play-again-btn" class="btn-primary">${t('playAgain')}</button>
+          <button id="home-btn">${t('goHome')}</button>
+        </div>
+        <button id="history-btn" style="width:100%;max-width:320px;margin:0 auto;display:block;font-size:13px;opacity:.8;">${t('pastGames')}</button>
+      </div>
+    `);
+    document.getElementById('play-again-btn').onclick = () => {
+      socket.emit('rematch', res => { if (!res?.ok) alert(res?.error||'Hata'); });
+    };
+    document.getElementById('home-btn').onclick = () => { socket?.disconnect(); isSolo = false; location.reload(); };
+    document.getElementById('history-btn').onclick = renderPastGames;
+    setTimeout(launchConfetti, 150);
+    return;
+  }
 
   const top3   = leaderboard.slice(0,3);
   const rest   = leaderboard.slice(3);
@@ -1060,10 +1123,14 @@ function renderPastGames() {
 // ── Socket handlers ───────────────────────────────────────────────────────────
 function setupSocketHandlers() {
   socket.on('connect',    () => setConnected(true));
-  socket.on('disconnect', () => { setConnected(false); alert(t('disconnectedAlert')); location.reload(); });
+  socket.on('disconnect', () => {
+    setConnected(false);
+    if (!isSolo) { alert(t('disconnectedAlert')); location.reload(); }
+  });
 
   socket.on('lobby_update', ({ players, settings }) => {
     if (settings) roomSettings = settings;
+    if (isSolo) return;
     renderLobby(players);
   });
 
@@ -1087,12 +1154,20 @@ function setupSocketHandlers() {
   socket.on('game_over',  renderGameOver);
 
   socket.on('career_hint', ({ hint, hintsLeft }) => {
-    if (!hint) return;
-    const idx = [0,1,2,3].find(i => !_careerRevealedHints[i]);
-    if (idx === undefined) return;
-    _careerRevealedHints[idx] = hint;
+    // The last submitted answer was wrong — mark it
+    if (_lastCareerAnswer && !_careerWrongAnswers.includes(_lastCareerAnswer)) {
+      _careerWrongAnswers.push(_lastCareerAnswer);
+    }
+    _lastCareerAnswer = null;
     _careerGuessesLeft = hintsLeft;
+    if (hint) {
+      const idx = [0,1,2,3].find(i => !_careerRevealedHints[i]);
+      if (idx !== undefined) _careerRevealedHints[idx] = hint;
+    }
     if (window._refreshCareerUI) window._refreshCareerUI();
+    // Set feedback after refresh (refresh replaces the div)
+    const fb = document.getElementById('feedback');
+    if (fb) fb.innerHTML = `<span style="color:#f87171;">✗ ${t('answerWrong')} — ${hintsLeft} ${t('careerHintsLeft')}</span>`;
   });
 
   socket.on('hl_start', ({ players, firstRevealedValue, firstLeft, firstRight }) => {
