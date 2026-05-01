@@ -510,17 +510,19 @@ async function generateQuestions(count = 10, gameMode = 'quickfire', settings = 
   }
 
   if (gameMode === 'squad') {
-    // Pre-count eligible clubs so we never request more than available
+    // Squad builder always uses the full player database across all leagues so there
+    // are enough clubs with 8+ players. The playerPool setting does not restrict here.
+    const squadPool = PLAYERS;
     const clubMap = new Map();
-    pool.forEach(p => { if (p.club && p.club !== 'Unknown') { if (!clubMap.has(p.club)) clubMap.set(p.club, []); clubMap.get(p.club).push(p); } });
+    squadPool.forEach(p => { if (p.club && p.club !== 'Unknown') { if (!clubMap.has(p.club)) clubMap.set(p.club, []); clubMap.get(p.club).push(p); } });
     const eligibleClubCount = [...clubMap.values()].filter(ps => ps.length >= 8).length;
-    if (eligibleClubCount === 0) throw new Error('Bu havuzda yeterli oyuncuya sahip kulüp yok');
+    if (eligibleClubCount === 0) throw new Error('Yeterli kulüp verisi yok');
     const target = Math.min(count, eligibleClubCount);
     const usedClubs = new Set();
     const questions = [];
     let attempts = 0;
     while (questions.length < target && attempts < target * 20) {
-      const q = qSquadBuilder(pool);
+      const q = qSquadBuilder(squadPool);
       if (q && !usedClubs.has(q.clubName)) { usedClubs.add(q.clubName); questions.push(q); }
       attempts++;
     }
