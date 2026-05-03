@@ -91,6 +91,19 @@ button:disabled{opacity:.45;cursor:not-allowed;}
 .mode-card.career-card:hover{border-color:#8b5cf6;box-shadow:0 0 18px rgba(139,92,246,.2);}
 .mode-card.squad-card:hover{border-color:#06b6d4;box-shadow:0 0 18px rgba(6,182,212,.2);}
 .mode-card.hl-card:hover{border-color:#f97316;box-shadow:0 0 18px rgba(249,115,22,.2);}
+.mode-card.fp-card:hover{border-color:#f43f5e;box-shadow:0 0 18px rgba(244,63,94,.2);}
+.mode-pill.fp{background:rgba(244,63,94,.12);border-color:rgba(244,63,94,.3);color:#fda4af;}
+.tag-rose{background:#e11d48;color:#fff;}
+/* Find the Player */
+.fp-clubs{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:1.2rem 0;flex-wrap:wrap;}
+.fp-club-badge{background:rgba(0,0,0,.3);border:2px solid rgba(244,196,48,.35);border-radius:12px;padding:14px 18px;font-weight:700;font-size:15px;text-align:center;flex:1;min-width:130px;max-width:220px;line-height:1.3;display:flex;align-items:center;justify-content:center;}
+.fp-connector{font-size:24px;display:flex;align-items:center;flex-shrink:0;}
+.fp-instruction{text-align:center;color:#86efac;font-size:14px;margin-bottom:.8rem;}
+.fp-attempts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:.6rem;min-height:22px;}
+.fp-wrong-attempt{background:#7f1d1d;border:1px solid #dc2626;border-radius:6px;padding:3px 10px;font-size:12px;color:#fca5a5;}
+.fp-input-row{display:flex;gap:8px;margin-bottom:.6rem;}
+.fp-input-row input{margin-bottom:0;flex:1;}
+.fp-input-row button{flex-shrink:0;padding:11px 18px;}
 .mode-icon{font-size:26px;margin-bottom:2px;}
 .mode-card-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;line-height:1.1;}
 .mode-card-sub{font-size:12px;color:#86efac;line-height:1.3;}
@@ -253,7 +266,12 @@ const i18n = {
     newGame:'Yeni oyun',gameStarting:'Oyun başlıyor...',
     connected:'Bağlı',disconnected:'Bağlantı koptu',disconnectedAlert:'Sunucuyla bağlantı koptu',
     historyTitle:'MAÇLAR',historyEmpty:'Henüz maç yok.',historyExport:'JSON İndir',historyBack:'← Geri',
-    historyModeQF:'Quickfire',historyModeCP:'Career',historyModeSQ:'Squad',historyModeHL:'Higher/Lower',
+    historyModeQF:'Quickfire',historyModeCP:'Career',historyModeSQ:'Squad',historyModeHL:'Higher/Lower',historyModeFP:'Oyuncu Bul',
+    modeFPTitle:'Oyuncu Bul',modeFPSub:'Her iki kulüpte de oynayan futbolcuyu bul',
+    fpInstruction:'Her iki kulübünde de oynamış bir futbolcuyu yaz!',
+    fpTypePlaceholder:'Soyad veya tam ad...',fpSubmit:'Gönder',
+    fpYouWon:'Buldun!',fpOpponentWon:'buldu!',fpNobodyFound:'Kimse bulamadı!',
+    fpValidPlayers:'Geçerli cevaplar:',fpTryAgain:'Tekrar dene!',
   },
   en: {
     subtitle:'Football trivia — online & singleplayer',namePlaceholder:'Your name',createRoom:'Create room',joinRoom:'Join room',enterName:'Please enter your name',soloPlay:'Solo Play',playAgain:'Play Again',squadSelected:'selected',
@@ -285,7 +303,12 @@ const i18n = {
     newGame:'New game',gameStarting:'Game starting...',
     connected:'Connected',disconnected:'Disconnected',disconnectedAlert:'Connection to server lost',
     historyTitle:'MATCHES',historyEmpty:'No matches yet.',historyExport:'Export JSON',historyBack:'← Back',
-    historyModeQF:'Quickfire',historyModeCP:'Career',historyModeSQ:'Squad',historyModeHL:'Higher/Lower',
+    historyModeQF:'Quickfire',historyModeCP:'Career',historyModeSQ:'Squad',historyModeHL:'Higher/Lower',historyModeFP:'Find Player',
+    modeFPTitle:'Find the Player',modeFPSub:'Find who played for both clubs',
+    fpInstruction:'Name a player who played for both clubs!',
+    fpTypePlaceholder:'Last name or full name...',fpSubmit:'Submit',
+    fpYouWon:'You got it!',fpOpponentWon:'found it!',fpNobodyFound:'Nobody found the player!',
+    fpValidPlayers:'Valid answers:',fpTryAgain:'Try again!',
   },
 };
 
@@ -328,6 +351,8 @@ let _lastCareerAnswer    = null;
 let _squadSelected       = [];
 let _squadPlayers        = [];
 let _squadCorrectIds     = null; // set at reveal
+// Find the Player state
+let _fpAttempts  = [];
 // HL mode state
 let _hlLeft      = null;
 let _hlRight     = null;
@@ -370,10 +395,10 @@ const POSITION_TR = {
 const displayPos = pos => (lang === 'tr' && POSITION_TR[pos]) ? POSITION_TR[pos] : (pos || '');
 
 function modePillClass(mode) {
-  return {career:'career',squad:'squad',higherlower:'hl'}[mode]||'';
+  return {career:'career',squad:'squad',higherlower:'hl',findplayer:'fp'}[mode]||'';
 }
 function modePillLabel(mode) {
-  return {quickfire:'⚡ Quickfire',career:'🔍 Career Path',squad:'🏟 Squad Builder',higherlower:'📈 Higher/Lower'}[mode]||mode;
+  return {quickfire:'⚡ Quickfire',career:'🔍 Career Path',squad:'🏟 Squad Builder',higherlower:'📈 Higher/Lower',findplayer:'🔗 Find the Player'}[mode]||mode;
 }
 
 function launchConfetti() {
@@ -473,12 +498,18 @@ function renderModeSelect() {
         <div class="mode-card-sub">${t('modeHLSub')}</div>
         <span class="tag tag-orange">NEW</span>
       </button>
+      <button class="mode-card fp-card" id="m-fp" style="grid-column:1/-1;">
+        <div class="mode-icon">🔗</div>
+        <div class="mode-card-title">${t('modeFPTitle')}</div>
+        <div class="mode-card-sub">${t('modeFPSub')}</div>
+        <span class="tag tag-rose">NEW</span>
+      </button>
     </div>
     <button id="back-btn" style="width:100%;">${t('back')}</button>
     <div id="create-error" class="error" style="display:none;margin-top:10px;"></div>
     <div id="create-loading" style="display:none;margin-top:10px;text-align:center;color:#86efac;font-size:14px;"></div>
   `);
-  const modeMap = { 'quickfire':'quickfire','career':'career','squad':'squad','hl':'higherlower' };
+  const modeMap = { 'quickfire':'quickfire','career':'career','squad':'squad','hl':'higherlower','fp':'findplayer' };
   Object.keys(modeMap).forEach(k => {
     document.getElementById('m-'+k).onclick = () => goToSettings(modeMap[k]);
   });
@@ -488,6 +519,9 @@ function renderModeSelect() {
 // ── Settings ──────────────────────────────────────────────────────────────────
 function goToSettings(gameMode) {
   draftSettings = { ...roomSettings, gameMode };
+  if (gameMode === 'findplayer' && draftSettings.questionDurationMs < 15000) {
+    draftSettings.questionDurationMs = 20000;
+  }
   renderSettings();
 }
 
@@ -527,6 +561,7 @@ function renderSettings() {
         ${[[5000,'5s'],[10000,'10s'],[15000,'15s'],[20000,'20s'],[30000,'30s']].map(([v,l])=>chip('questionDurationMs',v,l)).join('')}
       </div>
     </div>`:''}
+    ${s.gameMode!=='findplayer'?`
     <div class="settings-section">
       <div class="settings-label">${t('settingDifficulty')}</div>
       <div class="chip-row">
@@ -538,7 +573,8 @@ function renderSettings() {
       <div class="chip-row">
         ${[['europe',t('poolEurope')],['turkey',t('poolTurkey')],['mixed',t('poolMixed')],['strikers_only',t('poolStrikers')]].map(([v,l])=>chip('playerPool',v,l)).join('')}
       </div>
-    </div>
+    </div>`:''}
+
     <div class="settings-section">
       ${toggle('speedBonus',t('settingSpeedBonus'),t('settingSpeedBonusSub'))}
       ${toggle('showLeaderboardLive',t('settingLeaderboard'),t('settingLeaderboardSub'))}
@@ -665,6 +701,10 @@ function renderQuestion(data) {
   }
   if (questionType === 'squad_builder') {
     renderSquadQuestion(data);
+    return;
+  }
+  if (questionType === 'find_player') {
+    renderFindPlayerQuestion(data);
     return;
   }
 
@@ -855,6 +895,103 @@ function submitSquad() {
   document.getElementById('feedback').textContent = t('answerSubmitted');
 }
 
+// ── Find the Player ───────────────────────────────────────────────────────────
+const _CLUB_MAP = {
+  'Eindhovense Voetbalvereniging Philips Sport Vereniging':'PSV Eindhoven',
+  'Verein für Bewegungsspiele Stuttgart 1893':'VfB Stuttgart',
+  'Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs':'1899 Hoffenheim',
+  'Verein für Leibesübungen Wolfsburg':'VfL Wolfsburg',
+  '1. Fußball- und Sportverein Mainz 05':'1. FSV Mainz 05',
+  'Football Club Internazionale Milano S.p.A.':'Inter Milan',
+  'Olympique Gymnaste Club Nice Côte d\'Azur':'OGC Nice',
+  'Koninklijke Racing Club Genk':'KRC Genk',
+  'Koninklijke Atletiek Associatie Gent':'KAA Gent',
+  'Club Brugge Koninklijke Voetbalvereniging':'Club Brugge',
+  'Royal Sporting Club Anderlecht':'Anderlecht',
+  'Racing Club de Strasbourg Alsace':'Strasbourg',
+  'Club Atlético de Madrid S.A.D.':'Atlético Madrid',
+  'Lille Olympique Sporting Club':'Lille',
+  'Sporting Clube de Portugal':'Sporting CP',
+  'Sport Lisboa e Benfica':'Benfica',
+  'Società Sportiva Calcio Napoli':'Napoli',
+  'Atalanta Bergamasca Calcio S.p.a.':'Atalanta',
+  'AFC Ajax Amsterdam':'Ajax',
+  'Futebol Clube do Porto':'FC Porto',
+  'Sociedade Esportiva Palmeiras':'Palmeiras',
+  'Associazione Sportiva Roma':'AS Roma',
+  'Associazione Calcio Fiorentina':'Fiorentina',
+  'Associazione Calcio Milan':'AC Milan',
+  'RasenBallsport Leipzig':'RB Leipzig',
+  'İstanbul Başakşehir Futbol Kulübü':'Başakşehir FK',
+  'Göztepe Sportif Yatırımlar A.Ş.':'Göztepe',
+  'Girona Fútbol Club S. A. D.':'Girona',
+  'Real Betis Balompié S.A.D.':'Real Betis',
+  'Valencia Club de Fútbol S. A. D.':'Valencia',
+  'Villarreal Club de Fútbol S.A.D.':'Villarreal',
+  'Real Sociedad de Fútbol S.A.D.':'Real Sociedad',
+};
+const shortClubName = name => {
+  if (_CLUB_MAP[name]) return _CLUB_MAP[name];
+  return name
+    .replace(/\s+S\.?\s?p\.?\s?A\.?$/i, '').replace(/\s+S\.?\s?A\.?\s?D\.?$/i, '')
+    .replace(/\s+A\.?\s?Ş\.?$/i, '').replace(/\s+e\.?\s?V\.?$/i, '')
+    .replace(/\s+Football Club$/i, '').replace(/^Football Club\s+/i, '')
+    .replace(/^Association Football Club\s+/i, '').replace(/^Association sportive de\s+/i, '')
+    .replace(/\s+FC$/i, '').replace(/^Futbol Club\s+/i, '').replace(/^Fußballclub\s+/i, '')
+    .replace(/^Futebol Clube do\s+/i, '')
+    .replace(/\s+Club de Fútbol.*$/i, '').replace(/\s+Fútbol Club.*$/i, '')
+    .replace(/\s+Futbol Kulübü.*$/i, '').replace(/\s+Jimnastik Kulübü$/i, '')
+    .replace(/\s+Spor Kulübü$/i, '').replace(/\s+Kulübü$/i, '')
+    .replace(/\s+Sportif Yatırımlar.*$/i, '')
+    .replace(/^Clube de Regatas do\s+/i, '').replace(/^Olympique de\s+/i, '')
+    .replace(/\s+Fußball.*$/i, '').replace(/^AFC\s+/i, '')
+    .replace(/\s+Balompié.*$/i, '').replace(/\s+de Fútbol.*$/i, '')
+    .trim();
+};
+
+function renderFindPlayerQuestion(data) {
+  const { index, total, durationMs, fpClubA, fpClubB } = data;
+  _fpAttempts = [];
+  qStartTs = Date.now(); answered = false;
+  if (timerRaf) cancelAnimationFrame(timerRaf);
+
+  root.innerHTML = `
+    <div class="header-row">
+      <span class="muted">${t('question')} ${index+1} / ${total}</span>
+      <span style="font-size:13px;color:#86efac;">${t('code')}: ${currentCode}</span>
+    </div>
+    <div class="timer-bar-wrap"><div id="timer-bar" class="timer-bar" style="width:100%"></div></div>
+    <div class="fp-clubs">
+      <div class="fp-club-badge">${shortClubName(fpClubA||'')}</div>
+      <div class="fp-connector">🔗</div>
+      <div class="fp-club-badge">${shortClubName(fpClubB||'')}</div>
+    </div>
+    <p class="fp-instruction">${t('fpInstruction')}</p>
+    <div class="fp-attempts" id="fp-attempts"></div>
+    <div class="fp-input-row">
+      <input id="fp-input" placeholder="${t('fpTypePlaceholder')}" autocomplete="off" autocorrect="off" autocapitalize="words" />
+      <button id="fp-submit" class="btn-primary">${t('fpSubmit')}</button>
+    </div>
+    <div id="feedback" class="center muted" style="min-height:24px;"></div>
+  `;
+
+  const input  = document.getElementById('fp-input');
+  const submit = document.getElementById('fp-submit');
+
+  const doSubmit = () => {
+    const val = input.value.trim();
+    if (!val || submit.disabled) return;
+    submit.disabled = true;
+    socket.emit('submit_findplayer', { answer: val }, () => { submit.disabled = false; });
+    input.value = '';
+    input.focus();
+  };
+  submit.onclick   = doSubmit;
+  input.onkeydown  = e => { if (e.key === 'Enter') doSubmit(); };
+  input.focus();
+  startTimer(durationMs);
+}
+
 // ── Higher or Lower ───────────────────────────────────────────────────────────
 function renderHLScreen() {
   if (_hlDone) {
@@ -971,8 +1108,30 @@ function handleAnswerAck({ correct, gained, outOfHints }) {
 }
 
 // ── Reveal ────────────────────────────────────────────────────────────────────
-function renderReveal({ correct, correctIds, leaderboard, realClubs }) {
+function renderReveal({ correct, correctIds, leaderboard, realClubs, fpExamples, fpWinnerName }) {
   cancelAnimationFrame(timerRaf);
+
+  if (fpExamples !== undefined) {
+    // Find the Player reveal — disable input if still enabled
+    const input  = document.getElementById('fp-input');
+    const submit = document.getElementById('fp-submit');
+    if (input)  input.disabled  = true;
+    if (submit) submit.disabled = true;
+    const fb = document.getElementById('feedback');
+    if (fb) {
+      const exampleHtml = fpExamples.length
+        ? `<div style="margin-top:.5rem;font-size:13px;color:#86efac;">${t('fpValidPlayers')} <strong style="color:#f4c430;">${fpExamples.join(', ')}</strong></div>`
+        : '';
+      const winnerHtml = fpWinnerName
+        ? `<span style="color:#4ade80;">⚽ <strong>${fpWinnerName}</strong> ${t('fpOpponentWon')}</span>`
+        : `<span style="color:#f87171;">${t('fpNobodyFound')}</span>`;
+      fb.innerHTML = winnerHtml + exampleHtml;
+      if (roomSettings.showLeaderboardLive) {
+        fb.innerHTML += `<div style="text-align:left;max-width:360px;margin:.6rem auto 0;">${leaderboard.slice(0,5).map((p,i)=>`<div class="leaderboard-row"><span class="rank">${medalIcon(i+1)}</span><span style="flex:1;">${p.name}</span><span style="font-weight:600;color:#f4c430;">${p.score.toLocaleString()}</span></div>`).join('')}</div>`;
+      }
+    }
+    return;
+  }
 
   if (correctIds) {
     // Squad builder reveal
@@ -1089,7 +1248,7 @@ function renderGameOver({ leaderboard }) {
 function renderPastGames() {
   _lastRender = renderPastGames;
   const history = JSON.parse(localStorage.getItem('footbally_history')||'[]');
-  const modeLabel = m => ({ quickfire:t('historyModeQF'),career:t('historyModeCP'),squad:t('historyModeSQ'),higherlower:t('historyModeHL') }[m]||m);
+  const modeLabel = m => ({ quickfire:t('historyModeQF'),career:t('historyModeCP'),squad:t('historyModeSQ'),higherlower:t('historyModeHL'),findplayer:t('historyModeFP') }[m]||m);
   const rankEmoji = r => r===1?'🥇':r===2?'🥈':r===3?'🥉':'#'+r;
 
   render(`
@@ -1168,6 +1327,42 @@ function setupSocketHandlers() {
     // Set feedback after refresh (refresh replaces the div)
     const fb = document.getElementById('feedback');
     if (fb) fb.innerHTML = `<span style="color:#f87171;">✗ ${t('answerWrong')} — ${hintsLeft} ${t('careerHintsLeft')}</span>`;
+  });
+
+  socket.on('fp_result', ({ correct, winnerId, winnerName, playerFound, gained, answer }) => {
+    if (correct) {
+      cancelAnimationFrame(timerRaf);
+      const isMe = winnerId === socket.id;
+      if (isMe) {
+        myScore += gained || 0;
+        answered = true;
+      }
+      const input  = document.getElementById('fp-input');
+      const submit = document.getElementById('fp-submit');
+      if (input)  input.disabled  = true;
+      if (submit) submit.disabled = true;
+      const fb = document.getElementById('feedback');
+      if (fb) {
+        fb.innerHTML = isMe
+          ? `<span class="score-flash" style="color:#4ade80;">⚽ ${t('fpYouWon')} +${(gained||0).toLocaleString()}</span>`
+          : `<span style="color:#f87171;"><strong style="color:#f4c430;">${winnerName}</strong> ${t('fpOpponentWon')} — <em>${playerFound}</em></span>`;
+      }
+    } else {
+      // Wrong answer — add badge, re-enable input
+      const attemptsEl = document.getElementById('fp-attempts');
+      if (attemptsEl && answer) {
+        const badge = document.createElement('span');
+        badge.className = 'fp-wrong-attempt';
+        badge.textContent = '✗ ' + answer;
+        attemptsEl.appendChild(badge);
+      }
+      const fb = document.getElementById('feedback');
+      if (fb) fb.innerHTML = `<span style="color:#f87171;">✗ ${t('answerWrong')} — ${t('fpTryAgain')}</span>`;
+      const input  = document.getElementById('fp-input');
+      const submit = document.getElementById('fp-submit');
+      if (input)  { input.disabled  = false; input.focus(); }
+      if (submit) submit.disabled = false;
+    }
   });
 
   socket.on('hl_start', ({ players, firstRevealedValue, firstLeft, firstRight }) => {

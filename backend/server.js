@@ -2,7 +2,7 @@
 const express = require('express');
 const http    = require('http');
 const { Server } = require('socket.io');
-const { generateQuestions, loadAndGetHLChain } = require('./questionGenerator');
+const { generateQuestions, loadAndGetHLChain, normalizeName } = require('./questionGenerator');
 
 const app = express();
 app.use(express.json());
@@ -28,7 +28,7 @@ const DEFAULT_SETTINGS = {
   hintsEnabled:        true,
 };
 
-const VALID_GAME_MODES   = ['quickfire','career','squad','higherlower'];
+const VALID_GAME_MODES   = ['quickfire','career','squad','higherlower','findplayer'];
 const VALID_COUNTS       = [5,10,15,20,30];
 const VALID_DURATIONS    = [5000,10000,15000,20000,30000];
 const VALID_DIFFICULTIES = ['easy','normal','hard'];
@@ -63,6 +63,7 @@ function makeRoom(code) {
     hlActive: new Map(),
     qStartTs: 0,
     timer: null,
+    fpWinner: null,
   };
 }
 
@@ -120,6 +121,7 @@ function nextQuestion(room) {
   room.currentQ += 1;
   room.answers      = new Map();
   room.careerAnswers = new Map();
+  room.fpWinner     = null;
 
   if (room.currentQ >= room.questions.length) {
     room.state = 'finished';
@@ -149,6 +151,9 @@ function nextQuestion(room) {
     // Squad Builder extras
     squadClub:    q.clubName     || null,
     squadPlayers: q.squadPlayers || null,
+    // Find the Player extras
+    fpClubA:      q.fpClubA      || null,
+    fpClubB:      q.fpClubB      || null,
   });
 
   room.timer = setTimeout(() => revealAndAdvance(room), durationMs);
@@ -156,6 +161,17 @@ function nextQuestion(room) {
 
 function revealAndAdvance(room) {
   const q = room.questions[room.currentQ];
+
+  if (room.settings.gameMode === 'findplayer') {
+    broadcast(room, 'reveal', {
+      correct:       null,
+      fpExamples:    (q.validPlayerNames || []).slice(0, 3),
+      fpWinnerName:  room.fpWinner ? (room.players.get(room.fpWinner)?.name || null) : null,
+      leaderboard:   buildLeaderboard(room),
+    });
+    setTimeout(() => nextQuestion(room), 4000);
+    return;
+  }
 
   if (room.settings.gameMode === 'squad') {
     // Score squad submissions
@@ -336,6 +352,43 @@ io.on('connection', (socket) => {
       clearTimeout(room.timer);
       revealAndAdvance(room);
     }
+  });
+
+  socket.on('submit_findplayer', ({ answer }, ack) => {
+    const room = rooms.get(socket.data.roomCode);
+    if (!room || room.state !== 'playing' || room.settings.gameMode !== 'findplayer') return;
+    if (room.fpWinner) return ack?.({ ok: false, error: 'alreadyWon' });
+    const q = room.questions[room.currentQ];
+    if (!q) return;
+
+    const normInput = normalizeName(answer || '');
+    if (normInput.length < 2) return ack?.({ ok: false });
+
+    const matchedName = (q.validPlayerNames || []).find(name => {
+      const nn = normalizeName(name);
+      if (nn === normInput) return true;
+      // Accept last name only (last space-separated token, min 3 chars)
+      const words = nn.split(' ');
+      return words.length >= 2 && words[words.length - 1] === normInput && normInput.length >= 3;
+    });
+
+    if (matchedName) {
+      room.fpWinner = socket.id;
+      const responseMs = Date.now() - room.qStartTs;
+      const gained = calcScore(true, responseMs, room.settings.questionDurationMs, room.settings.speedBonus);
+      const player = room.players.get(socket.id);
+      if (player) player.score += gained;
+      clearTimeout(room.timer);
+      broadcast(room, 'fp_result', {
+        correct: true, winnerId: socket.id,
+        winnerName: player?.name || '', playerFound: matchedName, gained,
+        leaderboard: buildLeaderboard(room),
+      });
+      setTimeout(() => revealAndAdvance(room), 2500);
+    } else {
+      socket.emit('fp_result', { correct: false, answer });
+    }
+    ack?.({ ok: true });
   });
 
   socket.on('hl_answer', ({ direction }, ack) => {
