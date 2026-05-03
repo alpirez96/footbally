@@ -530,25 +530,7 @@ async function generateQuestions(count = 10, gameMode = 'quickfire', settings = 
     return questions;
   }
 
-  if (gameMode === 'findplayer') {
-    // Always use full PLAYERS so all career paths are available for pair-finding
-    const clubIndex = buildClubIndex(PLAYERS);
-    const usedPairs = new Set();
-    const questions = [];
-    let attempts = 0;
-    while (questions.length < count && attempts < count * 50) {
-      const q = qFindPlayer(PLAYERS, clubIndex);
-      if (q) {
-        const key = [q.fpClubA, q.fpClubB].sort().join('|||');
-        if (!usedPairs.has(key)) { usedPairs.add(key); questions.push(q); }
-      }
-      attempts++;
-    }
-    if (questions.length === 0) throw new Error('Find Player sorusu oluşturulamadı');
-    return questions;
-  }
-
-  // quickfire / blitz
+  // quickfire / buzzer / blitz
   const gens = getGenerators(settings.difficulty || 'normal');
   const questions = [];
   let attempts = 0;
@@ -573,58 +555,4 @@ async function loadAndGetHLChain(settings = {}, count = 30) {
   return generateHLChain(pool, count);
 }
 
-// ── Find the Player ───────────────────────────────────────────────────────────
-function normalizeName(s) {
-  return (s || '').trim().toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9 ]/g, '')
-    .replace(/\s+/g, ' ');
-}
-
-function buildClubIndex(players) {
-  const index = new Map();
-  players.forEach(p => {
-    const clubs = new Set();
-    if (p.club && p.club !== 'Unknown') clubs.add(p.club);
-    (p.careerPath || []).forEach(s => { if (s.club) clubs.add(s.club); });
-    clubs.forEach(c => {
-      if (!index.has(c)) index.set(c, []);
-      index.get(c).push(String(p.id));
-    });
-  });
-  return index;
-}
-
-function qFindPlayer(players, clubIndex) {
-  // Only use clubs with 5+ players so questions feature recognisable teams
-  const clubs = [...clubIndex.entries()]
-    .filter(([, ids]) => ids.length >= 5)
-    .map(([c]) => c);
-  if (clubs.length < 2) return null;
-  for (let attempt = 0; attempt < 80; attempt++) {
-    const [clubA, clubB] = pickN(clubs, 2);
-    const setA = new Set(clubIndex.get(clubA) || []);
-    const sharedIds = (clubIndex.get(clubB) || []).filter(id => setA.has(id));
-    if (sharedIds.length === 0) continue;
-    const validPlayers = sharedIds
-      .map(id => players.find(p => String(p.id) === id))
-      .filter(Boolean);
-    if (validPlayers.length === 0) continue;
-    const validPlayerNames = [...new Set(validPlayers.map(p => p.name))];
-    return {
-      type: 'find_player',
-      fpClubA: clubA,
-      fpClubB: clubB,
-      validPlayerNames,
-      ...q(
-        `${clubA} ve ${clubB} takımlarında oynayan futbolcuyu bul!`,
-        `Find a player who played for both ${clubA} and ${clubB}!`,
-      ),
-      options: [],
-      correct: validPlayerNames[0],
-    };
-  }
-  return null;
-}
-
-module.exports = { generateQuestions, loadAndGetHLChain, normalizeName, getLoadedAt: () => loadedAt };
+module.exports = { generateQuestions, loadAndGetHLChain, getLoadedAt: () => loadedAt };
