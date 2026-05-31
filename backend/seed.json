@@ -125,6 +125,38 @@
       }
     },
     {
+      "id": "566723",
+      "name": "Michael Olise",
+      "club": "FC Bayern München",
+      "position": "Attack",
+      "nationality": "France",
+      "marketValue": 150000000,
+      "leagueId": "L1",
+      "age": 24,
+      "birthYear": 2001,
+      "height": 184,
+      "careerPath": [
+        {
+          "club": "Reading FC",
+          "year": "2020"
+        },
+        {
+          "club": "Crystal Palace Football Club",
+          "year": "2021"
+        },
+        {
+          "club": "FC Bayern München",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Crystal Palace Football Club",
+        "to": "FC Bayern München",
+        "date": "2024-07-07",
+        "fee": 53000000
+      }
+    },
+    {
       "id": "683840",
       "name": "Pedri",
       "club": "Futbol Club Barcelona",
@@ -158,38 +190,6 @@
         "to": "Futbol Club Barcelona",
         "date": "2020-07-31",
         "fee": 0
-      }
-    },
-    {
-      "id": "566723",
-      "name": "Michael Olise",
-      "club": "FC Bayern München",
-      "position": "Attack",
-      "nationality": "France",
-      "marketValue": 140000000,
-      "leagueId": "L1",
-      "age": 24,
-      "birthYear": 2001,
-      "height": 184,
-      "careerPath": [
-        {
-          "club": "Reading FC",
-          "year": "2020"
-        },
-        {
-          "club": "Crystal Palace Football Club",
-          "year": "2021"
-        },
-        {
-          "club": "FC Bayern München",
-          "year": "2024"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Crystal Palace Football Club",
-        "to": "FC Bayern München",
-        "date": "2024-07-07",
-        "fee": 53000000
       }
     },
     {
@@ -297,30 +297,6 @@
         "from": null,
         "to": "Arsenal Football Club",
         "date": "2019-07-01",
-        "fee": 0
-      }
-    },
-    {
-      "id": "580195",
-      "name": "Jamal Musiala",
-      "club": "FC Bayern München",
-      "position": "Midfield",
-      "nationality": "Germany",
-      "marketValue": 120000000,
-      "leagueId": "L1",
-      "age": 23,
-      "birthYear": 2003,
-      "height": 184,
-      "careerPath": [
-        {
-          "club": "FC Bayern München",
-          "year": "2020"
-        }
-      ],
-      "lastTransfer": {
-        "from": null,
-        "to": "FC Bayern München",
-        "date": "2020-07-01",
         "fee": 0
       }
     },
@@ -585,6 +561,30 @@
       }
     },
     {
+      "id": "580195",
+      "name": "Jamal Musiala",
+      "club": "FC Bayern München",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 100000000,
+      "leagueId": "L1",
+      "age": 23,
+      "birthYear": 2003,
+      "height": 184,
+      "careerPath": [
+        {
+          "club": "FC Bayern München",
+          "year": "2020"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "FC Bayern München",
+        "date": "2020-07-01",
+        "fee": 0
+      }
+    },
+    {
       "id": "636703",
       "name": "Fermín López",
       "club": "Futbol Club Barcelona",
@@ -821,6 +821,30 @@
       }
     },
     {
+      "id": "792380",
+      "name": "Aleksandar Pavlovic",
+      "club": "FC Bayern München",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 90000000,
+      "leagueId": "L1",
+      "age": 22,
+      "birthYear": 2004,
+      "height": 188,
+      "careerPath": [
+        {
+          "club": "FC Bayern München",
+          "year": "2023"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "FC Bayern München",
+        "date": "2023-11-01",
+        "fee": 0
+      }
+    },
+    {
       "id": "861410",
       "name": "Arda Güler",
       "club": "Real Madrid Club de Fútbol",
@@ -874,6 +898,34 @@
         "to": "Paris Saint-Germain Football Club",
         "date": "2024-08-17",
         "fee": 50000000
+      }
+    },
+    {
+      "id": "1390649",
+      "name": "Yan Diomande",
+      "club": "RasenBallsport Leipzig",
+      "position": "Attack",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 90000000,
+      "leagueId": "L1",
+      "age": 19,
+      "birthYear": 2006,
+      "height": 180,
+      "careerPath": [
+        {
+          "club": "CD Leganés",
+          "year": "2025"
+        },
+        {
+          "club": "RasenBallsport Leipzig",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "CD Leganés",
+        "to": "RasenBallsport Leipzig",
+        "date": "2025-07-16",
+        "fee": 20000000
       }
     },
     {
@@ -984,7 +1036,7 @@
       "nationality": "England",
       "marketValue": 80000000,
       "leagueId": "GB1",
-      "age": 25,
+      "age": 26,
       "birthYear": 2000,
       "height": 171,
       "careerPath": [
@@ -1421,30 +1473,6 @@
       }
     },
     {
-      "id": "792380",
-      "name": "Aleksandar Pavlovic",
-      "club": "FC Bayern München",
-      "position": "Midfield",
-      "nationality": "Germany",
-      "marketValue": 75000000,
-      "leagueId": "L1",
-      "age": 22,
-      "birthYear": 2004,
-      "height": 188,
-      "careerPath": [
-        {
-          "club": "FC Bayern München",
-          "year": "2023"
-        }
-      ],
-      "lastTransfer": {
-        "from": null,
-        "to": "FC Bayern München",
-        "date": "2023-11-01",
-        "fee": 0
-      }
-    },
-    {
       "id": "845654",
       "name": "Kenan Yıldız",
       "club": "Juventus Football Club",
@@ -1466,34 +1494,6 @@
         "to": "Juventus Football Club",
         "date": "2023-11-07",
         "fee": 0
-      }
-    },
-    {
-      "id": "1390649",
-      "name": "Yan Diomande",
-      "club": "RasenBallsport Leipzig",
-      "position": "Attack",
-      "nationality": "Cote d'Ivoire",
-      "marketValue": 75000000,
-      "leagueId": "L1",
-      "age": 19,
-      "birthYear": 2006,
-      "height": 180,
-      "careerPath": [
-        {
-          "club": "CD Leganés",
-          "year": "2025"
-        },
-        {
-          "club": "RasenBallsport Leipzig",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "CD Leganés",
-        "to": "RasenBallsport Leipzig",
-        "date": "2025-07-16",
-        "fee": 20000000
       }
     },
     {
@@ -1668,7 +1668,7 @@
       "nationality": "Brazil",
       "marketValue": 70000000,
       "leagueId": "GB1",
-      "age": 26,
+      "age": 27,
       "birthYear": 1999,
       "height": 183,
       "careerPath": [
@@ -1754,42 +1754,6 @@
         "to": "Paris Saint-Germain Football Club",
         "date": "2023-08-31",
         "fee": 45000000
-      }
-    },
-    {
-      "id": "132098",
-      "name": "Harry Kane",
-      "club": "FC Bayern München",
-      "position": "Attack",
-      "nationality": "England",
-      "marketValue": 65000000,
-      "leagueId": "L1",
-      "age": 32,
-      "birthYear": 1993,
-      "height": 188,
-      "careerPath": [
-        {
-          "club": "Tottenham Hotspur Football Club",
-          "year": "2013"
-        },
-        {
-          "club": "Leicester City",
-          "year": "2013"
-        },
-        {
-          "club": "Tottenham Hotspur Football Club",
-          "year": "2013"
-        },
-        {
-          "club": "FC Bayern München",
-          "year": "2023"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Tottenham Hotspur Football Club",
-        "to": "FC Bayern München",
-        "date": "2023-08-12",
-        "fee": 95000000
       }
     },
     {
@@ -2092,7 +2056,7 @@
       "nationality": "Belgium",
       "marketValue": 65000000,
       "leagueId": "GB1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 173,
       "careerPath": [
@@ -2184,7 +2148,7 @@
       "nationality": "Slovenia",
       "marketValue": 65000000,
       "leagueId": "GB1",
-      "age": 22,
+      "age": 23,
       "birthYear": 2003,
       "height": 195,
       "careerPath": [
@@ -2266,6 +2230,42 @@
         "to": "Calcio Como",
         "date": "2024-08-25",
         "fee": 6000000
+      }
+    },
+    {
+      "id": "132098",
+      "name": "Harry Kane",
+      "club": "FC Bayern München",
+      "position": "Attack",
+      "nationality": "England",
+      "marketValue": 60000000,
+      "leagueId": "L1",
+      "age": 32,
+      "birthYear": 1993,
+      "height": 188,
+      "careerPath": [
+        {
+          "club": "Tottenham Hotspur Football Club",
+          "year": "2013"
+        },
+        {
+          "club": "Leicester City",
+          "year": "2013"
+        },
+        {
+          "club": "Tottenham Hotspur Football Club",
+          "year": "2013"
+        },
+        {
+          "club": "FC Bayern München",
+          "year": "2023"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Tottenham Hotspur Football Club",
+        "to": "FC Bayern München",
+        "date": "2023-08-12",
+        "fee": 95000000
       }
     },
     {
@@ -3177,7 +3177,7 @@
       "height": 185,
       "careerPath": [
         {
-          "club": "Atalanta Bergamasca Calcio S.p.a.",
+          "club": "Juventus Football Club",
           "year": "2021"
         },
         {
@@ -3186,7 +3186,7 @@
         },
         {
           "club": "Atalanta Bergamasca Calcio S.p.a.",
-          "year": "2022"
+          "year": "2021"
         },
         {
           "club": "Tottenham Hotspur Football Club",
@@ -3208,7 +3208,7 @@
       "nationality": "France",
       "marketValue": 50000000,
       "leagueId": "GB1",
-      "age": 26,
+      "age": 27,
       "birthYear": 1999,
       "height": 194,
       "careerPath": [
@@ -3318,34 +3318,6 @@
         "to": "Real Madrid Club de Fútbol",
         "date": "2019-07-01",
         "fee": 45000000
-      }
-    },
-    {
-      "id": "496094",
-      "name": "Karim Adeyemi",
-      "club": "Borussia Dortmund",
-      "position": "Attack",
-      "nationality": "Germany",
-      "marketValue": 50000000,
-      "leagueId": "L1",
-      "age": 24,
-      "birthYear": 2002,
-      "height": 180,
-      "careerPath": [
-        {
-          "club": "Fußballclub Red Bull Salzburg",
-          "year": "2018"
-        },
-        {
-          "club": "Borussia Dortmund",
-          "year": "2022"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Fußballclub Red Bull Salzburg",
-        "to": "Borussia Dortmund",
-        "date": "2022-07-01",
-        "fee": 30000000
       }
     },
     {
@@ -3558,6 +3530,34 @@
         "to": "Chelsea Football Club",
         "date": "2023-05-31",
         "fee": 0
+      }
+    },
+    {
+      "id": "618472",
+      "name": "Castello Lukeba",
+      "club": "RasenBallsport Leipzig",
+      "position": "Defender",
+      "nationality": "France",
+      "marketValue": 50000000,
+      "leagueId": "L1",
+      "age": 23,
+      "birthYear": 2002,
+      "height": 184,
+      "careerPath": [
+        {
+          "club": "Olympique Lyonnais",
+          "year": "2021"
+        },
+        {
+          "club": "RasenBallsport Leipzig",
+          "year": "2023"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Olympique Lyonnais",
+        "to": "RasenBallsport Leipzig",
+        "date": "2023-08-11",
+        "fee": 30000000
       }
     },
     {
@@ -3849,6 +3849,58 @@
       }
     },
     {
+      "id": "926993",
+      "name": "Victor Froholdt",
+      "club": "Futebol Clube do Porto",
+      "position": "Midfield",
+      "nationality": "Denmark",
+      "marketValue": 50000000,
+      "leagueId": "PO1",
+      "age": 20,
+      "birthYear": 2006,
+      "height": 187,
+      "careerPath": [
+        {
+          "club": "Football Club København",
+          "year": "2024"
+        },
+        {
+          "club": "Futebol Clube do Porto",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Football Club København",
+        "to": "Futebol Clube do Porto",
+        "date": "2025-07-23",
+        "fee": 20000000
+      }
+    },
+    {
+      "id": "927353",
+      "name": "Johan Manzambi",
+      "club": "Sport-Club Freiburg",
+      "position": "Midfield",
+      "nationality": "Switzerland",
+      "marketValue": 50000000,
+      "leagueId": "L1",
+      "age": 20,
+      "birthYear": 2005,
+      "height": 182,
+      "careerPath": [
+        {
+          "club": "Sport-Club Freiburg",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "Sport-Club Freiburg",
+        "date": "2024-07-01",
+        "fee": 0
+      }
+    },
+    {
       "id": "1005649",
       "name": "Murillo",
       "club": "Nottingham Forest Football Club",
@@ -3990,34 +4042,6 @@
         "to": "Futbol Club Barcelona",
         "date": "2019-07-01",
         "fee": 86000000
-      }
-    },
-    {
-      "id": "424204",
-      "name": "Alphonso Davies",
-      "club": "FC Bayern München",
-      "position": "Defender",
-      "nationality": "Canada",
-      "marketValue": 45000000,
-      "leagueId": "L1",
-      "age": 25,
-      "birthYear": 2000,
-      "height": 185,
-      "careerPath": [
-        {
-          "club": "Vancouver Whitecaps FC",
-          "year": "2016"
-        },
-        {
-          "club": "FC Bayern München",
-          "year": "2019"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Vancouver Whitecaps FC",
-        "to": "FC Bayern München",
-        "date": "2019-01-01",
-        "fee": 14000000
       }
     },
     {
@@ -4289,34 +4313,6 @@
       }
     },
     {
-      "id": "618472",
-      "name": "Castello Lukeba",
-      "club": "RasenBallsport Leipzig",
-      "position": "Defender",
-      "nationality": "France",
-      "marketValue": 45000000,
-      "leagueId": "L1",
-      "age": 23,
-      "birthYear": 2002,
-      "height": 184,
-      "careerPath": [
-        {
-          "club": "Olympique Lyonnais",
-          "year": "2021"
-        },
-        {
-          "club": "RasenBallsport Leipzig",
-          "year": "2023"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Olympique Lyonnais",
-        "to": "RasenBallsport Leipzig",
-        "date": "2023-08-11",
-        "fee": 30000000
-      }
-    },
-    {
       "id": "632349",
       "name": "Jarell Quansah",
       "club": "Bayer 04 Leverkusen Fußball",
@@ -4497,6 +4493,34 @@
       }
     },
     {
+      "id": "905011",
+      "name": "Ibrahim Maza",
+      "club": "Bayer 04 Leverkusen Fußball",
+      "position": "Midfield",
+      "nationality": "Algeria",
+      "marketValue": 45000000,
+      "leagueId": "L1",
+      "age": 20,
+      "birthYear": 2005,
+      "height": 180,
+      "careerPath": [
+        {
+          "club": "Hertha BSC",
+          "year": "2023"
+        },
+        {
+          "club": "Bayer 04 Leverkusen Fußball",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Hertha BSC",
+        "to": "Bayer 04 Leverkusen Fußball",
+        "date": "2025-07-01",
+        "fee": 12000000
+      }
+    },
+    {
       "id": "930781",
       "name": "Pio Esposito",
       "club": "Football Club Internazionale Milano S.p.A.",
@@ -4526,34 +4550,6 @@
         "to": "Football Club Internazionale Milano S.p.A.",
         "date": "2025-06-10",
         "fee": 0
-      }
-    },
-    {
-      "id": "974982",
-      "name": "Ousmane Diomande",
-      "club": "Sporting Clube de Portugal",
-      "position": "Defender",
-      "nationality": "Cote d'Ivoire",
-      "marketValue": 45000000,
-      "leagueId": "PO1",
-      "age": 22,
-      "birthYear": 2003,
-      "height": 190,
-      "careerPath": [
-        {
-          "club": "Fodbold Club Midtjylland",
-          "year": "2022"
-        },
-        {
-          "club": "Sporting Clube de Portugal",
-          "year": "2023"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Fodbold Club Midtjylland",
-        "to": "Sporting Clube de Portugal",
-        "date": "2023-01-31",
-        "fee": 14500000
       }
     },
     {
@@ -4621,6 +4617,58 @@
       }
     },
     {
+      "id": "1168219",
+      "name": "Said El Mala",
+      "club": "1. Fußball-Club Köln",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 45000000,
+      "leagueId": "L1",
+      "age": 19,
+      "birthYear": 2006,
+      "height": 187,
+      "careerPath": [
+        {
+          "club": "1. Fußball-Club Köln",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "1. Fußball-Club Köln",
+        "date": "2025-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "974982",
+      "name": "Ousmane Diomande",
+      "club": "Sporting Clube de Portugal",
+      "position": "Defender",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 42000000,
+      "leagueId": "PO1",
+      "age": 22,
+      "birthYear": 2003,
+      "height": 190,
+      "careerPath": [
+        {
+          "club": "Fodbold Club Midtjylland",
+          "year": "2022"
+        },
+        {
+          "club": "Sporting Clube de Portugal",
+          "year": "2023"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Fodbold Club Midtjylland",
+        "to": "Sporting Clube de Portugal",
+        "date": "2023-01-31",
+        "fee": 14500000
+      }
+    },
+    {
       "id": "1138758",
       "name": "Geovany Quenda",
       "club": "Sporting Clube de Portugal",
@@ -4646,38 +4694,6 @@
         "to": "Chelsea Football Club",
         "date": "2026-07-01",
         "fee": 50700000
-      }
-    },
-    {
-      "id": "161056",
-      "name": "Joshua Kimmich",
-      "club": "FC Bayern München",
-      "position": "Midfield",
-      "nationality": "Germany",
-      "marketValue": 40000000,
-      "leagueId": "L1",
-      "age": 31,
-      "birthYear": 1995,
-      "height": 177,
-      "careerPath": [
-        {
-          "club": "RasenBallsport Leipzig",
-          "year": "2013"
-        },
-        {
-          "club": "Verein für Bewegungsspiele Stuttgart 1893",
-          "year": "2015"
-        },
-        {
-          "club": "FC Bayern München",
-          "year": "2015"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Verein für Bewegungsspiele Stuttgart 1893",
-        "to": "FC Bayern München",
-        "date": "2015-07-02",
-        "fee": 9500000
       }
     },
     {
@@ -4789,39 +4805,31 @@
       }
     },
     {
-      "id": "270541",
-      "name": "Serhou Guirassy",
-      "club": "Borussia Dortmund",
-      "position": "Attack",
-      "nationality": "Guinea",
+      "id": "324278",
+      "name": "Christoph Baumgartner",
+      "club": "RasenBallsport Leipzig",
+      "position": "Midfield",
+      "nationality": "Austria",
       "marketValue": 40000000,
       "leagueId": "L1",
-      "age": 30,
-      "birthYear": 1996,
-      "height": 187,
+      "age": 26,
+      "birthYear": 1999,
+      "height": 180,
       "careerPath": [
         {
-          "club": "Verein für Bewegungsspiele Stuttgart 1893",
-          "year": "2022"
+          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+          "year": "2019"
         },
         {
-          "club": "Stade Rennais Football Club",
+          "club": "RasenBallsport Leipzig",
           "year": "2023"
-        },
-        {
-          "club": "Verein für Bewegungsspiele Stuttgart 1893",
-          "year": "2023"
-        },
-        {
-          "club": "Borussia Dortmund",
-          "year": "2024"
         }
       ],
       "lastTransfer": {
-        "from": "Verein für Bewegungsspiele Stuttgart 1893",
-        "to": "Borussia Dortmund",
-        "date": "2024-07-18",
-        "fee": 18000000
+        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "to": "RasenBallsport Leipzig",
+        "date": "2023-07-01",
+        "fee": 25500000
       }
     },
     {
@@ -5093,6 +5101,42 @@
       }
     },
     {
+      "id": "412669",
+      "name": "Francisco Trincão",
+      "club": "Sporting Clube de Portugal",
+      "position": "Midfield",
+      "nationality": "Portugal",
+      "marketValue": 40000000,
+      "leagueId": "PO1",
+      "age": 26,
+      "birthYear": 1999,
+      "height": 184,
+      "careerPath": [
+        {
+          "club": "Futbol Club Barcelona",
+          "year": "2022"
+        },
+        {
+          "club": "Sporting Clube de Portugal",
+          "year": "2022"
+        },
+        {
+          "club": "Futbol Club Barcelona",
+          "year": "2023"
+        },
+        {
+          "club": "Sporting Clube de Portugal",
+          "year": "2023"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Futbol Club Barcelona",
+        "to": "Sporting Clube de Portugal",
+        "date": "2023-07-01",
+        "fee": 18000000
+      }
+    },
+    {
       "id": "413403",
       "name": "Ezri Konsa",
       "club": "Aston Villa Football Club",
@@ -5118,6 +5162,34 @@
         "to": "Aston Villa Football Club",
         "date": "2019-07-11",
         "fee": 13300000
+      }
+    },
+    {
+      "id": "424204",
+      "name": "Alphonso Davies",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "Canada",
+      "marketValue": 40000000,
+      "leagueId": "L1",
+      "age": 25,
+      "birthYear": 2000,
+      "height": 185,
+      "careerPath": [
+        {
+          "club": "Vancouver Whitecaps FC",
+          "year": "2016"
+        },
+        {
+          "club": "FC Bayern München",
+          "year": "2019"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Vancouver Whitecaps FC",
+        "to": "FC Bayern München",
+        "date": "2019-01-01",
+        "fee": 14000000
       }
     },
     {
@@ -5253,6 +5325,38 @@
       }
     },
     {
+      "id": "483046",
+      "name": "Josip Stanisic",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "Croatia",
+      "marketValue": 40000000,
+      "leagueId": "L1",
+      "age": 26,
+      "birthYear": 2000,
+      "height": 187,
+      "careerPath": [
+        {
+          "club": "FC Bayern München",
+          "year": "2021"
+        },
+        {
+          "club": "Bayer 04 Leverkusen Fußball",
+          "year": "2023"
+        },
+        {
+          "club": "FC Bayern München",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Bayer 04 Leverkusen Fußball",
+        "to": "FC Bayern München",
+        "date": "2024-06-30",
+        "fee": 0
+      }
+    },
+    {
       "id": "485963",
       "name": "Pape Gueye",
       "club": "Villarreal Club de Fútbol S.A.D.",
@@ -5286,6 +5390,34 @@
         "to": "Villarreal Club de Fútbol S.A.D.",
         "date": "2024-07-05",
         "fee": 0
+      }
+    },
+    {
+      "id": "496094",
+      "name": "Karim Adeyemi",
+      "club": "Borussia Dortmund",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 40000000,
+      "leagueId": "L1",
+      "age": 24,
+      "birthYear": 2002,
+      "height": 180,
+      "careerPath": [
+        {
+          "club": "Fußballclub Red Bull Salzburg",
+          "year": "2018"
+        },
+        {
+          "club": "Borussia Dortmund",
+          "year": "2022"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Fußballclub Red Bull Salzburg",
+        "to": "Borussia Dortmund",
+        "date": "2022-07-01",
+        "fee": 30000000
       }
     },
     {
@@ -5645,6 +5777,98 @@
       }
     },
     {
+      "id": "643574",
+      "name": "Kaishu Sano",
+      "club": "1. Fußball- und Sportverein Mainz 05",
+      "position": "Midfield",
+      "nationality": "Japan",
+      "marketValue": 40000000,
+      "leagueId": "L1",
+      "age": 25,
+      "birthYear": 2000,
+      "height": 176,
+      "careerPath": [
+        {
+          "club": "Zelvia",
+          "year": "2019"
+        },
+        {
+          "club": "Kashima Antlers FC",
+          "year": "2023"
+        },
+        {
+          "club": "1. Fußball- und Sportverein Mainz 05",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Kashima Antlers FC",
+        "to": "1. Fußball- und Sportverein Mainz 05",
+        "date": "2024-07-03",
+        "fee": 2500000
+      }
+    },
+    {
+      "id": "691892",
+      "name": "Nathaniel Brown",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 40000000,
+      "leagueId": "L1",
+      "age": 22,
+      "birthYear": 2003,
+      "height": 176,
+      "careerPath": [
+        {
+          "club": "1.FC Nuremberg",
+          "year": "2022"
+        },
+        {
+          "club": "Eintracht Frankfurt Fußball AG",
+          "year": "2024"
+        },
+        {
+          "club": "1.FC Nuremberg",
+          "year": "2024"
+        },
+        {
+          "club": "Eintracht Frankfurt Fußball AG",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": "1.FC Nuremberg",
+        "to": "Eintracht Frankfurt Fußball AG",
+        "date": "2024-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "702869",
+      "name": "Ismael Saibari",
+      "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+      "position": "Midfield",
+      "nationality": "Morocco",
+      "marketValue": 40000000,
+      "leagueId": "NL1",
+      "age": 25,
+      "birthYear": 2001,
+      "height": 185,
+      "careerPath": [
+        {
+          "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+          "year": "2022"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "date": "2022-07-01",
+        "fee": 0
+      }
+    },
+    {
       "id": "730861",
       "name": "Milos Kerkez",
       "club": "Liverpool Football Club",
@@ -5810,6 +6034,34 @@
         "to": "Chelsea Football Club",
         "date": "2026-06-30",
         "fee": 0
+      }
+    },
+    {
+      "id": "796297",
+      "name": "Jobe Bellingham",
+      "club": "Borussia Dortmund",
+      "position": "Midfield",
+      "nationality": "England",
+      "marketValue": 40000000,
+      "leagueId": "L1",
+      "age": 20,
+      "birthYear": 2005,
+      "height": 191,
+      "careerPath": [
+        {
+          "club": "Sunderland Association Football Club",
+          "year": "2023"
+        },
+        {
+          "club": "Borussia Dortmund",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Sunderland Association Football Club",
+        "to": "Borussia Dortmund",
+        "date": "2025-06-10",
+        "fee": 30500000
       }
     },
     {
@@ -5981,34 +6233,6 @@
       }
     },
     {
-      "id": "905011",
-      "name": "Ibrahim Maza",
-      "club": "Bayer 04 Leverkusen Fußball",
-      "position": "Midfield",
-      "nationality": "Algeria",
-      "marketValue": 40000000,
-      "leagueId": "L1",
-      "age": 20,
-      "birthYear": 2005,
-      "height": 180,
-      "careerPath": [
-        {
-          "club": "Hertha BSC",
-          "year": "2023"
-        },
-        {
-          "club": "Bayer 04 Leverkusen Fußball",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Hertha BSC",
-        "to": "Bayer 04 Leverkusen Fußball",
-        "date": "2025-07-01",
-        "fee": 12000000
-      }
-    },
-    {
       "id": "955357",
       "name": "Junior Kroupi",
       "club": "Association Football Club Bournemouth",
@@ -6137,6 +6361,34 @@
       }
     },
     {
+      "id": "1067904",
+      "name": "Bazoumana Touré",
+      "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+      "position": "Attack",
+      "nationality": "Cote d'Ivoire",
+      "marketValue": 40000000,
+      "leagueId": "L1",
+      "age": 20,
+      "birthYear": 2006,
+      "height": 175,
+      "careerPath": [
+        {
+          "club": "Hammarby IF",
+          "year": "2024"
+        },
+        {
+          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Hammarby IF",
+        "to": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "date": "2025-02-01",
+        "fee": 10000000
+      }
+    },
+    {
       "id": "1364454",
       "name": "Christian Kofane",
       "club": "Bayer 04 Leverkusen Fußball",
@@ -6218,6 +6470,38 @@
         "to": "Futebol Clube do Porto",
         "date": "2024-07-01",
         "fee": 0
+      }
+    },
+    {
+      "id": "161056",
+      "name": "Joshua Kimmich",
+      "club": "FC Bayern München",
+      "position": "Midfield",
+      "nationality": "Germany",
+      "marketValue": 35000000,
+      "leagueId": "L1",
+      "age": 31,
+      "birthYear": 1995,
+      "height": 177,
+      "careerPath": [
+        {
+          "club": "RasenBallsport Leipzig",
+          "year": "2013"
+        },
+        {
+          "club": "Verein für Bewegungsspiele Stuttgart 1893",
+          "year": "2015"
+        },
+        {
+          "club": "FC Bayern München",
+          "year": "2015"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Verein für Bewegungsspiele Stuttgart 1893",
+        "to": "FC Bayern München",
+        "date": "2015-07-02",
+        "fee": 9500000
       }
     },
     {
@@ -6426,34 +6710,6 @@
         "to": "Associazione Sportiva Roma",
         "date": "2026-07-01",
         "fee": 25000000
-      }
-    },
-    {
-      "id": "333647",
-      "name": "Jonathan Burkardt",
-      "club": "Eintracht Frankfurt Fußball AG",
-      "position": "Attack",
-      "nationality": "Germany",
-      "marketValue": 35000000,
-      "leagueId": "L1",
-      "age": 25,
-      "birthYear": 2000,
-      "height": 181,
-      "careerPath": [
-        {
-          "club": "1. Fußball- und Sportverein Mainz 05",
-          "year": "2018"
-        },
-        {
-          "club": "Eintracht Frankfurt Fußball AG",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "1. Fußball- und Sportverein Mainz 05",
-        "to": "Eintracht Frankfurt Fußball AG",
-        "date": "2025-07-04",
-        "fee": 21000000
       }
     },
     {
@@ -6729,42 +6985,6 @@
       }
     },
     {
-      "id": "412669",
-      "name": "Francisco Trincão",
-      "club": "Sporting Clube de Portugal",
-      "position": "Midfield",
-      "nationality": "Portugal",
-      "marketValue": 35000000,
-      "leagueId": "PO1",
-      "age": 26,
-      "birthYear": 1999,
-      "height": 184,
-      "careerPath": [
-        {
-          "club": "Futbol Club Barcelona",
-          "year": "2022"
-        },
-        {
-          "club": "Sporting Clube de Portugal",
-          "year": "2022"
-        },
-        {
-          "club": "Futbol Club Barcelona",
-          "year": "2023"
-        },
-        {
-          "club": "Sporting Clube de Portugal",
-          "year": "2023"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Futbol Club Barcelona",
-        "to": "Sporting Clube de Portugal",
-        "date": "2023-07-01",
-        "fee": 18000000
-      }
-    },
-    {
       "id": "420002",
       "name": "Jean-Philippe Mateta",
       "club": "Crystal Palace Football Club",
@@ -6798,6 +7018,42 @@
         "to": "Crystal Palace Football Club",
         "date": "2022-01-31",
         "fee": 11000000
+      }
+    },
+    {
+      "id": "425918",
+      "name": "Jakub Kiwior",
+      "club": "Futebol Clube do Porto",
+      "position": "Defender",
+      "nationality": "Poland",
+      "marketValue": 35000000,
+      "leagueId": "PO1",
+      "age": 26,
+      "birthYear": 2000,
+      "height": 189,
+      "careerPath": [
+        {
+          "club": "Arsenal Football Club",
+          "year": "2023"
+        },
+        {
+          "club": "Futebol Clube do Porto",
+          "year": "2025"
+        },
+        {
+          "club": "Arsenal Football Club",
+          "year": "2026"
+        },
+        {
+          "club": "Futebol Clube do Porto",
+          "year": "2026"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Arsenal Football Club",
+        "to": "Futebol Clube do Porto",
+        "date": "2026-07-01",
+        "fee": 17000000
       }
     },
     {
@@ -6894,42 +7150,6 @@
         "to": "Atalanta Bergamasca Calcio S.p.a.",
         "date": "2024-07-01",
         "fee": 23700000
-      }
-    },
-    {
-      "id": "444523",
-      "name": "Lucas Paquetá",
-      "club": "Clube de Regatas do Flamengo",
-      "position": "Midfield",
-      "nationality": "Brazil",
-      "marketValue": 35000000,
-      "leagueId": "BRA1",
-      "age": 28,
-      "birthYear": 1997,
-      "height": 180,
-      "careerPath": [
-        {
-          "club": "Associazione Calcio Milan",
-          "year": "2019"
-        },
-        {
-          "club": "Olympique Lyonnais",
-          "year": "2020"
-        },
-        {
-          "club": "West Ham United Football Club",
-          "year": "2022"
-        },
-        {
-          "club": "Clube de Regatas do Flamengo",
-          "year": "2026"
-        }
-      ],
-      "lastTransfer": {
-        "from": "West Ham United Football Club",
-        "to": "Clube de Regatas do Flamengo",
-        "date": "2026-01-28",
-        "fee": 42000000
       }
     },
     {
@@ -7037,38 +7257,6 @@
       }
     },
     {
-      "id": "483046",
-      "name": "Josip Stanisic",
-      "club": "FC Bayern München",
-      "position": "Defender",
-      "nationality": "Croatia",
-      "marketValue": 35000000,
-      "leagueId": "L1",
-      "age": 26,
-      "birthYear": 2000,
-      "height": 187,
-      "careerPath": [
-        {
-          "club": "FC Bayern München",
-          "year": "2021"
-        },
-        {
-          "club": "Bayer 04 Leverkusen Fußball",
-          "year": "2023"
-        },
-        {
-          "club": "FC Bayern München",
-          "year": "2024"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Bayer 04 Leverkusen Fußball",
-        "to": "FC Bayern München",
-        "date": "2024-06-30",
-        "fee": 0
-      }
-    },
-    {
       "id": "484547",
       "name": "Jeremie Frimpong",
       "club": "Liverpool Football Club",
@@ -7144,7 +7332,7 @@
       "nationality": "England",
       "marketValue": 35000000,
       "leagueId": "GB1",
-      "age": 24,
+      "age": 25,
       "birthYear": 2001,
       "height": 180,
       "careerPath": [
@@ -7230,6 +7418,38 @@
         "to": "Juventus Football Club",
         "date": "2022-07-20",
         "fee": 51300000
+      }
+    },
+    {
+      "id": "524290",
+      "name": "Fisnik Asllani",
+      "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+      "position": "Attack",
+      "nationality": "Kosovo",
+      "marketValue": 35000000,
+      "leagueId": "L1",
+      "age": 23,
+      "birthYear": 2002,
+      "height": 191,
+      "careerPath": [
+        {
+          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+          "year": "2022"
+        },
+        {
+          "club": "Fußballklub Austria Wien",
+          "year": "2023"
+        },
+        {
+          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "date": "2025-06-30",
+        "fee": 0
       }
     },
     {
@@ -7350,10 +7570,10 @@
       "careerPath": [
         {
           "club": "Udinese Calcio",
-          "year": "2022"
+          "year": "2021"
         },
         {
-          "club": "Tottenham Hotspur Football Club",
+          "club": "Verona Hellas Football Club",
           "year": "2022"
         },
         {
@@ -7362,7 +7582,7 @@
         },
         {
           "club": "Tottenham Hotspur Football Club",
-          "year": "2023"
+          "year": "2022"
         }
       ],
       "lastTransfer": {
@@ -7450,6 +7670,38 @@
         "to": "Athletic Club Bilbao",
         "date": "2020-08-04",
         "fee": 0
+      }
+    },
+    {
+      "id": "572675",
+      "name": "Maxi Araújo",
+      "club": "Sporting Clube de Portugal",
+      "position": "Defender",
+      "nationality": "Uruguay",
+      "marketValue": 35000000,
+      "leagueId": "PO1",
+      "age": 26,
+      "birthYear": 2000,
+      "height": 179,
+      "careerPath": [
+        {
+          "club": "Club de Futbol Puebla de La Franja",
+          "year": "2020"
+        },
+        {
+          "club": "Deportivo Toluca Futbol Club, S. A. de C. V.",
+          "year": "2023"
+        },
+        {
+          "club": "Sporting Clube de Portugal",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Deportivo Toluca Futbol Club, S. A. de C. V.",
+        "to": "Sporting Clube de Portugal",
+        "date": "2024-08-27",
+        "fee": 13730000
       }
     },
     {
@@ -7621,6 +7873,42 @@
       }
     },
     {
+      "id": "654982",
+      "name": "Bilal El Khannouss",
+      "club": "Verein für Bewegungsspiele Stuttgart 1893",
+      "position": "Midfield",
+      "nationality": "Morocco",
+      "marketValue": 35000000,
+      "leagueId": "L1",
+      "age": 22,
+      "birthYear": 2004,
+      "height": 180,
+      "careerPath": [
+        {
+          "club": "Leicester City",
+          "year": "2024"
+        },
+        {
+          "club": "Verein für Bewegungsspiele Stuttgart 1893",
+          "year": "2025"
+        },
+        {
+          "club": "Leicester City",
+          "year": "2026"
+        },
+        {
+          "club": "Verein für Bewegungsspiele Stuttgart 1893",
+          "year": "2026"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Leicester City",
+        "to": "Verein für Bewegungsspiele Stuttgart 1893",
+        "date": "2026-07-01",
+        "fee": 15000000
+      }
+    },
+    {
       "id": "668951",
       "name": "Matías Soulé",
       "club": "Associazione Sportiva Roma",
@@ -7721,42 +8009,6 @@
       }
     },
     {
-      "id": "691892",
-      "name": "Nathaniel Brown",
-      "club": "Eintracht Frankfurt Fußball AG",
-      "position": "Defender",
-      "nationality": "Germany",
-      "marketValue": 35000000,
-      "leagueId": "L1",
-      "age": 22,
-      "birthYear": 2003,
-      "height": 176,
-      "careerPath": [
-        {
-          "club": "1.FC Nuremberg",
-          "year": "2022"
-        },
-        {
-          "club": "Eintracht Frankfurt Fußball AG",
-          "year": "2024"
-        },
-        {
-          "club": "1.FC Nuremberg",
-          "year": "2024"
-        },
-        {
-          "club": "Eintracht Frankfurt Fußball AG",
-          "year": "2024"
-        }
-      ],
-      "lastTransfer": {
-        "from": "1.FC Nuremberg",
-        "to": "Eintracht Frankfurt Fußball AG",
-        "date": "2024-06-30",
-        "fee": 0
-      }
-    },
-    {
       "id": "711337",
       "name": "Evanilson",
       "club": "Association Football Club Bournemouth",
@@ -7814,6 +8066,30 @@
         "to": "Wolverhampton Wanderers Football Club",
         "date": "2023-01-30",
         "fee": 18700000
+      }
+    },
+    {
+      "id": "748804",
+      "name": "Mika Godts",
+      "club": "AFC Ajax Amsterdam",
+      "position": "Attack",
+      "nationality": "Belgium",
+      "marketValue": 35000000,
+      "leagueId": "NL1",
+      "age": 20,
+      "birthYear": 2005,
+      "height": 176,
+      "careerPath": [
+        {
+          "club": "AFC Ajax Amsterdam",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "AFC Ajax Amsterdam",
+        "date": "2024-01-01",
+        "fee": 0
       }
     },
     {
@@ -8149,10 +8425,38 @@
       }
     },
     {
+      "id": "924117",
+      "name": "Finn Jeltsch",
+      "club": "Verein für Bewegungsspiele Stuttgart 1893",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 35000000,
+      "leagueId": "L1",
+      "age": 19,
+      "birthYear": 2006,
+      "height": 188,
+      "careerPath": [
+        {
+          "club": "1.FC Nuremberg",
+          "year": "2023"
+        },
+        {
+          "club": "Verein für Bewegungsspiele Stuttgart 1893",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "1.FC Nuremberg",
+        "to": "Verein für Bewegungsspiele Stuttgart 1893",
+        "date": "2025-02-03",
+        "fee": 9500000
+      }
+    },
+    {
       "id": "926952",
       "name": "Patrick Dorgu",
       "club": "Manchester United Football Club",
-      "position": "Defender",
+      "position": "Attack",
       "nationality": "Denmark",
       "marketValue": 35000000,
       "leagueId": "GB1",
@@ -8174,30 +8478,6 @@
         "to": "Manchester United Football Club",
         "date": "2025-02-02",
         "fee": 30000000
-      }
-    },
-    {
-      "id": "927353",
-      "name": "Johan Manzambi",
-      "club": "Sport-Club Freiburg",
-      "position": "Midfield",
-      "nationality": "Switzerland",
-      "marketValue": 35000000,
-      "leagueId": "L1",
-      "age": 20,
-      "birthYear": 2005,
-      "height": 182,
-      "careerPath": [
-        {
-          "club": "Sport-Club Freiburg",
-          "year": "2024"
-        }
-      ],
-      "lastTransfer": {
-        "from": null,
-        "to": "Sport-Club Freiburg",
-        "date": "2024-07-01",
-        "fee": 0
       }
     },
     {
@@ -8313,58 +8593,6 @@
       }
     },
     {
-      "id": "1067904",
-      "name": "Bazoumana Touré",
-      "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-      "position": "Attack",
-      "nationality": "Cote d'Ivoire",
-      "marketValue": 35000000,
-      "leagueId": "L1",
-      "age": 20,
-      "birthYear": 2006,
-      "height": 175,
-      "careerPath": [
-        {
-          "club": "Hammarby IF",
-          "year": "2024"
-        },
-        {
-          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Hammarby IF",
-        "to": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-        "date": "2025-02-01",
-        "fee": 10000000
-      }
-    },
-    {
-      "id": "1168219",
-      "name": "Said El Mala",
-      "club": "1. Fußball-Club Köln",
-      "position": "Attack",
-      "nationality": "Germany",
-      "marketValue": 35000000,
-      "leagueId": "L1",
-      "age": 19,
-      "birthYear": 2006,
-      "height": 187,
-      "careerPath": [
-        {
-          "club": "1. Fußball-Club Köln",
-          "year": "2024"
-        }
-      ],
-      "lastTransfer": {
-        "from": null,
-        "to": "1. Fußball-Club Köln",
-        "date": "2025-06-30",
-        "fee": 0
-      }
-    },
-    {
       "id": "893661",
       "name": "Joel Ordóñez",
       "club": "Club Brugge Koninklijke Voetbalvereniging",
@@ -8396,7 +8624,7 @@
       "nationality": "Austria",
       "marketValue": 32000000,
       "leagueId": "L1",
-      "age": 28,
+      "age": 29,
       "birthYear": 1997,
       "height": 180,
       "careerPath": [
@@ -8421,38 +8649,38 @@
       }
     },
     {
-      "id": "324503",
-      "name": "Vangelis Pavlidis",
-      "club": "Sport Lisboa e Benfica",
+      "id": "270541",
+      "name": "Serhou Guirassy",
+      "club": "Borussia Dortmund",
       "position": "Attack",
-      "nationality": "Greece",
+      "nationality": "Guinea",
       "marketValue": 32000000,
-      "leagueId": "PO1",
-      "age": 27,
-      "birthYear": 1998,
-      "height": 186,
+      "leagueId": "L1",
+      "age": 30,
+      "birthYear": 1996,
+      "height": 187,
       "careerPath": [
         {
-          "club": "VfL Bochum",
-          "year": "2019"
+          "club": "Verein für Bewegungsspiele Stuttgart 1893",
+          "year": "2022"
         },
         {
-          "club": "Willem II Tilburg",
-          "year": "2019"
+          "club": "Stade Rennais Football Club",
+          "year": "2023"
         },
         {
-          "club": "Alkmaar Zaanstreek",
-          "year": "2021"
+          "club": "Verein für Bewegungsspiele Stuttgart 1893",
+          "year": "2023"
         },
         {
-          "club": "Sport Lisboa e Benfica",
+          "club": "Borussia Dortmund",
           "year": "2024"
         }
       ],
       "lastTransfer": {
-        "from": "Alkmaar Zaanstreek",
-        "to": "Sport Lisboa e Benfica",
-        "date": "2024-07-01",
+        "from": "Verein für Bewegungsspiele Stuttgart 1893",
+        "to": "Borussia Dortmund",
+        "date": "2024-07-18",
         "fee": 18000000
       }
     },
@@ -8526,6 +8754,42 @@
         "to": "Newcastle United Football Club",
         "date": "2023-07-23",
         "fee": 44000000
+      }
+    },
+    {
+      "id": "444523",
+      "name": "Lucas Paquetá",
+      "club": "Clube de Regatas do Flamengo",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 32000000,
+      "leagueId": "BRA1",
+      "age": 28,
+      "birthYear": 1997,
+      "height": 180,
+      "careerPath": [
+        {
+          "club": "Associazione Calcio Milan",
+          "year": "2019"
+        },
+        {
+          "club": "Olympique Lyonnais",
+          "year": "2020"
+        },
+        {
+          "club": "West Ham United Football Club",
+          "year": "2022"
+        },
+        {
+          "club": "Clube de Regatas do Flamengo",
+          "year": "2026"
+        }
+      ],
+      "lastTransfer": {
+        "from": "West Ham United Football Club",
+        "to": "Clube de Regatas do Flamengo",
+        "date": "2026-01-28",
+        "fee": 42000000
       }
     },
     {
@@ -8709,42 +8973,6 @@
       }
     },
     {
-      "id": "654982",
-      "name": "Bilal El Khannouss",
-      "club": "Verein für Bewegungsspiele Stuttgart 1893",
-      "position": "Midfield",
-      "nationality": "Morocco",
-      "marketValue": 32000000,
-      "leagueId": "L1",
-      "age": 22,
-      "birthYear": 2004,
-      "height": 180,
-      "careerPath": [
-        {
-          "club": "Leicester City",
-          "year": "2024"
-        },
-        {
-          "club": "Verein für Bewegungsspiele Stuttgart 1893",
-          "year": "2025"
-        },
-        {
-          "club": "Leicester City",
-          "year": "2026"
-        },
-        {
-          "club": "Verein für Bewegungsspiele Stuttgart 1893",
-          "year": "2026"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Leicester City",
-        "to": "Verein für Bewegungsspiele Stuttgart 1893",
-        "date": "2026-07-01",
-        "fee": 15000000
-      }
-    },
-    {
       "id": "701057",
       "name": "Rico Lewis",
       "club": "Manchester City Football Club",
@@ -8764,30 +8992,6 @@
       "lastTransfer": {
         "from": null,
         "to": "Manchester City Football Club",
-        "date": "2022-07-01",
-        "fee": 0
-      }
-    },
-    {
-      "id": "702869",
-      "name": "Ismael Saibari",
-      "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
-      "position": "Midfield",
-      "nationality": "Morocco",
-      "marketValue": 32000000,
-      "leagueId": "NL1",
-      "age": 25,
-      "birthYear": 2001,
-      "height": 185,
-      "careerPath": [
-        {
-          "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
-          "year": "2022"
-        }
-      ],
-      "lastTransfer": {
-        "from": null,
-        "to": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
         "date": "2022-07-01",
         "fee": 0
       }
@@ -8818,6 +9022,38 @@
         "to": "Futebol Clube do Porto",
         "date": "2023-08-16",
         "fee": 8000000
+      }
+    },
+    {
+      "id": "808509",
+      "name": "Danilo",
+      "club": "S. A. F. Botafogo",
+      "position": "Midfield",
+      "nationality": "Brazil",
+      "marketValue": 32000000,
+      "leagueId": "BRA1",
+      "age": 25,
+      "birthYear": 2001,
+      "height": 177,
+      "careerPath": [
+        {
+          "club": "Sociedade Esportiva Palmeiras",
+          "year": "2020"
+        },
+        {
+          "club": "Nottingham Forest Football Club",
+          "year": "2023"
+        },
+        {
+          "club": "S. A. F. Botafogo",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Nottingham Forest Football Club",
+        "to": "S. A. F. Botafogo",
+        "date": "2025-07-18",
+        "fee": 23000000
       }
     },
     {
@@ -8874,34 +9110,6 @@
         "to": "RasenBallsport Leipzig",
         "date": "2024-08-13",
         "fee": 21000000
-      }
-    },
-    {
-      "id": "931838",
-      "name": "Hugo Larsson",
-      "club": "Eintracht Frankfurt Fußball AG",
-      "position": "Midfield",
-      "nationality": "Sweden",
-      "marketValue": 32000000,
-      "leagueId": "L1",
-      "age": 21,
-      "birthYear": 2004,
-      "height": 187,
-      "careerPath": [
-        {
-          "club": "Malmö Fotbollförening",
-          "year": "2022"
-        },
-        {
-          "club": "Eintracht Frankfurt Fußball AG",
-          "year": "2023"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Malmö Fotbollförening",
-        "to": "Eintracht Frankfurt Fußball AG",
-        "date": "2023-07-01",
-        "fee": 9000000
       }
     },
     {
@@ -8974,70 +9182,6 @@
         "to": "Paris Saint-Germain Football Club",
         "date": "2013-07-19",
         "fee": 31400000
-      }
-    },
-    {
-      "id": "196357",
-      "name": "Jonathan Tah",
-      "club": "FC Bayern München",
-      "position": "Defender",
-      "nationality": "Germany",
-      "marketValue": 30000000,
-      "leagueId": "L1",
-      "age": 30,
-      "birthYear": 1996,
-      "height": 195,
-      "careerPath": [
-        {
-          "club": "Fortuna Düsseldorf",
-          "year": "2014"
-        },
-        {
-          "club": "Hamburger Sport Verein",
-          "year": "2015"
-        },
-        {
-          "club": "Bayer 04 Leverkusen Fußball",
-          "year": "2015"
-        },
-        {
-          "club": "FC Bayern München",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Bayer 04 Leverkusen Fußball",
-        "to": "FC Bayern München",
-        "date": "2025-06-09",
-        "fee": 2000000
-      }
-    },
-    {
-      "id": "324278",
-      "name": "Christoph Baumgartner",
-      "club": "RasenBallsport Leipzig",
-      "position": "Midfield",
-      "nationality": "Austria",
-      "marketValue": 30000000,
-      "leagueId": "L1",
-      "age": 26,
-      "birthYear": 1999,
-      "height": 180,
-      "careerPath": [
-        {
-          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-          "year": "2019"
-        },
-        {
-          "club": "RasenBallsport Leipzig",
-          "year": "2023"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-        "to": "RasenBallsport Leipzig",
-        "date": "2023-07-01",
-        "fee": 25500000
       }
     },
     {
@@ -9174,6 +9318,34 @@
         "to": "Newcastle United Football Club",
         "date": "2019-07-23",
         "fee": 43500000
+      }
+    },
+    {
+      "id": "333647",
+      "name": "Jonathan Burkardt",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Attack",
+      "nationality": "Germany",
+      "marketValue": 30000000,
+      "leagueId": "L1",
+      "age": 25,
+      "birthYear": 2000,
+      "height": 181,
+      "careerPath": [
+        {
+          "club": "1. Fußball- und Sportverein Mainz 05",
+          "year": "2018"
+        },
+        {
+          "club": "Eintracht Frankfurt Fußball AG",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "1. Fußball- und Sportverein Mainz 05",
+        "to": "Eintracht Frankfurt Fußball AG",
+        "date": "2025-07-04",
+        "fee": 21000000
       }
     },
     {
@@ -9421,34 +9593,6 @@
       }
     },
     {
-      "id": "401578",
-      "name": "Exequiel Palacios",
-      "club": "Bayer 04 Leverkusen Fußball",
-      "position": "Midfield",
-      "nationality": "Argentina",
-      "marketValue": 30000000,
-      "leagueId": "L1",
-      "age": 27,
-      "birthYear": 1998,
-      "height": 178,
-      "careerPath": [
-        {
-          "club": "Club Atlético River Plate",
-          "year": "2017"
-        },
-        {
-          "club": "Bayer 04 Leverkusen Fußball",
-          "year": "2020"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Club Atlético River Plate",
-        "to": "Bayer 04 Leverkusen Fußball",
-        "date": "2020-01-01",
-        "fee": 17000000
-      }
-    },
-    {
       "id": "405398",
       "name": "Takefusa Kubo",
       "club": "Real Sociedad de Fútbol S.A.D.",
@@ -9514,6 +9658,42 @@
         "to": "Nottingham Forest Football Club",
         "date": "2024-07-18",
         "fee": 12300000
+      }
+    },
+    {
+      "id": "424784",
+      "name": "Luis Suárez",
+      "club": "Sporting Clube de Portugal",
+      "position": "Attack",
+      "nationality": "Colombia",
+      "marketValue": 30000000,
+      "leagueId": "PO1",
+      "age": 28,
+      "birthYear": 1997,
+      "height": 181,
+      "careerPath": [
+        {
+          "club": "UD Almería",
+          "year": "2023"
+        },
+        {
+          "club": "Olympique de Marseille",
+          "year": "2023"
+        },
+        {
+          "club": "UD Almería",
+          "year": "2023"
+        },
+        {
+          "club": "Sporting Clube de Portugal",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "UD Almería",
+        "to": "Sporting Clube de Portugal",
+        "date": "2025-07-28",
+        "fee": 22950000
       }
     },
     {
@@ -9664,7 +9844,7 @@
       "nationality": "United States",
       "marketValue": 30000000,
       "leagueId": "L1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 187,
       "careerPath": [
@@ -9977,34 +10157,34 @@
       }
     },
     {
-      "id": "524290",
-      "name": "Fisnik Asllani",
-      "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-      "position": "Attack",
-      "nationality": "Kosovo",
+      "id": "504087",
+      "name": "Tomás Araújo",
+      "club": "Sport Lisboa e Benfica",
+      "position": "Defender",
+      "nationality": "Portugal",
       "marketValue": 30000000,
-      "leagueId": "L1",
-      "age": 23,
+      "leagueId": "PO1",
+      "age": 24,
       "birthYear": 2002,
-      "height": 191,
+      "height": 187,
       "careerPath": [
         {
-          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+          "club": "Sport Lisboa e Benfica",
           "year": "2022"
         },
         {
-          "club": "Fußballklub Austria Wien",
-          "year": "2023"
+          "club": "Gil Vicente Futebol Clube",
+          "year": "2022"
         },
         {
-          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-          "year": "2024"
+          "club": "Sport Lisboa e Benfica",
+          "year": "2023"
         }
       ],
       "lastTransfer": {
-        "from": null,
-        "to": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-        "date": "2025-06-30",
+        "from": "Gil Vicente Futebol Clube",
+        "to": "Sport Lisboa e Benfica",
+        "date": "2023-06-30",
         "fee": 0
       }
     },
@@ -10077,34 +10257,6 @@
       }
     },
     {
-      "id": "548193",
-      "name": "Zeno Debast",
-      "club": "Sporting Clube de Portugal",
-      "position": "Defender",
-      "nationality": "Belgium",
-      "marketValue": 30000000,
-      "leagueId": "PO1",
-      "age": 22,
-      "birthYear": 2003,
-      "height": 191,
-      "careerPath": [
-        {
-          "club": "Royal Sporting Club Anderlecht",
-          "year": "2021"
-        },
-        {
-          "club": "Sporting Clube de Portugal",
-          "year": "2024"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Royal Sporting Club Anderlecht",
-        "to": "Sporting Clube de Portugal",
-        "date": "2024-07-04",
-        "fee": 18050000
-      }
-    },
-    {
       "id": "571604",
       "name": "Giorgio Scalvini",
       "club": "Atalanta Bergamasca Calcio S.p.a.",
@@ -10126,6 +10278,42 @@
         "to": "Atalanta Bergamasca Calcio S.p.a.",
         "date": "2021-07-09",
         "fee": 0
+      }
+    },
+    {
+      "id": "606752",
+      "name": "Rodrigo Zalazar",
+      "club": "Sporting Clube de Braga",
+      "position": "Midfield",
+      "nationality": "Uruguay",
+      "marketValue": 30000000,
+      "leagueId": "PO1",
+      "age": 26,
+      "birthYear": 1999,
+      "height": 178,
+      "careerPath": [
+        {
+          "club": "Eintracht Frankfurt Fußball AG",
+          "year": "2022"
+        },
+        {
+          "club": "FC Schalke 04",
+          "year": "2022"
+        },
+        {
+          "club": "Sporting Clube de Braga",
+          "year": "2023"
+        },
+        {
+          "club": "Sporting Clube de Portugal",
+          "year": "2026"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Sporting Clube de Braga",
+        "to": "Sporting Clube de Portugal",
+        "date": "2026-07-01",
+        "fee": 30000000
       }
     },
     {
@@ -10209,6 +10397,42 @@
       }
     },
     {
+      "id": "627207",
+      "name": "Ricardo Pepi",
+      "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+      "position": "Attack",
+      "nationality": "United States",
+      "marketValue": 30000000,
+      "leagueId": "NL1",
+      "age": 23,
+      "birthYear": 2003,
+      "height": 185,
+      "careerPath": [
+        {
+          "club": "Fußball-Club Augsburg 1907",
+          "year": "2022"
+        },
+        {
+          "club": "Football Club Groningen",
+          "year": "2022"
+        },
+        {
+          "club": "Fußball-Club Augsburg 1907",
+          "year": "2023"
+        },
+        {
+          "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+          "year": "2023"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Fußball-Club Augsburg 1907",
+        "to": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
+        "date": "2023-07-07",
+        "fee": 11000000
+      }
+    },
+    {
       "id": "646740",
       "name": "Gavi",
       "club": "Futbol Club Barcelona",
@@ -10289,6 +10513,34 @@
       }
     },
     {
+      "id": "667457",
+      "name": "Leon Avdullahu",
+      "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+      "position": "Midfield",
+      "nationality": "Kosovo",
+      "marketValue": 30000000,
+      "leagueId": "L1",
+      "age": 22,
+      "birthYear": 2004,
+      "height": 185,
+      "careerPath": [
+        {
+          "club": "FC Basel 1893 AG",
+          "year": "2023"
+        },
+        {
+          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "FC Basel 1893 AG",
+        "to": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "date": "2025-07-01",
+        "fee": 8000000
+      }
+    },
+    {
       "id": "668207",
       "name": "Petar Sučić",
       "club": "Football Club Internazionale Milano S.p.A.",
@@ -10350,6 +10602,74 @@
         "to": "Calcio Como",
         "date": "2025-07-18",
         "fee": 13000000
+      }
+    },
+    {
+      "id": "670103",
+      "name": "Andreas Schjelderup",
+      "club": "Sport Lisboa e Benfica",
+      "position": "Attack",
+      "nationality": "Norway",
+      "marketValue": 30000000,
+      "leagueId": "PO1",
+      "age": 21,
+      "birthYear": 2004,
+      "height": 176,
+      "careerPath": [
+        {
+          "club": "Fodbold Club Nordsjælland",
+          "year": "2021"
+        },
+        {
+          "club": "Sport Lisboa e Benfica",
+          "year": "2023"
+        },
+        {
+          "club": "Fodbold Club Nordsjælland",
+          "year": "2023"
+        },
+        {
+          "club": "Sport Lisboa e Benfica",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Fodbold Club Nordsjælland",
+        "to": "Sport Lisboa e Benfica",
+        "date": "2024-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "699704",
+      "name": "Gabri Veiga",
+      "club": "Futebol Clube do Porto",
+      "position": "Midfield",
+      "nationality": "Spain",
+      "marketValue": 30000000,
+      "leagueId": "PO1",
+      "age": 24,
+      "birthYear": 2002,
+      "height": 185,
+      "careerPath": [
+        {
+          "club": "Real Club Celta de Vigo S. A. D.",
+          "year": "2022"
+        },
+        {
+          "club": "Al-Ahli Saudi Football Club",
+          "year": "2023"
+        },
+        {
+          "club": "Futebol Clube do Porto",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Al-Ahli Saudi Football Club",
+        "to": "Futebol Clube do Porto",
+        "date": "2025-06-05",
+        "fee": 14970000
       }
     },
     {
@@ -10541,34 +10861,6 @@
       }
     },
     {
-      "id": "796297",
-      "name": "Jobe Bellingham",
-      "club": "Borussia Dortmund",
-      "position": "Midfield",
-      "nationality": "England",
-      "marketValue": 30000000,
-      "leagueId": "L1",
-      "age": 20,
-      "birthYear": 2005,
-      "height": 191,
-      "careerPath": [
-        {
-          "club": "Sunderland Association Football Club",
-          "year": "2023"
-        },
-        {
-          "club": "Borussia Dortmund",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Sunderland Association Football Club",
-        "to": "Borussia Dortmund",
-        "date": "2025-06-10",
-        "fee": 30500000
-      }
-    },
-    {
       "id": "808348",
       "name": "Mamadou Sangaré",
       "club": "Racing Club de Lens",
@@ -10666,62 +10958,6 @@
         "to": "Fulham Football Club",
         "date": "2025-09-01",
         "fee": 40000000
-      }
-    },
-    {
-      "id": "924117",
-      "name": "Finn Jeltsch",
-      "club": "Verein für Bewegungsspiele Stuttgart 1893",
-      "position": "Defender",
-      "nationality": "Germany",
-      "marketValue": 30000000,
-      "leagueId": "L1",
-      "age": 19,
-      "birthYear": 2006,
-      "height": 188,
-      "careerPath": [
-        {
-          "club": "1.FC Nuremberg",
-          "year": "2023"
-        },
-        {
-          "club": "Verein für Bewegungsspiele Stuttgart 1893",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "1.FC Nuremberg",
-        "to": "Verein für Bewegungsspiele Stuttgart 1893",
-        "date": "2025-02-03",
-        "fee": 9500000
-      }
-    },
-    {
-      "id": "926993",
-      "name": "Victor Froholdt",
-      "club": "Futebol Clube do Porto",
-      "position": "Midfield",
-      "nationality": "Denmark",
-      "marketValue": 30000000,
-      "leagueId": "PO1",
-      "age": 20,
-      "birthYear": 2006,
-      "height": 187,
-      "careerPath": [
-        {
-          "club": "Football Club København",
-          "year": "2024"
-        },
-        {
-          "club": "Futebol Clube do Porto",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Football Club København",
-        "to": "Futebol Clube do Porto",
-        "date": "2025-07-23",
-        "fee": 20000000
       }
     },
     {
@@ -10864,7 +11100,7 @@
       "nationality": "Spain",
       "marketValue": 30000000,
       "leagueId": "ES1",
-      "age": 18,
+      "age": 19,
       "birthYear": 2007,
       "height": 193,
       "careerPath": [
@@ -10961,6 +11197,42 @@
       }
     },
     {
+      "id": "196357",
+      "name": "Jonathan Tah",
+      "club": "FC Bayern München",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 28000000,
+      "leagueId": "L1",
+      "age": 30,
+      "birthYear": 1996,
+      "height": 195,
+      "careerPath": [
+        {
+          "club": "Fortuna Düsseldorf",
+          "year": "2014"
+        },
+        {
+          "club": "Hamburger Sport Verein",
+          "year": "2015"
+        },
+        {
+          "club": "Bayer 04 Leverkusen Fußball",
+          "year": "2015"
+        },
+        {
+          "club": "FC Bayern München",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Bayer 04 Leverkusen Fußball",
+        "to": "FC Bayern München",
+        "date": "2025-06-09",
+        "fee": 2000000
+      }
+    },
+    {
       "id": "258919",
       "name": "Dean Henderson",
       "club": "Crystal Palace Football Club",
@@ -10994,6 +11266,42 @@
         "to": "Crystal Palace Football Club",
         "date": "2023-08-31",
         "fee": 17500000
+      }
+    },
+    {
+      "id": "324503",
+      "name": "Vangelis Pavlidis",
+      "club": "Sport Lisboa e Benfica",
+      "position": "Attack",
+      "nationality": "Greece",
+      "marketValue": 28000000,
+      "leagueId": "PO1",
+      "age": 27,
+      "birthYear": 1998,
+      "height": 186,
+      "careerPath": [
+        {
+          "club": "VfL Bochum",
+          "year": "2019"
+        },
+        {
+          "club": "Willem II Tilburg",
+          "year": "2019"
+        },
+        {
+          "club": "Alkmaar Zaanstreek",
+          "year": "2021"
+        },
+        {
+          "club": "Sport Lisboa e Benfica",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Alkmaar Zaanstreek",
+        "to": "Sport Lisboa e Benfica",
+        "date": "2024-07-01",
+        "fee": 18000000
       }
     },
     {
@@ -11174,70 +11482,6 @@
         "to": "Olympique de Marseille",
         "date": "2025-01-31",
         "fee": 19000000
-      }
-    },
-    {
-      "id": "424784",
-      "name": "Luis Suárez",
-      "club": "Sporting Clube de Portugal",
-      "position": "Attack",
-      "nationality": "Colombia",
-      "marketValue": 28000000,
-      "leagueId": "PO1",
-      "age": 28,
-      "birthYear": 1997,
-      "height": 181,
-      "careerPath": [
-        {
-          "club": "UD Almería",
-          "year": "2023"
-        },
-        {
-          "club": "Olympique de Marseille",
-          "year": "2023"
-        },
-        {
-          "club": "UD Almería",
-          "year": "2023"
-        },
-        {
-          "club": "Sporting Clube de Portugal",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "UD Almería",
-        "to": "Sporting Clube de Portugal",
-        "date": "2025-07-28",
-        "fee": 22950000
-      }
-    },
-    {
-      "id": "426620",
-      "name": "Pedro Gonçalves",
-      "club": "Sporting Clube de Portugal",
-      "position": "Attack",
-      "nationality": "Portugal",
-      "marketValue": 28000000,
-      "leagueId": "PO1",
-      "age": 27,
-      "birthYear": 1998,
-      "height": 173,
-      "careerPath": [
-        {
-          "club": "Futebol Clube de Famalicão",
-          "year": "2019"
-        },
-        {
-          "club": "Sporting Clube de Portugal",
-          "year": "2020"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Futebol Clube de Famalicão",
-        "to": "Sporting Clube de Portugal",
-        "date": "2020-08-18",
-        "fee": 13500000
       }
     },
     {
@@ -11449,74 +11693,6 @@
       }
     },
     {
-      "id": "504087",
-      "name": "Tomás Araújo",
-      "club": "Sport Lisboa e Benfica",
-      "position": "Defender",
-      "nationality": "Portugal",
-      "marketValue": 28000000,
-      "leagueId": "PO1",
-      "age": 24,
-      "birthYear": 2002,
-      "height": 187,
-      "careerPath": [
-        {
-          "club": "Sport Lisboa e Benfica",
-          "year": "2022"
-        },
-        {
-          "club": "Gil Vicente Futebol Clube",
-          "year": "2022"
-        },
-        {
-          "club": "Sport Lisboa e Benfica",
-          "year": "2023"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Gil Vicente Futebol Clube",
-        "to": "Sport Lisboa e Benfica",
-        "date": "2023-06-30",
-        "fee": 0
-      }
-    },
-    {
-      "id": "505653",
-      "name": "Fábio Silva",
-      "club": "Borussia Dortmund",
-      "position": "Attack",
-      "nationality": "Portugal",
-      "marketValue": 28000000,
-      "leagueId": "L1",
-      "age": 23,
-      "birthYear": 2002,
-      "height": 185,
-      "careerPath": [
-        {
-          "club": "Wolverhampton Wanderers Football Club",
-          "year": "2024"
-        },
-        {
-          "club": "UD Las Palmas",
-          "year": "2024"
-        },
-        {
-          "club": "Wolverhampton Wanderers Football Club",
-          "year": "2025"
-        },
-        {
-          "club": "Borussia Dortmund",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Wolverhampton Wanderers Football Club",
-        "to": "Borussia Dortmund",
-        "date": "2025-08-29",
-        "fee": 22500000
-      }
-    },
-    {
       "id": "522784",
       "name": "Taty Castellanos",
       "club": "West Ham United Football Club",
@@ -11582,6 +11758,34 @@
         "to": "Nottingham Forest Football Club",
         "date": "2025-09-01",
         "fee": 35000000
+      }
+    },
+    {
+      "id": "548193",
+      "name": "Zeno Debast",
+      "club": "Sporting Clube de Portugal",
+      "position": "Defender",
+      "nationality": "Belgium",
+      "marketValue": 28000000,
+      "leagueId": "PO1",
+      "age": 22,
+      "birthYear": 2003,
+      "height": 191,
+      "careerPath": [
+        {
+          "club": "Royal Sporting Club Anderlecht",
+          "year": "2021"
+        },
+        {
+          "club": "Sporting Clube de Portugal",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Royal Sporting Club Anderlecht",
+        "to": "Sporting Clube de Portugal",
+        "date": "2024-07-04",
+        "fee": 18050000
       }
     },
     {
@@ -11685,66 +11889,6 @@
       }
     },
     {
-      "id": "623325",
-      "name": "Georgiy Sudakov",
-      "club": "Sport Lisboa e Benfica",
-      "position": "Midfield",
-      "nationality": "Ukraine",
-      "marketValue": 28000000,
-      "leagueId": "PO1",
-      "age": 23,
-      "birthYear": 2002,
-      "height": 177,
-      "careerPath": [
-        {
-          "club": "FC Shakhtar Donetsk",
-          "year": "2021"
-        },
-        {
-          "club": "Sport Lisboa e Benfica",
-          "year": "2025"
-        },
-        {
-          "club": "FC Shakhtar Donetsk",
-          "year": "2026"
-        },
-        {
-          "club": "Sport Lisboa e Benfica",
-          "year": "2026"
-        }
-      ],
-      "lastTransfer": {
-        "from": "FC Shakhtar Donetsk",
-        "to": "Sport Lisboa e Benfica",
-        "date": "2026-07-01",
-        "fee": 20250000
-      }
-    },
-    {
-      "id": "650568",
-      "name": "António Silva",
-      "club": "Sport Lisboa e Benfica",
-      "position": "Defender",
-      "nationality": "Portugal",
-      "marketValue": 28000000,
-      "leagueId": "PO1",
-      "age": 22,
-      "birthYear": 2003,
-      "height": 187,
-      "careerPath": [
-        {
-          "club": "Sport Lisboa e Benfica",
-          "year": "2022"
-        }
-      ],
-      "lastTransfer": {
-        "from": null,
-        "to": "Sport Lisboa e Benfica",
-        "date": "2022-07-01",
-        "fee": 0
-      }
-    },
-    {
       "id": "700106",
       "name": "Brajan Gruda",
       "club": "RasenBallsport Leipzig",
@@ -11752,7 +11896,7 @@
       "nationality": "Germany",
       "marketValue": 28000000,
       "leagueId": "L1",
-      "age": 21,
+      "age": 22,
       "birthYear": 2004,
       "height": 178,
       "careerPath": [
@@ -11777,6 +11921,30 @@
         "from": "RasenBallsport Leipzig",
         "to": "Brighton and Hove Albion Football Club",
         "date": "2026-06-30",
+        "fee": 0
+      }
+    },
+    {
+      "id": "720286",
+      "name": "Aleksey Batrakov",
+      "club": "Футбольный клуб \"Локомотив\" Москва",
+      "position": "Midfield",
+      "nationality": "Russia",
+      "marketValue": 28000000,
+      "leagueId": "RU1",
+      "age": 20,
+      "birthYear": 2005,
+      "height": 173,
+      "careerPath": [
+        {
+          "club": "Футбольный клуб \"Локомотив\" Москва",
+          "year": "2024"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "Футбольный клуб \"Локомотив\" Москва",
+        "date": "2024-01-01",
         "fee": 0
       }
     },
@@ -11877,6 +12045,58 @@
       }
     },
     {
+      "id": "931838",
+      "name": "Hugo Larsson",
+      "club": "Eintracht Frankfurt Fußball AG",
+      "position": "Midfield",
+      "nationality": "Sweden",
+      "marketValue": 28000000,
+      "leagueId": "L1",
+      "age": 21,
+      "birthYear": 2004,
+      "height": 187,
+      "careerPath": [
+        {
+          "club": "Malmö Fotbollförening",
+          "year": "2022"
+        },
+        {
+          "club": "Eintracht Frankfurt Fußball AG",
+          "year": "2023"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Malmö Fotbollförening",
+        "to": "Eintracht Frankfurt Fußball AG",
+        "date": "2023-07-01",
+        "fee": 9000000
+      }
+    },
+    {
+      "id": "1084638",
+      "name": "Karim Coulibaly",
+      "club": "Sportverein Werder Bremen von 1899",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 28000000,
+      "leagueId": "L1",
+      "age": 19,
+      "birthYear": 2007,
+      "height": 191,
+      "careerPath": [
+        {
+          "club": "Sportverein Werder Bremen von 1899",
+          "year": "2025"
+        }
+      ],
+      "lastTransfer": {
+        "from": null,
+        "to": "Sportverein Werder Bremen von 1899",
+        "date": "2025-07-16",
+        "fee": 0
+      }
+    },
+    {
       "id": "1111589",
       "name": "El Hadji Malick Diouf",
       "club": "West Ham United Football Club",
@@ -11945,74 +12165,6 @@
       }
     },
     {
-      "id": "408574",
-      "name": "Joey Veerman",
-      "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
-      "position": "Midfield",
-      "nationality": "Netherlands",
-      "marketValue": 27000000,
-      "leagueId": "NL1",
-      "age": 27,
-      "birthYear": 1998,
-      "height": 185,
-      "careerPath": [
-        {
-          "club": "Football Club Volendam",
-          "year": "2016"
-        },
-        {
-          "club": "Sportclub Heerenveen",
-          "year": "2019"
-        },
-        {
-          "club": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
-          "year": "2022"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Sportclub Heerenveen",
-        "to": "Eindhovense Voetbalvereniging Philips Sport Vereniging",
-        "date": "2022-01-04",
-        "fee": 6000000
-      }
-    },
-    {
-      "id": "425918",
-      "name": "Jakub Kiwior",
-      "club": "Futebol Clube do Porto",
-      "position": "Defender",
-      "nationality": "Poland",
-      "marketValue": 27000000,
-      "leagueId": "PO1",
-      "age": 26,
-      "birthYear": 2000,
-      "height": 189,
-      "careerPath": [
-        {
-          "club": "Arsenal Football Club",
-          "year": "2023"
-        },
-        {
-          "club": "Futebol Clube do Porto",
-          "year": "2025"
-        },
-        {
-          "club": "Arsenal Football Club",
-          "year": "2026"
-        },
-        {
-          "club": "Futebol Clube do Porto",
-          "year": "2026"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Arsenal Football Club",
-        "to": "Futebol Clube do Porto",
-        "date": "2026-07-01",
-        "fee": 17000000
-      }
-    },
-    {
       "id": "493003",
       "name": "Daniel Muñoz",
       "club": "Crystal Palace Football Club",
@@ -12020,7 +12172,7 @@
       "nationality": "Colombia",
       "marketValue": 27000000,
       "leagueId": "GB1",
-      "age": 29,
+      "age": 30,
       "birthYear": 1996,
       "height": 181,
       "careerPath": [
@@ -12046,42 +12198,6 @@
         "to": "Crystal Palace Football Club",
         "date": "2024-01-30",
         "fee": 8000000
-      }
-    },
-    {
-      "id": "746910",
-      "name": "Mohamed Amoura",
-      "club": "Verein für Leibesübungen Wolfsburg",
-      "position": "Attack",
-      "nationality": "Algeria",
-      "marketValue": 27000000,
-      "leagueId": "L1",
-      "age": 26,
-      "birthYear": 2000,
-      "height": 170,
-      "careerPath": [
-        {
-          "club": "Royale Union Saint-Gilloise",
-          "year": "2023"
-        },
-        {
-          "club": "Verein für Leibesübungen Wolfsburg",
-          "year": "2024"
-        },
-        {
-          "club": "Royale Union Saint-Gilloise",
-          "year": "2025"
-        },
-        {
-          "club": "Verein für Leibesübungen Wolfsburg",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Royale Union Saint-Gilloise",
-        "to": "Verein für Leibesübungen Wolfsburg",
-        "date": "2025-07-01",
-        "fee": 14750000
       }
     },
     {
@@ -12118,42 +12234,6 @@
         "to": "Football Club Internazionale Milano S.p.A.",
         "date": "2024-07-01",
         "fee": 15250000
-      }
-    },
-    {
-      "id": "620477",
-      "name": "Kaio Jorge",
-      "club": "Cruzeiro Esporte Clube",
-      "position": "Attack",
-      "nationality": "Brazil",
-      "marketValue": 26000000,
-      "leagueId": "BRA1",
-      "age": 24,
-      "birthYear": 2002,
-      "height": 182,
-      "careerPath": [
-        {
-          "club": "Juventus Football Club",
-          "year": "2021"
-        },
-        {
-          "club": "Frosinone Calcio",
-          "year": "2023"
-        },
-        {
-          "club": "Juventus Football Club",
-          "year": "2024"
-        },
-        {
-          "club": "Cruzeiro Esporte Clube",
-          "year": "2024"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Juventus Football Club",
-        "to": "Cruzeiro Esporte Clube",
-        "date": "2024-07-10",
-        "fee": 7200000
       }
     },
     {
@@ -12346,7 +12426,7 @@
       "nationality": "Denmark",
       "marketValue": 25000000,
       "leagueId": "GB1",
-      "age": 29,
+      "age": 30,
       "birthYear": 1996,
       "height": 192,
       "careerPath": [
@@ -12543,6 +12623,38 @@
       }
     },
     {
+      "id": "318204",
+      "name": "David Raum",
+      "club": "RasenBallsport Leipzig",
+      "position": "Defender",
+      "nationality": "Germany",
+      "marketValue": 25000000,
+      "leagueId": "L1",
+      "age": 28,
+      "birthYear": 1998,
+      "height": 181,
+      "careerPath": [
+        {
+          "club": "SpVgg Greuther Fürth",
+          "year": "2017"
+        },
+        {
+          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+          "year": "2021"
+        },
+        {
+          "club": "RasenBallsport Leipzig",
+          "year": "2022"
+        }
+      ],
+      "lastTransfer": {
+        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
+        "to": "RasenBallsport Leipzig",
+        "date": "2022-07-31",
+        "fee": 26000000
+      }
+    },
+    {
       "id": "321528",
       "name": "Denzel Dumfries",
       "club": "Football Club Internazionale Milano S.p.A.",
@@ -12684,122 +12796,6 @@
         "to": "Association sportive de Monaco Football Club",
         "date": "2023-08-14",
         "fee": 20000000
-      }
-    },
-    {
-      "id": "340918",
-      "name": "Caoimhín Kelleher",
-      "club": "Brentford Football Club",
-      "position": "Goalkeeper",
-      "nationality": "Ireland",
-      "marketValue": 25000000,
-      "leagueId": "GB1",
-      "age": 27,
-      "birthYear": 1998,
-      "height": 188,
-      "careerPath": [
-        {
-          "club": "Liverpool Football Club",
-          "year": "2019"
-        },
-        {
-          "club": "Brentford Football Club",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Liverpool Football Club",
-        "to": "Brentford Football Club",
-        "date": "2025-07-01",
-        "fee": 14800000
-      }
-    },
-    {
-      "id": "344069",
-      "name": "Anton Stach",
-      "club": "Leeds United Association Football Club",
-      "position": "Midfield",
-      "nationality": "Germany",
-      "marketValue": 25000000,
-      "leagueId": "GB1",
-      "age": 27,
-      "birthYear": 1998,
-      "height": 194,
-      "careerPath": [
-        {
-          "club": "SpVgg Greuther Fürth",
-          "year": "2020"
-        },
-        {
-          "club": "1. Fußball- und Sportverein Mainz 05",
-          "year": "2021"
-        },
-        {
-          "club": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-          "year": "2023"
-        },
-        {
-          "club": "Leeds United Association Football Club",
-          "year": "2025"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs",
-        "to": "Leeds United Association Football Club",
-        "date": "2025-07-22",
-        "fee": 20000000
-      }
-    },
-    {
-      "id": "349701",
-      "name": "Antonee Robinson",
-      "club": "Fulham Football Club",
-      "position": "Defender",
-      "nationality": "United States",
-      "marketValue": 25000000,
-      "leagueId": "GB1",
-      "age": 28,
-      "birthYear": 1997,
-      "height": 183,
-      "careerPath": [
-        {
-          "club": "Wigan Athletic",
-          "year": "2018"
-        },
-        {
-          "club": "Fulham Football Club",
-          "year": "2020"
-        }
-      ],
-      "lastTransfer": {
-        "from": "Wigan Athletic",
-        "to": "Fulham Football Club",
-        "date": "2020-08-20",
-        "fee": 2100000
-      }
-    },
-    {
-      "id": "351478",
-      "name": "Mikel Oyarzabal",
-      "club": "Real Sociedad de Fútbol S.A.D.",
-      "position": "Attack",
-      "nationality": "Spain",
-      "marketValue": 25000000,
-      "leagueId": "ES1",
-      "age": 29,
-      "birthYear": 1997,
-      "height": 181,
-      "careerPath": [
-        {
-          "club": "Real Sociedad de Fútbol S.A.D.",
-          "year": "2016"
-        }
-      ],
-      "lastTransfer": {
-        "from": null,
-        "to": "Real Sociedad de Fútbol S.A.D.",
-        "date": "2016-01-01",
-        "fee": 0
       }
     },
     {
@@ -13671,12 +13667,12 @@
       "height": 179,
       "careerPath": [
         {
-          "club": "Torino Calcio",
-          "year": "2025"
+          "club": "Football Club Internazionale Milano S.p.A.",
+          "year": "2023"
         },
         {
-          "club": "Football Club Internazionale Milano S.p.A.",
-          "year": "2026"
+          "club": "Torino Calcio",
+          "year": "2025"
         },
         {
           "club": "Beşiktaş Jimnastik Kulübü",
@@ -13702,7 +13698,7 @@
       "nationality": "England",
       "marketValue": 12000000,
       "leagueId": "TR1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 190,
       "careerPath": [
@@ -14842,7 +14838,7 @@
       "nationality": "Nigeria",
       "marketValue": 6000000,
       "leagueId": "TR1",
-      "age": 31,
+      "age": 32,
       "birthYear": 1994,
       "height": 201,
       "careerPath": [
@@ -16121,7 +16117,7 @@
       }
     }
   ],
-  "generatedAt": "2026-05-24T05:50:48.165Z",
+  "generatedAt": "2026-05-31T06:05:47.323Z",
   "count": 500,
   "europeCount": 400,
   "turkeyCount": 100
