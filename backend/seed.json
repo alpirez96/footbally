@@ -748,7 +748,7 @@
       "nationality": "France",
       "marketValue": 90000000,
       "leagueId": "GB1",
-      "age": 22,
+      "age": 23,
       "birthYear": 2003,
       "height": 177,
       "careerPath": [
@@ -928,7 +928,7 @@
       "nationality": "Argentina",
       "marketValue": 85000000,
       "leagueId": "IT1",
-      "age": 28,
+      "age": 29,
       "birthYear": 1997,
       "height": 174,
       "careerPath": [
@@ -3828,7 +3828,7 @@
       "nationality": "England",
       "marketValue": 50000000,
       "leagueId": "GB1",
-      "age": 22,
+      "age": 23,
       "birthYear": 2003,
       "height": 178,
       "careerPath": [
@@ -5708,7 +5708,7 @@
       "nationality": "Netherlands",
       "marketValue": 40000000,
       "leagueId": "GB1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 193,
       "careerPath": [
@@ -7100,7 +7100,7 @@
       "nationality": "Cote d'Ivoire",
       "marketValue": 35000000,
       "leagueId": "IT1",
-      "age": 26,
+      "age": 27,
       "birthYear": 1999,
       "height": 192,
       "careerPath": [
@@ -13746,7 +13746,7 @@
       "nationality": "Morocco",
       "marketValue": 10000000,
       "leagueId": "TR1",
-      "age": 29,
+      "age": 30,
       "birthYear": 1996,
       "height": 185,
       "careerPath": [
@@ -13914,7 +13914,7 @@
       "nationality": "Senegal",
       "marketValue": 8000000,
       "leagueId": "TR1",
-      "age": 26,
+      "age": 27,
       "birthYear": 1999,
       "height": 184,
       "careerPath": [
@@ -13982,7 +13982,7 @@
       "nationality": "Türkiye",
       "marketValue": 8000000,
       "leagueId": "TR1",
-      "age": 21,
+      "age": 22,
       "birthYear": 2004,
       "height": 193,
       "careerPath": [
@@ -15078,7 +15078,7 @@
       "nationality": "Cote d'Ivoire",
       "marketValue": 5000000,
       "leagueId": "TR1",
-      "age": 25,
+      "age": 26,
       "birthYear": 2000,
       "height": 194,
       "careerPath": [
@@ -15977,7 +15977,7 @@
       }
     }
   ],
-  "generatedAt": "2026-08-16T02:49:25.679Z",
+  "generatedAt": "2026-08-23T02:51:53.855Z",
   "count": 500,
   "europeCount": 400,
   "turkeyCount": 100
