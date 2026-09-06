@@ -384,7 +384,7 @@
       "nationality": "England",
       "marketValue": 110000000,
       "leagueId": "GB1",
-      "age": 24,
+      "age": 25,
       "birthYear": 2001,
       "height": 178,
       "careerPath": [
@@ -1940,7 +1940,7 @@
       "nationality": "France",
       "marketValue": 70000000,
       "leagueId": "FR1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 187,
       "careerPath": [
@@ -4093,7 +4093,7 @@
       "height": 185,
       "careerPath": [
         {
-          "club": "Atalanta BC",
+          "club": "Juventus FC",
           "year": "2021"
         },
         {
@@ -4102,7 +4102,7 @@
         },
         {
           "club": "Atalanta BC",
-          "year": "2022"
+          "year": "2021"
         },
         {
           "club": "Tottenham Hotspur",
@@ -5976,7 +5976,7 @@
       "nationality": "Ukraine",
       "marketValue": 40000000,
       "leagueId": "FR1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 189,
       "careerPath": [
@@ -6604,7 +6604,7 @@
       "nationality": "Brazil",
       "marketValue": 40000000,
       "leagueId": "IT1",
-      "age": 22,
+      "age": 23,
       "birthYear": 2003,
       "height": 178,
       "careerPath": [
@@ -7328,7 +7328,7 @@
       "nationality": "England",
       "marketValue": 35000000,
       "leagueId": "GB1",
-      "age": 27,
+      "age": 28,
       "birthYear": 1998,
       "height": 176,
       "careerPath": [
@@ -10014,10 +10014,10 @@
       "careerPath": [
         {
           "club": "Udinese Calcio",
-          "year": "2022"
+          "year": "2021"
         },
         {
-          "club": "Tottenham Hotspur",
+          "club": "Hellas Verona",
           "year": "2022"
         },
         {
@@ -10026,7 +10026,7 @@
         },
         {
           "club": "Tottenham Hotspur",
-          "year": "2023"
+          "year": "2022"
         }
       ],
       "lastTransfer": {
@@ -15330,7 +15330,7 @@
       "nationality": "Tanzania",
       "marketValue": 5000000,
       "leagueId": "TR1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 185,
       "careerPath": [
@@ -15390,7 +15390,7 @@
       "nationality": "Gabon",
       "marketValue": 4500000,
       "leagueId": "TR1",
-      "age": 32,
+      "age": 33,
       "birthYear": 1993,
       "height": 184,
       "careerPath": [
@@ -15977,7 +15977,7 @@
       }
     }
   ],
-  "generatedAt": "2026-08-30T07:33:57.469Z",
+  "generatedAt": "2026-09-06T06:33:20.850Z",
   "count": 500,
   "europeCount": 400,
   "turkeyCount": 100
