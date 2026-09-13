@@ -1256,7 +1256,7 @@
       "nationality": "Argentina",
       "marketValue": 80000000,
       "leagueId": "IT1",
-      "age": 21,
+      "age": 22,
       "birthYear": 2004,
       "height": 185,
       "careerPath": [
@@ -6068,7 +6068,7 @@
       "nationality": "England",
       "marketValue": 40000000,
       "leagueId": "GB1",
-      "age": 21,
+      "age": 22,
       "birthYear": 2004,
       "height": 179,
       "careerPath": [
@@ -6868,7 +6868,7 @@
       "nationality": "Portugal",
       "marketValue": 35000000,
       "leagueId": "GB1",
-      "age": 31,
+      "age": 32,
       "birthYear": 1994,
       "height": 183,
       "careerPath": [
@@ -7520,7 +7520,7 @@
       "nationality": "Spain",
       "marketValue": 35000000,
       "leagueId": "GB1",
-      "age": 26,
+      "age": 27,
       "birthYear": 1999,
       "height": 173,
       "careerPath": [
@@ -10828,7 +10828,7 @@
       "nationality": "Senegal",
       "marketValue": 30000000,
       "leagueId": "IT1",
-      "age": 20,
+      "age": 21,
       "birthYear": 2005,
       "height": 185,
       "careerPath": [
@@ -14530,7 +14530,7 @@
       "nationality": "Türkiye",
       "marketValue": 6500000,
       "leagueId": "TR1",
-      "age": 31,
+      "age": 32,
       "birthYear": 1994,
       "height": 185,
       "careerPath": [
@@ -15977,7 +15977,7 @@
       }
     }
   ],
-  "generatedAt": "2026-09-06T06:33:20.850Z",
+  "generatedAt": "2026-09-13T06:50:41.881Z",
   "count": 500,
   "europeCount": 400,
   "turkeyCount": 100
