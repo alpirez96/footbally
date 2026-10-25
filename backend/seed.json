@@ -444,7 +444,7 @@
       "nationality": "Hungary",
       "marketValue": 100000000,
       "leagueId": "GB1",
-      "age": 25,
+      "age": 26,
       "birthYear": 2000,
       "height": 187,
       "careerPath": [
@@ -5140,7 +5140,7 @@
       "nationality": "Nigeria",
       "marketValue": 40000000,
       "leagueId": "IT1",
-      "age": 28,
+      "age": 29,
       "birthYear": 1997,
       "height": 174,
       "careerPath": [
@@ -5248,7 +5248,7 @@
       "nationality": "England",
       "marketValue": 40000000,
       "leagueId": "GB1",
-      "age": 28,
+      "age": 29,
       "birthYear": 1997,
       "height": 180,
       "careerPath": [
@@ -6040,7 +6040,7 @@
       "nationality": "Croatia",
       "marketValue": 40000000,
       "leagueId": "IT1",
-      "age": 22,
+      "age": 23,
       "birthYear": 2003,
       "height": 183,
       "careerPath": [
@@ -8060,7 +8060,7 @@
       "nationality": "Cote d'Ivoire",
       "marketValue": 35000000,
       "leagueId": "IT1",
-      "age": 22,
+      "age": 23,
       "birthYear": 2003,
       "height": 189,
       "careerPath": [
@@ -8508,7 +8508,7 @@
       "nationality": "Switzerland",
       "marketValue": 32000000,
       "leagueId": "GB1",
-      "age": 25,
+      "age": 26,
       "birthYear": 2000,
       "height": 184,
       "careerPath": [
@@ -10044,7 +10044,7 @@
       "nationality": "Spain",
       "marketValue": 30000000,
       "leagueId": "ES1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 174,
       "careerPath": [
@@ -10648,7 +10648,7 @@
       "nationality": "France",
       "marketValue": 30000000,
       "leagueId": "GB1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 195,
       "careerPath": [
@@ -11596,7 +11596,7 @@
       "nationality": "Belgium",
       "marketValue": 28000000,
       "leagueId": "PO1",
-      "age": 22,
+      "age": 23,
       "birthYear": 2003,
       "height": 191,
       "careerPath": [
@@ -12910,7 +12910,7 @@
       "nationality": "Türkiye",
       "marketValue": 20000000,
       "leagueId": "TR1",
-      "age": 27,
+      "age": 28,
       "birthYear": 1998,
       "height": 172,
       "careerPath": [
@@ -15977,7 +15977,7 @@
       }
     }
   ],
-  "generatedAt": "2026-10-18T06:40:53.249Z",
+  "generatedAt": "2026-10-25T07:01:34.828Z",
   "count": 500,
   "europeCount": 400,
   "turkeyCount": 100
