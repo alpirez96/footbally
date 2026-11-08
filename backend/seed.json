@@ -652,7 +652,7 @@
       "nationality": "Ecuador",
       "marketValue": 100000000,
       "leagueId": "GB1",
-      "age": 24,
+      "age": 25,
       "birthYear": 2001,
       "height": 178,
       "careerPath": [
@@ -992,7 +992,7 @@
       "nationality": "Morocco",
       "marketValue": 80000000,
       "leagueId": "FR1",
-      "age": 27,
+      "age": 28,
       "birthYear": 1998,
       "height": 180,
       "careerPath": [
@@ -1496,7 +1496,7 @@
       "nationality": "England",
       "marketValue": 75000000,
       "leagueId": "GB1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 179,
       "careerPath": [
@@ -5276,7 +5276,7 @@
       "nationality": "Canada",
       "marketValue": 40000000,
       "leagueId": "L1",
-      "age": 25,
+      "age": 26,
       "birthYear": 2000,
       "height": 183,
       "careerPath": [
@@ -7936,7 +7936,7 @@
       "nationality": "Hungary",
       "marketValue": 35000000,
       "leagueId": "GB1",
-      "age": 22,
+      "age": 23,
       "birthYear": 2003,
       "height": 180,
       "careerPath": [
@@ -9308,7 +9308,7 @@
       "nationality": "England",
       "marketValue": 30000000,
       "leagueId": "GB1",
-      "age": 25,
+      "age": 26,
       "birthYear": 2000,
       "height": 178,
       "careerPath": [
@@ -12328,7 +12328,7 @@
       "nationality": "Italy",
       "marketValue": 25000000,
       "leagueId": "FR1",
-      "age": 33,
+      "age": 34,
       "birthYear": 1992,
       "height": 165,
       "careerPath": [],
@@ -13642,7 +13642,7 @@
       "nationality": "Cape Verde",
       "marketValue": 11000000,
       "leagueId": "TR1",
-      "age": 23,
+      "age": 24,
       "birthYear": 2002,
       "height": 180,
       "careerPath": [
@@ -15977,7 +15977,7 @@
       }
     }
   ],
-  "generatedAt": "2026-11-01T08:15:40.597Z",
+  "generatedAt": "2026-11-08T08:08:10.771Z",
   "count": 500,
   "europeCount": 400,
   "turkeyCount": 100
